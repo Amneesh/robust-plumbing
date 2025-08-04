@@ -55,6 +55,7 @@ main {
   scroll-behavior: smooth;
   overflow-x: hidden;
   background-color: var(--color-background);
+  color: var(--color-navy);
   padding: 0;
   margin: 0;
 }
