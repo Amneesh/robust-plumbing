@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPD EVENTS</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./gallery.css">
+  <link rel="stylesheet" href="./flex.css" />
+
+  <script src="./animations.js" defer></script>
+
+ <script src="./gallery.js" defer></script>
+
+
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="gallery-page">
+
+
+   <header class="rpd-header">
+
+    <div class="rpd-logo">
+      <a href="./index.html"><img  src="./resources/rpd-logo.png" alt="" /></a>
+
+    </div>
+    <div class="header">
+      <button id="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="slide-menu" class="nav-links">
+        <ul>
+          <li> <a href="./index.html">Home</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li> <a href="./gallery.html">Gallery</a></li>
+          <li> <a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-header-wrapper gallery-page flex justify-center items-center animate-slide-down " data-delay="0.2s">
+      <h1 class="visually-hidden">GALLERY</h1>
+    </section>
+
+    <section class="profile-container flex ">
+
+
+      <div class="profile">
+
+        <div class="profile-image">
+
+          <img src="./resources/rpd-insta-logo.jpg"
+            alt="">
+
+        </div>
+
+        <div class="profile-user-settings flex flex-row flex-wrap gap-1 items-center">
+          <h3 class="profile-user-name">RPD Events</h3>
+<button class="rpd-button-secondary" onclick='window.open("https://www.instagram.com/rpd_events?igsh=MWp5dzlpbWF5NzBuag==", "_blank")'>
+  FOLLOW +
+</button>
+        </div>
+
+        <div class="profile-stats">
+
+          <ul>
+            <li><span class="profile-stat-count">164</span> posts</li>
+            <li><span class="profile-stat-count">188</span> followers</li>
+            <li><span class="profile-stat-count">206</span> following</li>
+          </ul>
+
+        </div>
+
+        <div class="profile-bio">
+
+          <p> We do a numerous amount of things like: Live DJ, DJ Setup, House LED decor, live sound, bhangra, etc.
+Contact if you need any service at:
+778-861-0450</p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="gallery-container">
+      <h1 class="visually-hidden"> Gallery</h1>
+      <div class="img-grid" id="imageGrid"></div>
+    </section>
+
+
+    <section class="join-us shake-effect gallery-join-us">
+      <div class="join-us-container flex flex-col items-center justify-center gap-1">
+        <h1><span class="color-accent">Seen enough? </span>Now it’s your turn to make us work ! </h1>
+        <button class="rpd-button-secondary go-to-contact">GET A QUOTE</button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="floating-social">
+    <button id="toggleSocial" aria-label="Toggle Social Links">
+      <i class="fas fa-share-alt"></i>
+    </button>
+    <nav id="socialPopup" class="social-popup hidden" aria-label="Social Links">
+      <a href="tel:+1234567890" aria-label="Phone" class="icon cyan">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="mailto:info@rpdevents.com" aria-label="Email" class="icon magenta">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="#" aria-label="Facebook" class="icon cyan">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" aria-label="Instagram" class="icon magenta">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </nav>
+  </div>
+
+  <footer class="footer-section">
+
+    <section class="subscription-box">
+      <div class="sub-box flex flex-row column-gap-25 items-center justify-between">
+        <div class="sub-box-title" id="subBoxTitle">
+          <h4>Join Us !</h4>
+        </div>
+        <div class="sub-box-content" id="subBoxContent">
+
+          <form class="sub-input-container" onsubmit="handleSubscribe(event)">
+            <input type="email" class="subscribe-input" placeholder="Enter your email" required />
+            <button type="submit" class="subscribe-button">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+
+
+        </div>
+        <div class="sub-success"  id="subSuccess"> <h3 class="color-accent">Thank you</h3> <h4>You have been subscribe to RPD Events !</h4></div>
+         <div class="sub-fail" id="subFail"> <p class="color-accent">Oops !</p> <p>Please try again after refreshing the page</p></div>
+      </div>
+
+    </section>
+    <section class="footer-info">
+      <h4 class="visually-hidden">Logo and description</h4>
+      <a class="footer-logo" href="#top">
+        <img src="./resources/rpd-logo.png" alt="RPD logo" />
+      </a>
+      <div class="footer-description">
+        <p>RPD </p>
+      </div>
+    </section>
+
+    <section class="footer-quick-links footer-column">
+      <h4>Quick Links</h4>
+      <div class="quick-links">
+        <ul>
+          <li><a href="./index.html#whoWeAre">About Us</a></li>
+          <li><a href="./index.html#section">Services</a></li>
+          <li><a href="./index.html#googleReviews">Client Reviews</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-contact-us footer-column">
+      <h4>Contact us</h4>
+      <div class="footer-contact">
+        <ul>
+          <li>
+            <a href="tel:+17788610450" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-phone"></i>
+              <p>+1 (778) 861-0450</p>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+17787980305" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-phone"></i>
+              <p>+1 (778) 798-0305</p>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:rpd.surrey@gmail.com" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-envelope"></i>
+              <p>rpd.surrey@gmail.com</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/sQJMdmcLzcGtsXuEA" target="_blank"
+              class="info-item-web-content flex flex-row col-gap-1 column-gap-1">
+              <i class="fa fa-location-dot"></i>
+              <p>8065 D 130 St Surrey, BC V3W 4G1</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-social-media footer-column">
+      <h4>Social media</h4>
+      <div class="footer-social-media-icons">
+        <a href="https://wa.me/12369715969?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
+          target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/RPD0450RPD/" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/rpd.sound/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.instagram.com/rpd_bhangra/" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+    </section>
+  </footer>
+
+</body>
+
+</html>

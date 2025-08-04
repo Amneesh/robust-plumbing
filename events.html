@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPD EVENTS</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="stylesheet" href="./flex.css" />
+  <link rel="stylesheet" href="./events.css" />
+  <script src="./animations.js" defer></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <script src="./script.js" defer></script>
+  <script src="./events.js" defer></script>
+
+</head>
+
+<body class="event-page">
+  <header class="rpd-header">
+
+    <div class="rpd-logo">
+      <a href="./index.html"><img src="./resources/rpd-logo.png" alt="" /></a>
+
+    </div>
+    <div class="header">
+      <button id="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="slide-menu" class="nav-links">
+        <ul>
+          <li> <a href="./index.html">Home</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li> <a href="./gallery.html">Gallery</a></li>
+          <li> <a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header-wrapper events-page flex justify-center items-center animate-slide-down "
+      data-delay="0.2s">
+      <h1 class="visually-hidden">EVENTS</h1>
+    </section>
+
+    <section class="event-categories flex flex-col gap-1 items-center" id="eventCategories">
+      <h1>EVENTS WE <span class="color-accent">CATER</span></h1>
+      <div class="underline"></div>
+      <div class="event-tiles">
+        <h2 class="sr-only">Event Categories</h2>
+
+        <article class="event-tile ">
+          <h2 class="visually-hidden">Weddings</h2>
+          <img src="./resources/wedding.jpg"
+            alt="Wedding celebration with flowers and lights">
+          <div class="event-tile-description flex flex-col justify-center items-center gap-1">
+            <strong>Weddings:</strong>
+            <p>From elegant ceremonies to vibrant receptions, we turn your big day into a beautiful memory.</p>
+          </div>
+        </article>
+
+        <article class="event-tile">
+          <h2 class="visually-hidden">Corporate Events</h2>
+          <img src="resources/corporate.jpg"
+            alt="Corporate event setup with stage and lighting">
+          <div class="event-tile-description flex flex-col justify-center items-center gap-1">
+            <strong>Corporate Events:</strong>
+            <p>Professional AV setups, smooth logistics, and impressive presentations tailored for your business goals.
+            </p>
+          </div>
+        </article>
+
+        <article class="event-tile">
+          <h2 class="visually-hidden">Birthday Parties</h2>
+          <img src="./resources/birthday.jpg"
+            alt="Birthday party with balloons and cake">
+          <div class="event-tile-description flex flex-col justify-center items-center gap-1">
+            <strong>Birthday Parties:</strong>
+            <p>Celebrate in style with themed decor, entertainment, and custom experiences for all ages.</p>
+          </div>
+        </article>
+
+        <article class="event-tile">
+          <h2 class="visually-hidden">Live Concerts</h2>
+          <img src="resources/live.jpg"
+            alt="Concert lighting and audience in a music event">
+          <div class="event-tile-description flex flex-col justify-center items-center gap-1">
+            <strong>Live Concerts:</strong>
+            <p>Bring your stage to life with high-quality sound, lighting, and visual effects tailored for artists and
+              fans.</p>
+          </div>
+        </article>
+
+        <article class="event-tile">
+          <h2 class="visually-hidden">Engagements</h2>
+          <img src="./resources/engagement.jpg"
+            alt="Couple dancing during an engagement party">
+          <div class="event-tile-description flex flex-col justify-center items-center gap-1">
+            <strong>Engagements:</strong>
+            <p>Celebrate your journey together with a beautifully coordinated and intimate engagement event.</p>
+          </div>
+        </article>
+
+        <article class="event-tile">
+          <h2 class="visually-hidden">Cultural Shows</h2>
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80"
+            alt="Cultural festival stage with traditional performers">
+          <div class="event-tile-description flex flex-col justify-center items-center gap-1">
+            <strong>Cultural Shows:</strong>
+            <p>Showcasing rich traditions through music, dance, and storytelling with our stage and tech expertise.</p>
+          </div>
+        </article>
+
+        <article class="event-tile">
+          <h2 class="visually-hidden">DJ Nights</h2>
+          <img src="./resources/djnight.jpg"
+            alt="DJ performing at a lively party">
+          <div class="event-tile-description flex flex-col justify-center items-center gap-1">
+            <strong>DJ Nights:</strong>
+            <p>High-energy lighting and sound to get the crowd moving and make your party unforgettable.</p>
+          </div>
+        </article>
+
+        <article class="event-tile">
+          <h2 class="visually-hidden">Community Events</h2>
+          <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=400&q=80"
+            alt="Outdoor event with food stalls and people gathering">
+          <div class="event-tile-description flex flex-col justify-center items-center gap-1">
+            <strong>Community Events:</strong>
+            <p>Creating memorable community experiences with thoughtful planning and professional support.</p>
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="why-us flex flex-col items-center justify-center gap-1">
+  <h1>WHY CHOOSE <span class="color-accent">RPD</span></h1>
+   <div class="underline"></div>
+      <div class="why-us-container flex flex-col lg:flex-row items-center justify-around gap-6">
+        <div class="why-us-description">
+
+          <div data-image="./resources/event-bg.webp" class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right" >
+            <div class="why-us-image"><img src="./resources/why-us-icons/unmatched.png" alt=""></div>
+            <div class="why-us-text">
+              <h4>Unmatched Expertise</h4>
+              <p>
+                Expertly blending creativity and precision to deliver unforgettable events, big or small.
+              </p>
+            </div>
+          </div>
+
+          <div data-image="./resources/why-us-icons/complete-package.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
+            <div class="why-us-image"><img src="./resources/why-us-icons/complete.png" alt=""></div>
+            <div class="why-us-text">
+              <h4>Complete Party Package</h4>
+              <p>
+               Your all-in-one partner for music, lighting, visuals, and performances that wow.
+              </p>
+            </div>
+          </div>
+
+          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right">
+            <div class="why-us-image"><img src="./resources/why-us-icons/seamless.png" alt=""></div>
+            <div class="why-us-text">
+              <h4>Seamless Execution</h4>
+              <p>
+                From setup to showtime, we manage every detail so you can enjoy your event stress-free.
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="why-us-main-image animate-rotate-in" id="whyUsMainContainer">
+        
+          <div class="stack">
+           
+              <div class="image"><img id="main-why-us-image" src="./resources/dj-contact.jpg" alt="dj-front"></div>
+      
+          </div>
+
+        </div>
+        <div class="why-us-description">
+          
+          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
+            <div class="why-us-image"><img src="./resources/why-us-icons/customized.png" alt=""></div>
+            <div class="why-us-text">
+              <h4>Customized to Your Vision</h4>
+              <p>
+              We bring your unique event vision to life with tailored experiences and personal touches.
+              </p>
+            </div>
+          </div>
+
+          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right">
+            <div class="why-us-image"><img src="./resources/why-us-icons/vibrant.png" alt=""></div>
+            <div class="why-us-text">
+              <h4>Vibrant Cultural Touch</h4>
+              <p>
+Infusing every celebration with the rich energy of Punjabi, Bollywood, and South Asian traditions.
+              </p>
+            </div>
+          </div>
+
+          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
+            <div class="why-us-image"><img src="./resources/why-us-icons/client.png" alt=""></div>
+            <div class="why-us-text">
+              <h4>Client Satisfaction First</h4>
+              <p>
+                Trusted by clients for our passion, professionalism, and obsession with flawless execution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="join-us shake-effect">
+      <div class="join-us-container flex flex-col items-center justify-center gap-1">
+        <h1>Some call it extra. We call it <span class="color-accent">RPD</span> ! </h1>
+        <button class="rpd-button-secondary go-to-contact">GET A QUOTE</button>
+      </div>
+    </section>
+
+    <section id="serviceDetails" class="service-details">
+      <h2 class="visually-hidden">Service Details</h2>
+      <div class="swiper-container" id="servicesCarousel">
+        <div class="swiper-wrapper" id="swiperWrapper">
+          <!-- Slides inserted dynamically by JS -->
+        </div>
+        <!-- Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+      </div>
+    </section>
+
+
+
+    <!-- <section class="insta-section">
+      <h2>Event Highlights on Instagram</h2>
+      <div class="insta-grid">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80"
+          alt="DJ Setup" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80"
+          alt="Dance Performance" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=400&q=80"
+          alt="LED Screens" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80"
+          alt="Lighting Show" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=400&q=80"
+          alt="Sound System" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=400&q=80"
+          alt="Crowd Fun" loading="lazy" />
+      </div>
+      <a class="insta-link" href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer">View More
+        on Instagram</a>
+    </section> -->
+
+
+
+
+
+  </main>
+
+  <div class="floating-social">
+    <button id="toggleSocial" aria-label="Toggle Social Links">
+      <i class="fas fa-share-alt"></i>
+    </button>
+    <nav id="socialPopup" class="social-popup hidden" aria-label="Social Links">
+      <a href="tel:+1234567890" aria-label="Phone" class="icon cyan">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="mailto:info@rpdevents.com" aria-label="Email" class="icon magenta">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="#" aria-label="Facebook" class="icon cyan">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" aria-label="Instagram" class="icon magenta">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </nav>
+  </div>
+  <footer class="footer-section">
+
+       <section class="subscription-box">
+      <div class="sub-box flex flex-row column-gap-25 items-center justify-between">
+        <div class="sub-box-title" id="subBoxTitle">
+          <h4>Join Us !</h4>
+        </div>
+        <div class="sub-box-content" id="subBoxContent">
+
+          <form class="sub-input-container" onsubmit="handleSubscribe(event)">
+            <input type="email" class="subscribe-input" placeholder="Enter your email" required />
+            <button type="submit" class="subscribe-button">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+
+
+        </div>
+        <div class="sub-success"  id="subSuccess"> <h3 class="color-accent">Thank you</h3> <h4>You have been subscribe to RPD Events !</h4></div>
+         <div class="sub-fail" id="subFail"> <p class="color-accent">Oops !</p> <p>Please try again after refreshing the page</p></div>
+      </div>
+
+    </section>
+    <section class="footer-info">
+      <h4 class="visually-hidden">Logo and description</h4>
+      <a class="footer-logo" href="#top">
+        <img src="./resources/rpd-logo.png" alt="RPD logo" />
+      </a>
+      <div class="footer-description">
+        <p>RPD </p>
+      </div>
+    </section>
+
+    <section class="footer-quick-links footer-column">
+      <h4>Quick Links</h4>
+      <div class="quick-links">
+        <ul>
+          <li><a href="./index.html#whoWeAre">About Us</a></li>
+          <li><a href="./index.html#section">Services</a></li>
+          <li><a href="./index.html#googleReviews">Client Reviews</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-contact-us footer-column">
+      <h4>Contact us</h4>
+      <div class="footer-contact">
+        <ul>
+          <li>
+            <a href="tel:+17788610450" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-phone"></i>
+              <p>+1 (778) 861-0450</p>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+17787980305" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-phone"></i>
+              <p>+1 (778) 798-0305</p>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:rpd.surrey@gmail.com" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-envelope"></i>
+              <p>rpd.surrey@gmail.com</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/sQJMdmcLzcGtsXuEA" target="_blank"
+              class="info-item-web-content flex flex-row col-gap-1 column-gap-1">
+              <i class="fa fa-location-dot"></i>
+              <p>8065 D 130 St Surrey, BC V3W 4G1</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-social-media footer-column">
+      <h4>Social media</h4>
+      <div class="footer-social-media-icons">
+        <a href="https://wa.me/12369715969?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
+          target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/RPD0450RPD/" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/rpd.sound/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.instagram.com/rpd_bhangra/" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+    </section>
+  </footer>
+
+</body>
+
+</html>
