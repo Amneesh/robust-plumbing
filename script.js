@@ -1,6 +1,7 @@
  window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
+
 const toggleBtn1 = document.getElementById('menu-toggle');
 const menu = document.getElementById('slide-menu');
 
@@ -75,22 +76,101 @@ document.addEventListener("DOMContentLoaded", () => {
 if (document.body.classList.contains("home-page")) {
 
   document.addEventListener("DOMContentLoaded", () => {
-    const topImg = document.querySelector(".hero-img-top");
-    const bottomImg = document.querySelector(".hero-img-bottom");
+    // const topImg = document.querySelector(".hero-img-top");
+    // const bottomImg = document.querySelector(".hero-img-bottom");
+    const overlay = document.querySelector(".overlay");
+
+
 
     setTimeout(() => {
-      topImg.classList.add("show");
-      bottomImg.classList.add("show");
-    }, 2000); // Show after 1 second
+      // topImg.classList.add("show");
+      // bottomImg.classList.add("show");
+      overlay.classList.add('show');
+    }, 100); // Show after 1 second
   });
 
 
-  //   document.addEventListener("DOMContentLoaded", () => {
-  //   setTimeout(() => {
-  //     document.querySelector(".left-animate").classList.add("show");
-  //   }, 2000); 
-  // });
+const vertical_slider = {
 
+        // Slide class name
+        slider_class: ".slider",
+
+        // Show slide
+        show_slide: function (slide_id, context_item) {
+            const slide_container = context_item.closest(this.slider_class).querySelector(".slides");
+            if (slide_container) {
+                const slides = slide_container.querySelectorAll(".slide");
+                if (slides && slides[slide_id]) {
+
+                    // Scroll to active slide
+                    slide_container.scrollTo({
+                        top: slides[slide_id].offsetTop,
+                        behavior: "smooth"
+                    });
+
+
+                    // Set active context item
+                    const active_context_item = context_item.closest(".slide_navigation").querySelector(".active");
+                    if (active_context_item) {
+                        active_context_item.classList.remove("active");
+                    }
+
+                    context_item.classList.add("active");
+                }
+            }
+        },
+
+        // Initialize slide
+        init_slider: function (slider) {
+
+            const navigation_items = slider.querySelectorAll(".slide_navigation a");
+
+            if (navigation_items) {
+                Object.keys(navigation_items).forEach(function (key) {
+                    navigation_items[key].onclick = function (e) {
+                        e.preventDefault();
+
+                        vertical_slider.show_slide(key, navigation_items[key]);
+                    };
+                });
+            }
+
+        },
+
+        // Initialize sliders
+        init: function () {
+
+            // Iterate over each slider
+            document.querySelectorAll(this.slider_class).forEach((slider) => this.init_slider(slider));
+
+        }
+    };
+
+    // Initialize sliders
+    vertical_slider.init();
+    document.querySelectorAll(".slider").forEach((slider) => {
+    const slideContainer = slider.querySelector(".slides");
+    const slides = slideContainer.querySelectorAll(".slide");
+    const navItems = slider.querySelectorAll(".slide_navigation a");
+
+    slideContainer.addEventListener("scroll", () => {
+        let closestIndex = 0;
+        let minDiff = Infinity;
+
+        slides.forEach((slide, index) => {
+            const diff = Math.abs(slide.offsetTop - slideContainer.scrollTop);
+            if (diff < minDiff) {
+                minDiff = diff;
+                closestIndex = index;
+            }
+        });
+
+        // Update active class in navigation
+        navItems.forEach((item, idx) => {
+            item.classList.toggle("active", idx === closestIndex);
+        });
+    });
+});
   const testimonialsData = [
     {
       "name": "Himani Thakur",
@@ -103,7 +183,7 @@ if (document.body.classList.contains("home-page")) {
       "name": "Gurjit Virk",
       "role": "1 review",
       "time": "2 years ago",
-      "text": "RPD bhangra academy is one of the best academy, my kids are doing great in bhangra only because of the best coaching skills they get taught by the fantastic coach",
+      "text": "robust bhangra academy is one of the best academy, my kids are doing great in bhangra only because of the best coaching skills they get taught by the fantastic coach",
       "likes": "❤️"
     },
     {
@@ -145,7 +225,7 @@ if (document.body.classList.contains("home-page")) {
       "name": "Amneesh Singh",
       "role": "5 reviews",
       "time": "1 year ago",
-      "text": "RPD Events truly transformed our wedding! Their professionalism and energy were unmatched.",
+      "text": "Robust Plumbing truly transformed our wedding! Their professionalism and energy were unmatched.",
       "likes": "🌟5"
     }
   ]
@@ -300,15 +380,15 @@ async function handleSubscribe(event) {
   if (email) {
     console.log("Subscribed with:", email);
 
-    const name = 'RPD subscription';
-    const message = `RPD events subscribed by new user: ${email}`;
+    const name = 'robust subscription';
+    const message = `Robust Plumbing subscribed by new user: ${email}`;
     const subBoxTitle = document.getElementById("subBoxTitle");
     const subBoxContent = document.getElementById("subBoxContent");
     const subSuccess = document.getElementById("subSuccess");
     const subFail = document.getElementById("subFail");
 
     const to = "amneeshsingh5@gmail.com";
-    const subject = `RPD EVENTS website inquiry from ${name}`;
+    const subject = `Robust Plumbing website inquiry from ${name}`;
     const html = `
       <h2>New Inquiry from Website</h2>
       <p><strong>Name:</strong> ${name}</p>
