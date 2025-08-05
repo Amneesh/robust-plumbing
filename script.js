@@ -91,86 +91,87 @@ if (document.body.classList.contains("home-page")) {
 
 
 const vertical_slider = {
+  slider_class: ".slider",
 
-        // Slide class name
-        slider_class: ".slider",
-
-        // Show slide
-        show_slide: function (slide_id, context_item) {
-            const slide_container = context_item.closest(this.slider_class).querySelector(".slides");
-            if (slide_container) {
-                const slides = slide_container.querySelectorAll(".slide");
-                if (slides && slides[slide_id]) {
-
-                    // Scroll to active slide
-                    slide_container.scrollTo({
-                        top: slides[slide_id].offsetTop,
-                        behavior: "smooth"
-                    });
-
-
-                    // Set active context item
-                    const active_context_item = context_item.closest(".slide_navigation").querySelector(".active");
-                    if (active_context_item) {
-                        active_context_item.classList.remove("active");
-                    }
-
-                    context_item.classList.add("active");
-                }
-            }
-        },
-
-        // Initialize slide
-        init_slider: function (slider) {
-
-            const navigation_items = slider.querySelectorAll(".slide_navigation a");
-
-            if (navigation_items) {
-                Object.keys(navigation_items).forEach(function (key) {
-                    navigation_items[key].onclick = function (e) {
-                        e.preventDefault();
-
-                        vertical_slider.show_slide(key, navigation_items[key]);
-                    };
-                });
-            }
-
-        },
-
-        // Initialize sliders
-        init: function () {
-
-            // Iterate over each slider
-            document.querySelectorAll(this.slider_class).forEach((slider) => this.init_slider(slider));
-
-        }
-    };
-
-    // Initialize sliders
-    vertical_slider.init();
-    document.querySelectorAll(".slider").forEach((slider) => {
+  show_slide(slideIndex, navItem) {
+    const slider = navItem.closest(this.slider_class);
     const slideContainer = slider.querySelector(".slides");
     const slides = slideContainer.querySelectorAll(".slide");
-    const navItems = slider.querySelectorAll(".slide_navigation a");
+    const navLinks = slider.querySelectorAll(".slide_navigation a");
 
-    slideContainer.addEventListener("scroll", () => {
-        let closestIndex = 0;
-        let minDiff = Infinity;
+    if (!slides[slideIndex]) return;
 
-        slides.forEach((slide, index) => {
+    // Update active link
+    navLinks.forEach(link => link.classList.remove("active"));
+    navItem.classList.add("active");
+
+    if (window.innerWidth >= 1024) {
+      // Desktop: scroll to slide
+      slideContainer.scrollTo({
+        top: slides[slideIndex].offsetTop,
+        behavior: "smooth"
+      });
+    } else {
+      // Mobile: show only active slide
+      slides.forEach(slide => slide.classList.remove("active"));
+      slides[slideIndex].classList.add("active");
+    }
+  },
+
+  init_slider(slider) {
+    const navLinks = slider.querySelectorAll(".slide_navigation a");
+
+    navLinks.forEach((link, index) => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        this.show_slide(index, link);
+      });
+    });
+
+    // Set first slide active on mobile by default
+    if (window.innerWidth < 1024) {
+      const slides = slider.querySelectorAll(".slide");
+      if (slides.length) {
+        slides.forEach(s => s.classList.remove("active"));
+        slides[0].classList.add("active");
+      }
+    }
+  },
+
+  init() {
+    document.querySelectorAll(this.slider_class).forEach(slider => {
+      this.init_slider(slider);
+
+      // Track scroll position for desktop only
+      const slideContainer = slider.querySelector(".slides");
+      const slides = slideContainer.querySelectorAll(".slide");
+      const navLinks = slider.querySelectorAll(".slide_navigation a");
+
+      if (window.innerWidth >= 1024) {
+        slideContainer.addEventListener("scroll", () => {
+          let closest = 0;
+          let minDiff = Infinity;
+
+          slides.forEach((slide, index) => {
             const diff = Math.abs(slide.offsetTop - slideContainer.scrollTop);
             if (diff < minDiff) {
-                minDiff = diff;
-                closestIndex = index;
+              minDiff = diff;
+              closest = index;
             }
-        });
+          });
 
-        // Update active class in navigation
-        navItems.forEach((item, idx) => {
-            item.classList.toggle("active", idx === closestIndex);
+          navLinks.forEach((link, i) => {
+            link.classList.toggle("active", i === closest);
+          });
         });
+      }
     });
-});
+  }
+};
+
+// Initialize on DOM load
+document.addEventListener("DOMContentLoaded", () => vertical_slider.init());
+
   const testimonialsData = [
     {
       "name": "Himani Thakur",
@@ -284,20 +285,35 @@ const vertical_slider = {
     const bgColor = colors[colorIndex];
 
     const testimonialHTML = `
-   
+
      <div class="testimonial-card flex flex-col justify-between items-center">
-        <div class="t-card-header flex flex-row justify-between items-center gap-2">
-          <div class="avatar" style="background-color: ${bgColor};">${firstLetter}</div>
-          <h4>${test.name}</h4>
-        </div>
+       
         <div class="t-card-body">
-        <p>${truncateWords(test.text, 10)}</p>
+        <p class="t-card-body-text">${truncateWords(test.text, 30)}</p>
         </div>
-        <div class="t-card-footer flex flex-row justify-between items-center">
-         <img src="./resources/google-logo.png" class="google-logo" alt="">
-          <p> ${test.role}</p>
-        </div>
+        
+       
+     <div class ="testimonial-card-data">
+       <div class="t-card-header flex flex-row justify-start items-center gap-1">
+       
+       <div class="user-pic">   
+        <div class="avatar" style="background-color: ${bgColor};">${firstLetter}</div>
+       </div> 
+
+       <div class="user-name">
+           <h5>${test.name}</h5>
+           <p> ${test.role}</p>
       </div>
+
+        </div>
+      
+      </div>
+         
+        </div>
+     
+
+      
+
     
   `;
 
@@ -312,6 +328,7 @@ const vertical_slider = {
 
   if (track) {
     const cards = track.querySelectorAll('.testimonial-card');
+
     let scrollX = 0;
     const speed = 1;
 
@@ -333,8 +350,10 @@ const vertical_slider = {
         const distance = Math.abs(containerCenter - cardCenter);
         if (distance < rect.width / 2) {
           card.classList.add('focused');
+         
         } else {
           card.classList.remove('focused');
+            
         }
       });
     }
