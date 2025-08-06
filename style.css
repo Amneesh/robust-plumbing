@@ -282,6 +282,7 @@ i {
 
   
 }
+
 .page-links a {
   color: var(--color-primary-dark);
 
@@ -309,7 +310,34 @@ i {
 
 .page-links a:hover::after {
   width: 100%;
-}
+} 
+.robust-page-links {
+    position: relative;
+  }
+
+  .page-links {
+    position: absolute;
+    top: 100%; /* Below header */
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    padding: 1rem;
+    z-index: 99;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .page-links.active {
+    display: flex;
+  }
+
+  .robust-logo {
+    cursor: pointer;
+  }
 
 
 /* Hamburger Base Styles */

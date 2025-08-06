@@ -2,6 +2,14 @@
     document.body.classList.add("loaded");
   });
 
+   const logo = document.querySelector('.robust-logo');
+  const nav = document.getElementById('page-links');
+
+  logo.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent link navigation
+    nav.classList.toggle('active');
+  });
+
 const toggleBtn1 = document.getElementById('menu-toggle');
 const menu = document.getElementById('slide-menu');
 
