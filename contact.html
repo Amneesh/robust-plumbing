@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./flex.css" />
   <script src="./animations.js" defer></script>
   <script src="./contact.js" defer></script>
-
+<link rel="icon" href="/resources/robust-logo-img-bg.png" type="image/png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,15 +22,21 @@
 
   <header class="robust-header">
 
-    <div class="robust-page-links">
+
+
+    <div class="robust-page-links flex flex-row  items-center">
+      <div class="robust-logo">
+        <a href="./index.html"><img src="./resources/robust-logo-img-bg.png" alt=""></a>
+      </div>
       <nav id="page-links" class="page-links ">
-        <ul>
+      <ul>
           <li> <a href="#contactFormContainer">CONTACT FORM</a></li>
           <li><a href="#faqs">QUESTIONNAIRES</a></li>
         
         </ul>
       </nav>
     </div>
+
     <div class="header">
       <button id="menu-toggle" class="hamburger">
         <span></span>
@@ -41,7 +47,7 @@
         <ul>
           <li> <a href="./index.html">Home</a></li>
           <li><a href="./events.html">Events</a></li>
-          <li> <a href="./gallery.html">Gallery</a></li>
+          <li> <a href="./portfolio.html">portfolio</a></li>
           <li> <a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -88,11 +94,11 @@
             <p>We’ll be in touch with you
               shortly !</p>
             <p>
-              Meanwhile you can explore our gallery !</p>
+              Meanwhile you can explore our portfolio !</p>
           </div>
 
-          <button class="robust-button-secondary open-gallery go-to-gallery">
-            Watch Gallery
+          <button class="robust-button-secondary open-portfolio go-to-portfolio">
+            Watch portfolio
           </button>
         </div>
         <div id="form-status-fail" style="margin-top: 10px">
@@ -268,25 +274,28 @@
     </nav>
   </div>
 
-  <footer class="footer-section flex flex-col md:flex-row ">
+   <footer class="footer-section flex flex-col md:flex-row ">
    
-    <section class="footer-info ">
+    <section class="footer-info flex flex-col items-center justify-center">
       <h4 class="visually-hidden">Logo and description</h4>
-      <div class="footer-info-content content-robust">
-        <h2>ROBUST</h2>
-        <h2>ROBUST</h2>
+      <div class="footer-logo-image">
+        <img src="./resources/robust-logo-img-bg.png" alt="">
+      </div>
+      <div class="footer-info-content-wrapper">
+        <div class="footer-info-content content-robust">
+          <h2>ROBUST</h2>
+          <h2>ROBUST</h2>
         
-        </div>
-        <div class="footer-info-content content-plumbing">
-        <h2>PLUMBING</h2>
-        <h2>PLUMBING</h2>
-        </div>
+          </div>
+          <div class="footer-info-content content-plumbing">
+          <h2>PLUMBING</h2>
+          <h2>PLUMBING</h2>
+          </div>
+      </div>
      
     </section>
 
-   
-
-     
+  
   <section class="footer-subscribe">
     <h1 >Reach Out <span class="color-accent">Today </span>!</h1>
     <form class="subscribe-form flex flex-col gap-1" onsubmit="handleSubscribe(event)">

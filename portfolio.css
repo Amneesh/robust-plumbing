@@ -1,7 +1,7 @@
- /* Gallery Overlay */
-.gallery-page{
+ /* portfolio Overlay */
+.portfolio-page{
 
-    background: url("./resources/gallery-bg.webp");
+    background: url("./resources/portfolio-bg.webp");
    background-size: cover;
   background-position: center;
   background-repeat: none;
@@ -30,18 +30,23 @@
 }
 
 .profile-image {
+  background-color: var(--primary-white-color);
     float: left;
- 
+ border-radius: 50%;
+ border: 1px solid var(--color-navy);
     display: flex;
+    padding: 10px;
     justify-content: center;
     align-items: center;
     margin-right: 3rem;
+    width: 100px;
+    height: auto;
 }
 
 .profile-image img {
     border-radius: 50%;
     display: block;
-    width: 160px;
+    width: 100%;
 
 }
 
@@ -185,7 +190,7 @@
 
 
 
-/* gallery container */
+/* portfolio container */
 
 
 .img-grid {
@@ -297,6 +302,6 @@
 }
 
 
-.gallery-join-us{
+.portfolio-join-us{
   margin: 5rem 0rem;
 }

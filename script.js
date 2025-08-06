@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".go-to-gallery").forEach(button => {
+  document.querySelectorAll(".go-to-portfolio").forEach(button => {
     button.addEventListener("click", () => {
-      window.location.href = "/gallery.html";
+      window.location.href = "/portfolio.html";
     });
   });
 });
@@ -231,10 +231,17 @@ document.addEventListener("DOMContentLoaded", () => vertical_slider.init());
     }
   ]
 
-  const colors = [
-    '#6c5ce7', '#00b894', '#d63031', '#0984e3', '#fd79a8',
-    '#e17055', '#00cec9', '#2d3436'
-  ];
+ const colors = [
+  '#0000FF',
+  '#ADD8E6',
+  '#00008B',
+  '#002347',
+  '#e5eef7',
+  '#ccddef',
+  '#FF0000',
+  '#FFCCCB',
+  '#8B0000'
+];
 
   document.addEventListener("DOMContentLoaded", () => {
     function counter(id, start, end, duration) {

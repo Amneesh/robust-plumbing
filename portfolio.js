@@ -1,16 +1,16 @@
-async function fetchAndShowGallery() {
+async function fetchAndShowportfolio() {
   try {
     // Step 1: Get media list
-    const res = await fetch(`https://aura-snap-backend.vercel.app/api/media?bucket=${encodeURIComponent('fanbhangrede')}`);
+    const res = await fetch(`https://aura-snap-backend.vercel.app/api/media?bucket=${encodeURIComponent('robust-plumbing')}`);
     const files = await res.json();
 
-    // Select gallery container
-    const galleryContainer = document.getElementById("imageGrid");
-    if (!galleryContainer) {
-      console.error('No element with class "gallery-grid" found');
+    // Select portfolio container
+    const portfolioContainer = document.getElementById("imageGrid");
+    if (!portfolioContainer) {
+      console.error('No element with class "portfolio-grid" found');
       return;
     }
-    galleryContainer.innerHTML = ''; // Clear existing images
+    portfolioContainer.innerHTML = ''; // Clear existing images
 
     // Step 2: For each file, fetch real signed URL
     const mediaWithUrls = await Promise.all(
@@ -32,7 +32,7 @@ mediaWithUrls.forEach((item) => {
   gridItem.classList.add("grid-item");
 
   const anchor = document.createElement("a");
-  anchor.href = 'https://www.instagram.com/rpd_events?igsh=MWp5dzlpbWF5NzBuag==';
+  anchor.href = 'https://www.instagram.com/robustplumbing?igsh=MWliNnE5czNxYmF1eA==';
   anchor.target = "_blank";
 
   const img = document.createElement("img");
@@ -41,16 +41,16 @@ mediaWithUrls.forEach((item) => {
 
   anchor.appendChild(img);
   gridItem.appendChild(anchor);
-  galleryContainer.appendChild(gridItem);
+  portfolioContainer.appendChild(gridItem);
 });
 
 
   } catch (error) {
-    console.error('Error fetching gallery:', error);
+    console.error('Error fetching portfolio:', error);
   }
 }
 
 // Call this function whenever you want to load images, e.g., after page load or button click
 window.addEventListener('load', () => {
-  fetchAndShowGallery();
+  fetchAndShowportfolio();
 });

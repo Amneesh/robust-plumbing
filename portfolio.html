@@ -6,26 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Robust Plumbing</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./gallery.css">
+  <link rel="stylesheet" href="./portfolio.css">
   <link rel="stylesheet" href="./flex.css" />
-
+<link rel="icon" href="/resources/robust-logo-img-bg.png" type="image/png" />
   <script src="./animations.js" defer></script>
 
- <script src="./gallery.js" defer></script>
+ <script src="./portfolio.js" defer></script>
 
 
   <script src="./script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
-<body class="gallery-page">
+<body class="portfolio-page">
 
 
    <header class="robust-header">
-
-    <div class="robust-logo">
-      <a href="./index.html"><img  src="./resources/robust-logo.png" alt="" /></a>
-
+ <div class="robust-page-links flex flex-row  items-center">
+      <div class="robust-logo">
+        <a href="./index.html"><img src="./resources/robust-logo-img-bg.png" alt=""></a>
+      </div>
+      <nav id="page-links" class="page-links ">
+      <ul>
+          <li> <a href="https://www.instagram.com/robustplumbing?igsh=MWliNnE5czNxYmF1eA==" target="_blank">Instagram</a></li>
+          <li><a href="#imageGrid">PORTFOLIO</a></li>
+        
+        </ul>
+      </nav>
     </div>
     <div class="header">
       <button id="menu-toggle" class="hamburger">
@@ -37,15 +44,15 @@
         <ul>
           <li> <a href="./index.html">Home</a></li>
           <li><a href="./events.html">Events</a></li>
-          <li> <a href="./gallery.html">Gallery</a></li>
+          <li> <a href="./portfolio.html">portfolio</a></li>
           <li> <a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <section class="page-header-wrapper gallery-page flex justify-center items-center animate-slide-down " data-delay="0.2s">
-      <h1 class="visually-hidden">GALLERY</h1>
+    <section class="page-header-wrapper portfolio-page flex justify-center items-center animate-slide-down " data-delay="0.2s">
+      <h1 class="visually-hidden">portfolio</h1>
     </section>
 
     <section class="profile-container flex ">
@@ -55,14 +62,14 @@
 
         <div class="profile-image">
 
-          <img src="./resources/robust-insta-logo.jpg"
+          <img src="./resources/robust-logo-bg-white.png"
             alt="">
 
         </div>
 
-        <div class="profile-user-settings flex flex-row flex-wrap gap-1 items-center">
+        <div class="profile-user-settings flex flex-row flex-wrap gap-1 items-start">
           <h3 class="profile-user-name">Robust Plumbing</h3>
-<button class="robust-button-secondary" onclick='window.open("https://www.instagram.com/robust_events?igsh=MWp5dzlpbWF5NzBuag==", "_blank")'>
+<button class="robust-button-primary" onclick='window.open("https://www.instagram.com/robustplumbing?igsh=MWliNnE5czNxYmF1eA==", "_blank")'>
   FOLLOW +
 </button>
         </div>
@@ -79,9 +86,11 @@
 
         <div class="profile-bio">
 
-          <p> We do a numerous amount of things like: Live DJ, DJ Setup, House LED decor, live sound, bhangra, etc.
-Contact if you need any service at:
-778-861-0450</p>
+          <h3> Robust Plumbing & Drain Services</h3>
+<p>💧24/7 Availability — Plumbing Repairs & Emergencies</p>
+<p>🔧20+ Years Experience — Fully Insured</p>
+<p>📍Serving Vancouver to Chilliwack</p>
+<p>👇Get A Free Estimate Today</p>
 
         </div>
 
@@ -89,13 +98,13 @@ Contact if you need any service at:
 
     </section>
 
-    <section class="gallery-container">
-      <h1 class="visually-hidden"> Gallery</h1>
+    <section class="portfolio-container">
+      <h1 class="visually-hidden"> portfolio</h1>
       <div class="img-grid" id="imageGrid"></div>
     </section>
 
 
-    <section class="join-us shake-effect gallery-join-us">
+    <section class="join-us shake-effect portfolio-join-us">
       <div class="join-us-container flex flex-col items-center justify-center gap-1">
         <h1><span class="color-accent">Seen enough? </span>Now it’s your turn to make us work ! </h1>
         <button class="robust-button-secondary go-to-contact">GET A QUOTE</button>
@@ -125,19 +134,24 @@ Contact if you need any service at:
   </div>
 
 
-  <footer class="footer-section flex flex-col md:flex-row ">
+ <footer class="footer-section flex flex-col md:flex-row ">
    
-    <section class="footer-info ">
+    <section class="footer-info flex flex-col items-center justify-center">
       <h4 class="visually-hidden">Logo and description</h4>
-      <div class="footer-info-content content-robust">
-        <h2>ROBUST</h2>
-        <h2>ROBUST</h2>
+      <div class="footer-logo-image">
+        <img src="./resources/robust-logo-img-bg.png" alt="">
+      </div>
+      <div class="footer-info-content-wrapper">
+        <div class="footer-info-content content-robust">
+          <h2>ROBUST</h2>
+          <h2>ROBUST</h2>
         
-        </div>
-        <div class="footer-info-content content-plumbing">
-        <h2>PLUMBING</h2>
-        <h2>PLUMBING</h2>
-        </div>
+          </div>
+          <div class="footer-info-content content-plumbing">
+          <h2>PLUMBING</h2>
+          <h2>PLUMBING</h2>
+          </div>
+      </div>
      
     </section>
 
@@ -161,7 +175,6 @@ Contact if you need any service at:
   </section>
 
   </footer>
-
 
 </body>
 
