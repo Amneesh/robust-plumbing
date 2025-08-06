@@ -8,12 +8,12 @@
   justify-content: space-between;
   width: 100vw;
   align-items: center;
-  background-color: var(--color-primary-black);
+  background-color: var(--color-secondary);
   color: var(--color-text);
 
 }
 
-.contact-section::before {
+/* .contact-section::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -24,7 +24,7 @@
   z-index: 0;
   opacity: 0.3;
   filter: brightness(0.3) contrast(1.2);
-}
+} */
 .contact-info {
   position: relative;
   z-index: 1;
@@ -43,15 +43,15 @@
   width: 100%;
   max-width: 280px;
   i {
-    width: 40px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    background-color: var(--color-accent-dark);
+    height: 50px;
+    background-color: var(--color-navy);
     padding: 10px;
     border-radius: 50%;
-    color: var(--primary-black-color) !important;
+    color: var(--primary-white-color) !important;
   }
   span{
     font-size:15px;
@@ -62,16 +62,16 @@ a{
   text-decoration: none;
 }
   i {
-    width: 40px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 50px;
    
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     padding: 5px;
     border-radius: 50%;
-    color: var(--primary-white-color);
+    color: var(--primary-black-color);
   }
 }
 
@@ -79,14 +79,14 @@ a{
       width: 100%;
     min-height: 550px;
   max-width: 500px;
+
   position: relative;
   z-index: 1;
   min-width: 200px;
-  /* border: 2px dotted var(--color-accent); */
   padding: 2rem;
-  border-radius: 15px;
+
   background-color: var(--color-surface);
-  /* background: linear-gradient(8deg,#ff00ff3c 0%, var(--color-surface) 63%); */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   backdrop-filter: blur(50px);
 }
 .contact-form label {
@@ -168,7 +168,7 @@ form textarea:focus {
   }
 }
 
-.faq-section::before {
+/* .faq-section::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -180,7 +180,7 @@ form textarea:focus {
   z-index: 0;
   opacity: 0.3;
   filter: brightness(0.3) contrast(1.2);
-}
+} */
 
 .faq-container {
   position: relative;
@@ -190,12 +190,26 @@ form textarea:focus {
   flex-direction: column;
   gap: 15px;
   h1 {
-    padding: 2rem 0rem;
+    padding: 2rem 0rem 0rem;
   }
+}
+.faq-wrapper{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.faq-image{
+  max-width: 500px;
+  min-width: 200px;
+
+
+}
+.faq-card-container{
+  width: 100%;
+  max-width: 800px;
 }
 
 .faq-card {
-  background: var(--primary-white-color);
+
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   overflow: hidden;
@@ -206,11 +220,11 @@ form textarea:focus {
   width: 100%;
   border: none;
   padding: 18px 24px;
-  background-color: var(--primary-white-color);
+  background-color: var(--color-primary-dark);
   font-size: 1.05rem;
   font-weight: 600;
   text-align: left;
-  color: var(--primary-black-color);
+  color: var(--primary-white-color);
   cursor: pointer;
   position: relative;
   display: flex;
@@ -220,7 +234,7 @@ form textarea:focus {
 }
 
 .faq-toggle:hover {
-  background-color: var(--primary-white-color);
+  background-color: var(--color-navy);
 }
 
 .faq-toggle .icon {
@@ -237,7 +251,7 @@ form textarea:focus {
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.3s ease;
   padding: 0 24px;
-  background-color: var(--primary-white-color);
+  background-color: var(--color-secondary-light);
 }
 
 .faq-card.active .faq-content {
@@ -247,7 +261,7 @@ form textarea:focus {
 
 .faq-content p {
   margin: 0;
-  font-size: 1rem;
-  color: #4b5563;
-  line-height: 1.6;
+  
+  color: var(--color-text);
+
 }

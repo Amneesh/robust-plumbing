@@ -124,103 +124,44 @@ Contact if you need any service at:
     </nav>
   </div>
 
-  <footer class="footer-section">
 
-    <section class="subscription-box">
-      <div class="sub-box flex flex-row column-gap-25 items-center justify-between">
-        <div class="sub-box-title" id="subBoxTitle">
-          <h4>Join Us !</h4>
-        </div>
-        <div class="sub-box-content" id="subBoxContent">
-
-          <form class="sub-input-container" onsubmit="handleSubscribe(event)">
-            <input type="email" class="subscribe-input" placeholder="Enter your email" required />
-            <button type="submit" class="subscribe-button">
-              <i class="fa-solid fa-paper-plane"></i>
-            </button>
-          </form>
-
-
-        </div>
-        <div class="sub-success"  id="subSuccess"> <h3 class="color-accent">Thank you</h3> <h4>You have been subscribe to Robust Plumbing !</h4></div>
-         <div class="sub-fail" id="subFail"> <p class="color-accent">Oops !</p> <p>Please try again after refreshing the page</p></div>
-      </div>
-
-    </section>
-    <section class="footer-info">
+  <footer class="footer-section flex flex-col md:flex-row ">
+   
+    <section class="footer-info ">
       <h4 class="visually-hidden">Logo and description</h4>
-      <a class="footer-logo" href="#top">
-        <img src="./resources/robust-logo.png" alt="robust logo" />
-      </a>
-      <div class="footer-description">
-        <p>robust </p>
-      </div>
+      <div class="footer-info-content content-robust">
+        <h2>ROBUST</h2>
+        <h2>ROBUST</h2>
+        
+        </div>
+        <div class="footer-info-content content-plumbing">
+        <h2>PLUMBING</h2>
+        <h2>PLUMBING</h2>
+        </div>
+     
     </section>
 
-    <section class="footer-quick-links footer-column">
-      <h4>Quick Links</h4>
-      <div class="quick-links">
-        <ul>
-          <li><a href="./index.html#whoWeAre">About Us</a></li>
-          <li><a href="./index.html#section">Services</a></li>
-          <li><a href="./index.html#googleReviews">Client Reviews</a></li>
-          <li><a href="./gallery.html">Gallery</a></li>
-        </ul>
-      </div>
-    </section>
+  
+  <section class="footer-subscribe">
+    <h1 >Reach Out <span class="color-accent">Today </span>!</h1>
+    <form class="subscribe-form flex flex-col gap-1" onsubmit="handleSubscribe(event)">
+      <p>Skip the wait — tell us what you need!      </p>
+    
+      <input type="email" id="subEmail" class="subscribe-input" name="email" placeholder="Enter your email" required />
+      <button class="robust-button-primary" type="submit" >Subscribe</button>
+    </form>
+    <div class="sub-success" id="subSuccess">
+      <h3 class="color-accent">Thank you</h3>
+      <h4>You have been subscribe to Robust Plumbing !</h4>
+    </div>
+    <div class="sub-fail" id="subFail">
+      <p class="color-accent">Oops !</p>
+      <p>Please try again after refreshing the page</p>
+    </div>
+  </section>
 
-    <section class="footer-contact-us footer-column">
-      <h4>Contact us</h4>
-      <div class="footer-contact">
-        <ul>
-          <li>
-            <a href="tel:+17788610450" class="info-item-web-content flex flex-row column-gap-1">
-              <i class="fa fa-phone"></i>
-              <p>+1 (778) 861-0450</p>
-            </a>
-          </li>
-          <li>
-            <a href="tel:+17787980305" class="info-item-web-content flex flex-row column-gap-1">
-              <i class="fa fa-phone"></i>
-              <p>+1 (778) 798-0305</p>
-            </a>
-          </li>
-          <li>
-            <a href="mailto:robust.surrey@gmail.com" class="info-item-web-content flex flex-row column-gap-1">
-              <i class="fa fa-envelope"></i>
-              <p>robust.surrey@gmail.com</p>
-            </a>
-          </li>
-          <li>
-            <a href="https://maps.app.goo.gl/sQJMdmcLzcGtsXuEA" target="_blank"
-              class="info-item-web-content flex flex-row col-gap-1 column-gap-1">
-              <i class="fa fa-location-dot"></i>
-              <p>8065 D 130 St Surrey, BC V3W 4G1</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="footer-social-media footer-column">
-      <h4>Social media</h4>
-      <div class="footer-social-media-icons">
-        <a href="https://wa.me/12369715969?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
-          target="_blank">
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="https://www.facebook.com/robust0450robust/" target="_blank">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/robust.sound/" target="_blank">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.instagram.com/robust_bhangra/" target="_blank">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-      </div>
-    </section>
   </footer>
+
 
 </body>
 

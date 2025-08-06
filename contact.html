@@ -22,9 +22,14 @@
 
   <header class="robust-header">
 
-    <div class="robust-logo">
-      <a href="./index.html"><img src="./resources/robust-logo.png" alt="" /></a>
-
+    <div class="robust-page-links">
+      <nav id="page-links" class="page-links ">
+        <ul>
+          <li> <a href="#contactFormContainer">CONTACT FORM</a></li>
+          <li><a href="#faqs">QUESTIONNAIRES</a></li>
+        
+        </ul>
+      </nav>
     </div>
     <div class="header">
       <button id="menu-toggle" class="hamburger">
@@ -52,16 +57,57 @@
 
       <iframe class="g-map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5219.399141656212!2d-122.86508812321976!3d49.149328280187824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d950f42214ab%3A0xe6f5832faf826c08!2srobust%20aound!5e0!3m2!1sen!2sca!4v1753905172039!5m2!1sen!2sca"
-        style="border: 0;filter: invert(100%) hue-rotate(80deg);" style="border:0;" allowfullscreen="" loading="lazy"
+        style="border: 0;filter: invert(0%) hue-rotate(10deg);" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
     <section
-      class="contact-section flex flex flex-col md:flex-row sm:justify-around items-start row-gap-1 sm:column-gap-2 items-center">
+      class="contact-section flex flex flex-col md:flex-row  sm:justify-around items-start row-gap-1 sm:column-gap-2 items-center">
+      <div class="contact-form shake-effect flex flex-col gap-2" id="contactFormContainer">
+        <div class="contact-header flex flex-col gap-25">
+          <h2 id="contactFormHeading">Get in touch </h2>
+          <h2 id="contactFormSuccessHeading">Thank You </h2>
+          <div class="underline-left"></div>
+        </div>
+        <form id="contactForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+
+          <button type="submit" class="robust-button-secondary">Send Message</button>
+        </form>
+        <div id="form-status-success" class="flex flex-col gap-2">
+          <div class="text-message">
+            <p>
+              Thank you for reaching out.</p>
+            <p>We’ll be in touch with you
+              shortly !</p>
+            <p>
+              Meanwhile you can explore our gallery !</p>
+          </div>
+
+          <button class="robust-button-secondary open-gallery go-to-gallery">
+            Watch Gallery
+          </button>
+        </div>
+        <div id="form-status-fail" style="margin-top: 10px">
+          <p>
+            <i class="fa fa-warning"></i>
+            Oops! Something went wrong. Please try again later or
+            contact support if the issue persists
+          </p>
+        </div>
+      </div>
       <div class="contact-info flex flex-col row-gap-2">
-        <h1><span class="color-accent">Let’s Make</span> Your Event Unforgettable</h1>
+        <h1>Contact Our<span class="color-accent"> Plumbing </span>Experts</h1>
         <h5>
-          We help make your events fun, stress-free, and memorable. Just tell us what you need — we’ll handle the rest!
+          Need urgent plumbing help? We’re ready 24/7 — call or message now!
+
         </h5>
 
 
@@ -75,8 +121,8 @@
               <h5>LET'S TALK</h5>
               <a href="tel:+17788610450" class="flex flex-col">+1 (778) 861-0450 <span class="color-primary"> - Kulvir
                   singh</span></a>
-              <a href="tel:+17787980305" class="flex flex-col">+1 (778) 798-0305 <span class="color-primary"> -
-                  Parminder Singh</span></a>
+              <!-- <a href="tel:+17787980305" class="flex flex-col">+1 (778) 798-0305 <span class="color-primary"> -
+                  Parminder Singh</span></a> -->
 
             </div>
           </div>
@@ -138,99 +184,63 @@
         </div>
       </div>
 
-      <div class="contact-form shake-effect flex flex-col gap-2" id="contactFormContainer">
-        <div class="contact-header flex flex-col gap-25">
-          <h2 id="contactFormHeading">Get in touch </h2>
-          <h2 id="contactFormSuccessHeading">Thank You </h2>
-          <div class="underline-left"></div>
-        </div>
-        <form id="contactForm">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your full name" required />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
-
-          <button type="submit" class="robust-button-secondary">Send Message</button>
-        </form>
-        <div id="form-status-success" class="flex flex-col gap-2">
-          <div class="text-message">
-            <p>
-              Thank you for reaching out.</p>
-            <p>We’ll be in touch with you
-              shortly !</p>
-            <p>
-              Meanwhile you can explore our gallery !</p>
-          </div>
-
-          <button class="robust-button-secondary open-gallery go-to-gallery">
-            Watch Gallery
-          </button>
-        </div>
-        <div id="form-status-fail" style="margin-top: 10px">
-          <p>
-            <i class="fa fa-warning"></i>
-            Oops! Something went wrong. Please try again later or
-            contact support if the issue persists
-          </p>
-        </div>
-      </div>
+    
     </section>
-    <section class="faq-section">
-      <h1 class="visually-hidden">Frequently Asked Questions</h1>
 
-      <div class="faq-container">
-        <h1><span class="color-accent">Questions ? </span> We’ve Got Answers!</h1>
-
-        <div class="faq-card animate-slide-down">
-          <button class="faq-toggle">How early should I book?<span class="icon">+</span></button>
-          <div class="faq-content">
-            <p>We recommend booking at least 1 to 2 months in advance to ensure availability, especially during peak
-              event seasons. However, we do accommodate last-minute bookings based on availability.</p>
+    <section class="faq-section flex flex-col gap-1 " id="faqs">
+    
+      <h1><span class="color-accent">Questions ? </span> We’ve Got Answers!</h1>
+      <div class="underline-left"></div>
+      <div class="faq-wrapper flex flex flex-col-reverse lg:flex-row  sm:justify-center items-star sm:column-gap-2 items-end ">
+        <div class="faq-container flex flex-col gap-2">
+       
+          <div class="faq-card-container flex flex-col gap-1">
+            <div class="faq-card animate-slide-down">
+              <button class="faq-toggle">How early should I book?<span class="icon">+</span></button>
+              <div class="faq-content">
+                <p>We recommend booking at least 1 to 2 months in advance to ensure availability, especially during peak
+                  event seasons. However, we do accommodate last-minute bookings based on availability.</p>
+              </div>
+            </div>
+            <div class="faq-card animate-slide-down">
+              <button class="faq-toggle">Do you provide on-site support?<span class="icon">+</span></button>
+              <div class="faq-content">
+                <p>Yes, our team is present on-site throughout your event to handle setup, technical support, and any
+                  last-minute adjustments to ensure everything runs smoothly.</p>
+              </div>
+            </div>
+            <div class="faq-card animate-slide-down">
+              <button class="faq-toggle">Can I customize a package?<span class="icon">+</span></button>
+              <div class="faq-content">
+                <p>Absolutely! All our packages are fully customizable. You can mix and match services, choose your
+                  preferred equipment, and personalize the experience to match your event’s theme and budget.</p>
+              </div>
+            </div>
+            <div class="faq-card animate-slide-down">
+              <button class="faq-toggle">What areas do you serve?<span class="icon">+</span></button>
+              <div class="faq-content">
+                <p>We primarily serve the Greater Vancouver Area and surrounding regions. For events outside this area, feel
+                  free to contact us—we may still be able to accommodate.</p>
+              </div>
+            </div>
+            <div class="faq-card animate-slide-down">
+              <button class="faq-toggle">Is a deposit required?<span class="icon">+</span></button>
+              <div class="faq-content">
+                <p>Yes, a deposit is required to confirm your booking. The remaining balance can be paid closer to the event
+                  date. Specific payment terms will be shared during the booking process.</p>
+              </div>
+            </div>
+            <div class="faq-card animate-slide-down">
+              <button class="faq-toggle">What if I need to cancel or reschedule?<span class="icon">+</span></button>
+              <div class="faq-content">
+                <p>You can cancel or reschedule up to 7 days before the event for a partial refund. For last-minute changes,
+                  please reach out to our team and we'll do our best to assist you.</p>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="faq-card animate-slide-down">
-          <button class="faq-toggle">Do you provide on-site support?<span class="icon">+</span></button>
-          <div class="faq-content">
-            <p>Yes, our team is present on-site throughout your event to handle setup, technical support, and any
-              last-minute adjustments to ensure everything runs smoothly.</p>
-          </div>
-        </div>
-
-        <div class="faq-card animate-slide-down">
-          <button class="faq-toggle">Can I customize a package?<span class="icon">+</span></button>
-          <div class="faq-content">
-            <p>Absolutely! All our packages are fully customizable. You can mix and match services, choose your
-              preferred equipment, and personalize the experience to match your event’s theme and budget.</p>
-          </div>
-        </div>
-
-        <div class="faq-card animate-slide-down">
-          <button class="faq-toggle">What areas do you serve?<span class="icon">+</span></button>
-          <div class="faq-content">
-            <p>We primarily serve the Greater Vancouver Area and surrounding regions. For events outside this area, feel
-              free to contact us—we may still be able to accommodate.</p>
-          </div>
-        </div>
-
-        <div class="faq-card animate-slide-down">
-          <button class="faq-toggle">Is a deposit required?<span class="icon">+</span></button>
-          <div class="faq-content">
-            <p>Yes, a deposit is required to confirm your booking. The remaining balance can be paid closer to the event
-              date. Specific payment terms will be shared during the booking process.</p>
-          </div>
-        </div>
-
-        <div class="faq-card animate-slide-down">
-          <button class="faq-toggle">What if I need to cancel or reschedule?<span class="icon">+</span></button>
-          <div class="faq-content">
-            <p>You can cancel or reschedule up to 7 days before the event for a partial refund. For last-minute changes,
-              please reach out to our team and we'll do our best to assist you.</p>
-          </div>
+        <div class="faq-image">
+          <img src="./resources/plumber-faq.png" alt="">
         </div>
       </div>
     </section>
@@ -258,102 +268,43 @@
     </nav>
   </div>
 
-  <footer class="footer-section">
-
-    <section class="subscription-box">
-      <div class="sub-box flex flex-row column-gap-25 items-center justify-between">
-        <div class="sub-box-title" id="subBoxTitle">
-          <h4>Join Us !</h4>
-        </div>
-        <div class="sub-box-content" id="subBoxContent">
-
-          <form class="sub-input-container" onsubmit="handleSubscribe(event)">
-            <input type="email" class="subscribe-input" placeholder="Enter your email" required />
-            <button type="submit" class="subscribe-button">
-              <i class="fa-solid fa-paper-plane"></i>
-            </button>
-          </form>
-
-
-        </div>
-        <div class="sub-success"  id="subSuccess"> <h3 class="color-accent">Thank you</h3> <h4>You have been subscribe to Robust Plumbing !</h4></div>
-         <div class="sub-fail" id="subFail"> <p class="color-accent">Oops !</p> <p>Please try again after refreshing the page</p></div>
-      </div>
-
-    </section>
-    <section class="footer-info">
+  <footer class="footer-section flex flex-col md:flex-row ">
+   
+    <section class="footer-info ">
       <h4 class="visually-hidden">Logo and description</h4>
-      <a class="footer-logo" href="#top">
-        <img src="./resources/robust-logo.png" alt="robust logo" />
-      </a>
-      <div class="footer-description">
-        <p>robust </p>
-      </div>
+      <div class="footer-info-content content-robust">
+        <h2>ROBUST</h2>
+        <h2>ROBUST</h2>
+        
+        </div>
+        <div class="footer-info-content content-plumbing">
+        <h2>PLUMBING</h2>
+        <h2>PLUMBING</h2>
+        </div>
+     
     </section>
 
-    <section class="footer-quick-links footer-column">
-      <h4>Quick Links</h4>
-      <div class="quick-links">
-        <ul>
-          <li><a href="./index.html#whoWeAre">About Us</a></li>
-          <li><a href="./index.html#section">Services</a></li>
-          <li><a href="./index.html#googleReviews">Client Reviews</a></li>
-          <li><a href="./gallery.html">Gallery</a></li>
-        </ul>
-      </div>
-    </section>
+   
 
-    <section class="footer-contact-us footer-column">
-      <h4>Contact us</h4>
-      <div class="footer-contact">
-        <ul>
-          <li>
-            <a href="tel:+17788610450" class="info-item-web-content flex flex-row column-gap-1">
-              <i class="fa fa-phone"></i>
-              <p>+1 (778) 861-0450</p>
-            </a>
-          </li>
-          <li>
-            <a href="tel:+17787980305" class="info-item-web-content flex flex-row column-gap-1">
-              <i class="fa fa-phone"></i>
-              <p>+1 (778) 798-0305</p>
-            </a>
-          </li>
-          <li>
-            <a href="mailto:robust.surrey@gmail.com" class="info-item-web-content flex flex-row column-gap-1">
-              <i class="fa fa-envelope"></i>
-              <p>robust.surrey@gmail.com</p>
-            </a>
-          </li>
-          <li>
-            <a href="https://maps.app.goo.gl/sQJMdmcLzcGtsXuEA" target="_blank"
-              class="info-item-web-content flex flex-row col-gap-1 column-gap-1">
-              <i class="fa fa-location-dot"></i>
-              <p>8065 D 130 St Surrey, BC V3W 4G1</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+     
+  <section class="footer-subscribe">
+    <h1 >Reach Out <span class="color-accent">Today </span>!</h1>
+    <form class="subscribe-form flex flex-col gap-1" onsubmit="handleSubscribe(event)">
+      <p>Skip the wait — tell us what you need!      </p>
+    
+      <input type="email" id="subEmail" class="subscribe-input" name="email" placeholder="Enter your email" required />
+      <button class="robust-button-primary" type="submit" >Subscribe</button>
+    </form>
+    <div class="sub-success" id="subSuccess">
+      <h3 class="color-accent">Thank you</h3>
+      <h4>You have been subscribe to Robust Plumbing !</h4>
+    </div>
+    <div class="sub-fail" id="subFail">
+      <p class="color-accent">Oops !</p>
+      <p>Please try again after refreshing the page</p>
+    </div>
+  </section>
 
-    <section class="footer-social-media footer-column">
-      <h4>Social media</h4>
-      <div class="footer-social-media-icons">
-        <a href="https://wa.me/12369715969?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
-          target="_blank">
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="https://www.facebook.com/robust0450robust/" target="_blank">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/robust.sound/" target="_blank">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.instagram.com/robust_bhangra/" target="_blank">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-      </div>
-    </section>
   </footer>
 
 </body>
