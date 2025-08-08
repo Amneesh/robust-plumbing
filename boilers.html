@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robust Plumbing</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="/resources/robust-logo-img-bg.png" type="image/png" />
+  <link rel="stylesheet" href="./flex.css" />
+  <link rel="stylesheet" href="./boilers.css" />
+  <script src="./animations.js" defer></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <script src="./script.js" defer></script>
+  <script src="./boilers.js" defer></script>
+
+</head>
+
+<body class="event-page">
+  <header class="robust-header">
+
+    <div class="robust-page-links flex flex-row  items-center">
+      <div class="robust-logo">
+        <a href="./index.html"><img src="./resources/robust-logo-img-bg.png" alt=""></a>
+      </div>
+      <nav id="page-links " class="page-links ">
+        <ul class="flex flex-col gap-2">
+
+          <li> <a href="#whoWeAre">ABOUT US</a></li>
+          <li><a href="#features">FEATURES</a></li>
+          <li> <a href="#services">SERVICES</a></li>
+          <li> <a href="#googleReviews">TESTIMONIALS</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header">
+      <button id="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="slide-menu" class="nav-links">
+        <ul>
+          <li> <a href="./index.html">Home</a></li>
+          <li><a href="./boilers.html">boilers</a></li>
+          <li> <a href="./portfolio.html">portfolio</a></li>
+          <li> <a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- <section class="page-header-wrapper events-page flex justify-center items-center animate-slide-down "
+      data-delay="0.2s">
+      <h1 class="visually-hidden">EVENTS</h1>
+    </section> -->
+    <section class="boiler-main-container">
+
+      <h1 class="visually-hidden">Boilers Services by Robust Plumbing</h1>
+      <div class="boiler-main-wrapper flex flex-row flex-wrap  gap-1 ">
+        <div class="boiler-text-wrapper flex flex-col gap-2 justify-center items-start ">
+          <div class="boiler-text-heading">
+            <h1>
+              <span class="color-accent">Boilers</span> by Robust !
+            </h1>
+            <div class="underline-left"></div>
+          </div>
+          <p>At Robust Plumbing, we understand how essential a reliable boiler system is for your home or business.
+            Whether you need a new boiler installation, routine maintenance, or emergency repairs, our expert
+            technicians are here to provide fast, efficient, and affordable boiler services you can count on.</p>
+          <button class="robust-button-primary">GET A QUOTE</button>
+        </div>
+        <div class="boiler-image-wrapper animate-slide-left"><img src="./resources/robust_van.png" alt="" srcset="">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="boiler-services-container flex flex-col items-center justify-center gap-2">
+      <h1><span class="color-accent">Boiler Services</span> we offer</h1>
+      <div class="boiler-services-wrapper flex flex-col md:flex-row gap-1 items-center justify-evenly">
+        <div class="boiler-services-image">
+          <img src="./resources/services/drain-cleanage.png" alt="">
+        </div>
+        <div class="boiler-services-content flex flex-col gap-1">
+
+          <div class="boiler-service-card side-left">
+            <div class="boiler-service-card-header flex flex-row gap-1 items-center">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <h4>Boiler Installation</h4>
+            </div>
+            <p>Expert installation of combi, system, and conventional boilers for safe, efficient heating.</p>
+          </div>
+
+          <div class="boiler-service-card side-right">
+            <div class="boiler-service-card-header flex flex-row gap-1 items-center">
+              <i class="fa-solid fa-wrench"></i>
+              <h4>Boiler Repair</h4>
+            </div>
+            <p>Fast, reliable repairs to restore your boiler’s performance and prevent downtime.</p>
+          </div>
+
+          <div class="boiler-service-card side-left">
+            <div class="boiler-service-card-header flex flex-row gap-1 items-center">
+              <i class="fa-solid fa-gear"></i>
+              <h4>Boiler Maintenance</h4>
+            </div>
+            <p>Comprehensive inspections and tune-ups to keep your boiler running efficiently year-round.</p>
+          </div>
+
+          <div class="boiler-service-card side-right">
+            <div class="boiler-service-card-header flex flex-row gap-1 items-center">
+              <i class="fa-solid fa-recycle"></i>
+              <h4>Boiler Replacement</h4>
+            </div>
+            <p>Hassle-free replacement with modern, energy-efficient boiler systems.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="boiler-catalog flex flex-col gap-2" id="boilerCatalog">
+      <div class="boiler-catalog-container-header flex flex-row flex-wrap justify-center md:justify-between">
+        <h1>EXPLORE THE <span class="color-accent">ITEMS</span></h1>
+        <div class="boiler-carousel-buttons flex flex-row gap-3">
+          <div class="swiper-button-next"> </div>
+            <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div class="boiler-catalog-carousel" id="boilerCatalogCarousel">
+        <div class="boiler-catalog-container flex flex-row flex-wrap gap-2 items-center justify-center" id="boilerCatalogContainer">
+          <!-- <div class="boiler-catalog-card flex flex-col gap-1">
+            <div class="boiler-catalog-card-image">
+              <img src="./resources/services/kitchen-plumbing.png" alt="">
+            </div>
+            <div class="boiler-catalog-content flex flex-col gap-50">
+              <div class="boiler-catalog-header flex flex-row gap-1 items-center justify-between">
+                <h5>Lorem Ipsum</h5>
+                <p>$255,000</p>
+              </div>
+              <div class="boiler-catalog-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, impedit.</p>
+              </div>
+              <div class="boiler-catalog-footer">
+                <button class="robust-button-secondary">BUY NOW</button>
+              </div>
+            </div>
+          </div>
+          <div class="boiler-catalog-card flex flex-col gap-1">
+            <div class="boiler-catalog-card-image">
+              <img src="./resources/services/kitchen-plumbing.png" alt="">
+            </div>
+            <div class="boiler-catalog-content flex flex-col gap-50">
+              <div class="boiler-catalog-header flex flex-row gap-1 items-center justify-between">
+                <h5>Lorem Ipsum</h5>
+                <p>$255,000</p>
+              </div>
+              <div class="boiler-catalog-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, impedit.</p>
+              </div>
+              <div class="boiler-catalog-footer">
+                <button class="robust-button-secondary">BUY NOW</button>
+              </div>
+            </div>
+          </div>
+          <div class="boiler-catalog-card flex flex-col gap-1">
+            <div class="boiler-catalog-card-image">
+              <img src="./resources/services/kitchen-plumbing.png" alt="">
+            </div>
+            <div class="boiler-catalog-content flex flex-col gap-50">
+              <div class="boiler-catalog-header flex flex-row gap-1 items-center justify-between">
+                <h5>Lorem Ipsum</h5>
+                <p>$255,000</p>
+              </div>
+              <div class="boiler-catalog-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, impedit.</p>
+              </div>
+              <div class="boiler-catalog-footer">
+                <button class="robust-button-secondary">BUY NOW</button>
+              </div>
+            </div>
+          </div> -->
+           <div id="serviceDetails" class="service-details">
+      <div class="swiper-container" id="servicesCarousel">
+        <div class="swiper-wrapper" id="swiperWrapper">
+          <!-- Slides inserted dynamically by JS -->
+        </div>
+
+      </div>
+    </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="why-us flex flex-col items-center justify-center gap-1">
+      <h1>WHY CHOOSE <span class="color-accent">robust</span></h1>
+      <div class="underline"></div>
+      <div class="why-us-container flex flex-col lg:flex-row items-center justify-around gap-6">
+        <div class="why-us-description">
+
+          <div data-image="./resources/event-bg.webp"
+            class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right">
+            <div class="why-us-image"><img src="./resources/why-us-icons/unmatched.png" alt=""></div>
+            <div class="why-us-text">
+              <h4>Unmatched Expertise</h4>
+              <p>
+                Expertly blending creativity and precision to deliver unforgettable events, big or small.
+              </p>
+            </div>
+          </div>
+
+          <div data-image="./resources/why-us-icons/complete-package.jpg"
+            class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
+            <div class="why-us-image"><img src="./resources/why-us-icons/complete.png" alt=""></div>
+            <div class="why-us-text">
+              <h4>Complete Party Package</h4>
+              <p>
+                Your all-in-one partner for music, lighting, visuals, and performances that wow.
+              </p>
+            </div>
+          </div>
+
+          <div data-image="./resources/dj-contact.jpg"
+            class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right">
+            <div class="why-us-image"><img src="./resources/why-us-icons/seamless.png" alt=""></div>
+            <div class="why-us-text">
+              <h4>Seamless Execution</h4>
+              <p>
+                From setup to showtime, we manage every detail so you can enjoy your event stress-free.
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="why-us-main-image animate-rotate-in" id="whyUsMainContainer">
+
+          <div class="stack">
+
+            <div class="image"><img id="main-why-us-image" src="./resources/dj-contact.jpg" alt="dj-front"></div>
+
+          </div>
+
+        </div>
+        <div class="why-us-description">
+
+          <div data-image="./resources/dj-contact.jpg"
+            class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
+            <div class="why-us-image"><img src="./resources/why-us-icons/customized.png" alt=""></div>
+            <div class="why-us-text">
+              <h4>Customized to Your Vision</h4>
+              <p>
+                We bring your unique event vision to life with tailored experiences and personal touches.
+              </p>
+            </div>
+          </div>
+
+          <div data-image="./resources/dj-contact.jpg"
+            class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right">
+            <div class="why-us-image"><img src="./resources/why-us-icons/vibrant.png" alt=""></div>
+            <div class="why-us-text">
+              <h4>Vibrant Cultural Touch</h4>
+              <p>
+                Infusing every celebration with the rich energy of Punjabi, Bollywood, and South Asian traditions.
+              </p>
+            </div>
+          </div>
+
+          <div data-image="./resources/dj-contact.jpg"
+            class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
+            <div class="why-us-image"><img src="./resources/why-us-icons/client.png" alt=""></div>
+            <div class="why-us-text">
+              <h4>Client Satisfaction First</h4>
+              <p>
+                Trusted by clients for our passion, professionalism, and obsession with flawless execution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+   <section class="services-vertical flex flex-col gap-2 justify-center items-center" id="services">
+      <h1>BOILER <span class="color-accent">TYPES</span> </h1>
+      <div class="underline"></div>
+      <div class="slider ">
+
+        <div class="content_container flex flex-col gap-1">
+
+
+          <p>Explore our comprehensive range of expert plumbing solutions designed to keep your home safe and efficient.
+          </p>
+          <div class="underline-left"></div>
+          <ul class="slide_navigation flex flex-col gap-1 justify-between items-start">
+            <li><a href="#slide_1" class="active">Emergency Plumbing Repairs</a></li>
+            <li><a href="#slide_2">Leak Detection and Repair</a></li>
+            <li><a href="#slide_3">Drain Cleaning and Unclogging</a></li>
+            <li><a href="#slide_4">Pipe Repair and Replacement</a></li>
+            <li><a href="#slide_5">Water Heater Installation and Repair</a></li>
+            <li><a href="#slide_6">Bathroom Plumbing Services</a></li>
+            <li><a href="#slide_7">Kitchen Plumbing Services</a></li>
+            <li><a href="#slide_8">Sewer Line Repair and Replacement</a></li>
+            <li><a href="#slide_9">Fixture Installation</a></li>
+            <li><a href="#slide_10">Sump Pump Installation and Repair</a></li>
+          </ul>
+        </div>
+
+        <div class="slides">
+
+          <div class="slide" id="slide_1">
+            <div class="inner_content ">
+            <img src="./resources/services/emergency-service.png" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1>Emergency Plumbing Repairs</h1>
+                <p>Fast, 24/7 response for urgent issues like burst pipes, major leaks, or flooding to prevent damage and
+                  restore service quickly.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" id="slide_2">
+            <div class="inner_content ">
+            <img src="./resources/services/leak-detection-and-repair.png" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1>Leak Detection and Repair</h1>
+                <p>Locating hidden or visible leaks using specialized tools and repairing them to stop water waste and
+                  prevent structural damage.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" id="slide_3">
+            <div class="inner_content ">
+            <img src="./resources/services/drain-cleanage.png" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1>Drain Cleaning and Unclogging</h1>
+                <p>Clearing clogged sinks, toilets, showers, and main drains using snaking, hydro jetting, or other
+                  effective methods.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" id="slide_4">
+            <div class="inner_content ">
+            <img src="./resources/services/pipe-repair.png" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1>Pipe Repair and Replacement</h1>
+                <p>Fixing damaged, corroded, or broken pipes, or replacing outdated plumbing to ensure safe and reliable
+                  water flow.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" id="slide_5">
+            <div class="inner_content ">
+            <img src="./resources/services/water-installation.png" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1>Water Heater Installation and Repair</h1>
+                <p>Installing new water heaters or repairing existing ones to provide consistent hot water for your home
+                  or business.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" id="slide_6">
+            <div class="inner_content ">
+            <img src="./resources/services/bathroom-plumbing.png" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1>Bathroom Plumbing Services</h1>
+                <p>Repairing or installing toilets, sinks, faucets, showers, and tubs to keep your bathroom functional and
+                  efficient.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" id="slide_7">
+            <div class="inner_content ">
+            <img src="./resources/services/kitchen-plumbing.png" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1>Kitchen Plumbing Services</h1>
+                <p>Handling kitchen sink, faucet, dishwasher, and garbage disposal installation and repairs for smooth
+                  kitchen operation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" id="slide_8">
+            <div class="inner_content ">
+            <img src="./resources/services/sewer-line.png" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1>Sewer Line Repair and Replacement</h1>
+                <p>Addressing sewer backups, broken pipes, and root intrusions with trenchless or traditional repair
+                  techniques.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" id="slide_9">
+            <div class="inner_content ">
+            <img src="./resources/services/fixture-installation.png" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1>Fixture Installation</h1>
+                <p>Professional installation of plumbing fixtures like toilets, faucets, sinks, and water filtration
+                  systems during renovations or upgrades.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" id="slide_10">
+            <div class="inner_content ">
+            <img src="./resources/services/sump-pump.png" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1>Sump Pump Installation and Repair</h1>
+                <p>Installing and maintaining sump pumps to prevent basement flooding and manage groundwater effectively.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </section>
+
+    <section class="join-us shake-effect">
+      <div class="join-us-container flex flex-col items-center justify-center gap-1">
+        <h1>Some call it extra. We call it <span class="color-accent">robust</span> ! </h1>
+        <button class="robust-button-secondary go-to-contact">GET A QUOTE</button>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- <section class="insta-section">
+      <h2>Event Highlights on Instagram</h2>
+      <div class="insta-grid">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80"
+          alt="DJ Setup" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80"
+          alt="Dance Performance" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=400&q=80"
+          alt="LED Screens" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80"
+          alt="Lighting Show" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=400&q=80"
+          alt="Sound System" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=400&q=80"
+          alt="Crowd Fun" loading="lazy" />
+      </div>
+      <a class="insta-link" href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer">View More
+        on Instagram</a>
+    </section> -->
+
+
+
+
+
+  </main>
+
+  <div class="floating-social">
+    <button id="toggleSocial" aria-label="Toggle Social Links">
+      <i class="fas fa-share-alt"></i>
+    </button>
+    <nav id="socialPopup" class="social-popup hidden" aria-label="Social Links">
+      <a href="tel:+1234567890" aria-label="Phone" class="icon cyan">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="mailto:info@robustevents.com" aria-label="Email" class="icon magenta">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="#" aria-label="Facebook" class="icon cyan">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" aria-label="Instagram" class="icon magenta">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </nav>
+  </div>
+  <footer class="footer-section flex flex-col md:flex-row ">
+
+    <section class="footer-info flex flex-col items-center justify-center">
+      <h4 class="visually-hidden">Logo and description</h4>
+      <div class="footer-logo-image">
+        <img src="./resources/robust-logo-img-bg.png" alt="">
+      </div>
+      <div class="footer-info-content-wrapper">
+        <div class="footer-info-content content-robust">
+          <h2>ROBUST</h2>
+          <h2>ROBUST</h2>
+
+        </div>
+        <div class="footer-info-content content-plumbing">
+          <h2>PLUMBING</h2>
+          <h2>PLUMBING</h2>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="footer-subscribe">
+      <h1>Reach Out <span class="color-accent">Today </span>!</h1>
+      <form class="subscribe-form flex flex-col gap-1" onsubmit="handleSubscribe(event)">
+        <p>Skip the wait — tell us what you need! </p>
+
+        <input type="email" id="subEmail" class="subscribe-input" name="email" placeholder="Enter your email"
+          required />
+        <button class="robust-button-primary" type="submit">Subscribe</button>
+      </form>
+      <div class="sub-success" id="subSuccess">
+        <h3 class="color-accent">Thank you</h3>
+        <h4>You have been subscribe to Robust Plumbing !</h4>
+      </div>
+      <div class="sub-fail" id="subFail">
+        <p class="color-accent">Oops !</p>
+        <p>Please try again after refreshing the page</p>
+      </div>
+    </section>
+
+  </footer>
+
+</body>
+
+</html>

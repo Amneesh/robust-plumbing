@@ -240,7 +240,8 @@ i {
 /* headxder */
 .robust-header {
   background-color: var(--color-secondary);
-  position: fixed;
+  position: relative;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -508,6 +509,11 @@ background-image:
 
   height: auto;
   width: 100%;
+  background: url("./resources/who-we-are.jpg");
+  color: var(--color-text);
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
 }
 
 .hero-video {
@@ -530,6 +536,12 @@ background-image:
   pointer-events: none;
 }
 
+
+
+@media only screen and (min-width: 768px) {
+
+}
+
 .overlay {
   text-align: center;
   background-color: var(--color-background);
@@ -537,10 +549,10 @@ background-image:
   width: 100%;
   padding: 3rem 2rem;
 
-  visibility: hidden;
+  /* visibility: hidden; */
   transition: opacity 1s ease, transform 1s ease;
   z-index: 2;
-  opacity: 0;
+  /* opacity: 0; */
   overflow: hidden;
   left: 0;
   transform: translateX(-100%);
@@ -573,16 +585,26 @@ background-image:
     width: 50%;
     height: 100vh;
   }
-
+ .hero-image{
+width: 50%;
+  }
+   
+.hero-image img{
+ display: none;
+}
   .overlay {
     padding: 0rem 2rem;
     width: 50%;
-    height: auto;
+       min-height: 100vh;
+       height: auto;
+
   }
 
   .hero-content {
     height: 100vh;
   }
+
+
 }
 
 .hero-btn:hover {
@@ -658,6 +680,7 @@ background-image:
   padding: 2rem 3rem;
 
   width: 100%;
+
 }
 
 .text-side p {

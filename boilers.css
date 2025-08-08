@@ -1,0 +1,402 @@
+.events-page {
+  background: url("./resources/event-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+}
+
+.boiler-main-wrapper {
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.boiler-text-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.boiler-image-wrapper {
+  max-width: 500px;
+  min-width: 200px;
+  margin: 0 auto;
+}
+
+.boiler-services-wrapper {
+  width: 100%;
+max-width: 1400px;
+}
+
+.boiler-service-card {
+  padding: 1rem;
+  max-width: 500px;
+  background-color: var(--primary-white-color);
+}
+
+/* services */
+.boiler-services-container {
+  background-color: var(--color-secondary);
+  padding: 3rem 1rem;
+}
+
+.boiler-services-image {
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    margin: 0 auto;
+    max-width: 300px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+  }
+}
+
+.boiler-services-content{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .side-left{
+  align-self: flex-start;
+  }
+  .side-right{
+   align-self: flex-end;
+  }
+}
+@media only screen and (min-width:768px){
+ .boiler-services-image {
+  width: 40%;
+}
+  .boiler-services-content{
+  width: 60%;
+}
+}
+/* services */
+
+/* BOILER-CATALOG */
+.boiler-catalog{
+  padding: 3rem 1rem;
+  position: relative;
+}
+.boiler-catalog::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 60%;
+  background: var(--color-accent-light);
+
+
+  pointer-events: none;
+}
+.boiler-catalog-card{
+  max-width: 300px;
+  min-width: 150px;
+
+  padding: 1rem;
+  background-color: var(--color-navy);
+  border: 1px solid var(--color-navy);
+  color:var(--primary-white-color)
+}
+.boiler-catalog-card-image{
+  img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+}
+.boiler-catalog-footer{
+  padding: 1rem 0rem 0rem 0rem;
+  border-top: 1px solid var(--color-primary-light);
+}
+/* BOILER CATALOG */
+/* why us */
+.why-us {
+  position: relative;
+
+  min-height: 100vh;
+  height: 100%;
+  color: var(--color-text);
+  padding: 10rem 0rem;
+
+  h1 {
+    position: relative;
+    color: var(--color-text) !important;
+  }
+
+  .underline {
+    position: relative;
+    color: var(--color-text) !important;
+    z-index: 1;
+  }
+
+}
+
+.why-point {
+
+  position: relative;
+  border: 1px solid var(--color-primary-light);
+  max-width: 500px;
+  border-radius: 20px;
+  margin: 2rem 0rem;
+  width: 100%;
+  background-color: var(--primary-black-color);
+  color: var(--color-primary-light);
+  cursor: pointer;
+
+  p {
+    display: none;
+  }
+}
+
+.why-left {
+  padding: 0.5rem 1rem 1rem 4rem;
+
+  .why-us-image {
+    left: -25px;
+    top: -10px;
+  }
+}
+
+.why-right {
+  padding: 0.5rem 4rem 1rem 1rem;
+
+  .why-us-image {
+    right: -25px;
+    top: -10px;
+  }
+}
+
+.why-us-image {
+  position: absolute;
+  width: 20%;
+  height: auto;
+  border: 8px double var(--primary-black-color);
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  padding: 10px;
+
+  img {
+    /* filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(1000%) hue-rotate(80deg); */
+    width: 100%;
+  }
+}
+
+.why-point.selected {
+  border: 1px solid var(--color-accent-light);
+  color: var(--color-accent-light);
+
+  transition: all 0.3s ease;
+
+  .why-us-image {
+
+    background-color: var(--color-accent-light);
+  }
+
+}
+
+.rotating-div {
+  animation: rotate360 1s ease forwards;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width:600px) {
+  .why-us {
+
+
+    margin-top: 0rem;
+  }
+}
+
+.why-us::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('./resources/why-us-bg.jpg');
+  background-size: cover;
+  background-position: top;
+  filter: contrast(2) brightness(0.5);
+  /* You can customize this */
+  z-index: 0;
+}
+
+.why-us-container {
+  padding: 5rem 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.why-us-description {
+
+
+  max-width: 600px;
+}
+
+
+
+.stack {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  padding: 5px 5px 50px 5px;
+  background-color: var(--color-accent-light);
+
+
+}
+
+
+
+#main-why-us-image {
+  width: 100%;
+  border: 4px solid var(--primary-black-color);
+  background-color: #eee;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  position: relative;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  /* starts transparent until loaded */
+
+}
+
+
+
+
+
+/* why us */
+
+
+
+.insta-section {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  text-align: center;
+
+}
+
+.insta-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.insta-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.insta-grid img:hover {
+  transform: scale(1.03);
+}
+
+.insta-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #e1306c;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.insta-link:hover {
+  background: #c1265a;
+}
+
+
+.booking-cta {
+  background: #e1306c;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+.booking-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.booking-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-book {
+  background: white;
+  color: #e1306c;
+  padding: 12px 30px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.btn-book:hover {
+  background: #c1265a;
+  color: white;
+}
+
+
+
+#servicesCarousel {
+  width: 90%;
+  max-width: 330px;
+  margin:0rem 5rem;
+
+  position: relative;
+}
+
+
+
+
+
+.service-details {
+  padding: 2rem 0rem 2rem 0rem;
+}
+.boiler-carousel-buttons{
+ position: relative;
+    width: 300px;
+     height: 100px;
+}
+@media only screen and (min-width:768px){
+  .boiler-carousel-buttons{
+
+    height: auto;
+}
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute !important;
+  color: var(--color-navy) !important;
+  opacity: 1;
+}

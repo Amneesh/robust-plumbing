@@ -93,19 +93,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 if (document.body.classList.contains("home-page")) {
 
-  document.addEventListener("DOMContentLoaded", () => {
-    // const topImg = document.querySelector(".hero-img-top");
-    // const bottomImg = document.querySelector(".hero-img-bottom");
-    const overlay = document.querySelector(".overlay");
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   // const topImg = document.querySelector(".hero-img-top");
+  //   // const bottomImg = document.querySelector(".hero-img-bottom");
+  //   const overlay = document.querySelector(".overlay");
 
 
 
-    setTimeout(() => {
-      // topImg.classList.add("show");
-      // bottomImg.classList.add("show");
-      overlay.classList.add('show');
-    }, 100); // Show after 1 second
-  });
+  //   setTimeout(() => {
+  //     // topImg.classList.add("show");
+  //     // bottomImg.classList.add("show");
+  //     overlay.classList.add('show');
+  //   }, 100); // Show after 1 second
+  // });
 
 
 const vertical_slider = {
@@ -428,8 +428,8 @@ document.addEventListener("DOMContentLoaded", () => vertical_slider.init());
   document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('click', () => {
       const service = card.dataset.service;
-      // Navigate to events.html with service query param
-      window.location.href = `events.html?service=${service}`;
+      // Navigate to boilers.html with service query param
+      window.location.href = `boilers.html?service=${service}`;
     });
   });
 
