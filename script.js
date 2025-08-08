@@ -1,14 +1,24 @@
  window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
+// menu headeer dropdown
+const logo = document.querySelector('.robust-logo');
+const pageLinks = document.querySelector('.page-links');
+const links = document.querySelectorAll('.page-links a');
 
-   const logo = document.querySelector('.robust-logo');
-  const nav = document.getElementById('page-links');
+logo.addEventListener('click', (e) => {
+  e.preventDefault();
+  pageLinks.classList.toggle('active');
+  logo.classList.toggle('rotate');
+});
 
-  logo.addEventListener('click', (e) => {
-    e.preventDefault(); // Prevent link navigation
-    nav.classList.toggle('active');
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    pageLinks.classList.remove('active');
+    logo.classList.remove('rotate');
   });
+});
+// menu headeer dropdown
 
 const toggleBtn1 = document.getElementById('menu-toggle');
 const menu = document.getElementById('slide-menu');
@@ -178,6 +188,45 @@ const vertical_slider = {
 };
 
 // Initialize on DOM load
+ const circle = document.getElementById('featureCircle');
+  const desc = document.getElementById('featureDesc');
+  const features = document.querySelectorAll('.feature');
+
+function getActiveFeature() {
+  const circleTransform = window.getComputedStyle(circle).transform;
+
+  if (circleTransform === 'none') return 0;
+
+  const matrix = new DOMMatrix(circleTransform); // WebKitCSSMatrix works too
+  const angleRad = Math.atan2(matrix.b, matrix.a);
+  const angleDeg = (angleRad * (180 / Math.PI));
+
+  // Invert rotation to match visual direction
+  const normalized = (360 - angleDeg + 360) % 360;
+
+  // Each feature is placed every 90 degrees
+  const index = Math.round(normalized / 90) % 4;
+  return index;
+}
+
+  function updateDescription() {
+  const index = getActiveFeature();
+  features.forEach((f, i) => {
+    if (i === index) {
+      f.classList.add('active-feature');
+    } else {
+      f.classList.remove('active-feature');
+    }
+  });
+
+  const activeFeature = features[index];
+    desc.innerHTML = `<div class = "feature-content-data flex flex-col gap-1"><h1>${activeFeature.dataset.title}</h1> <div class="underline"></div> <p> ${activeFeature.dataset.desc}</p></div>`;
+  }
+
+  // Update description every second
+  setInterval(updateDescription, 1000);
+  updateDescription();
+
 document.addEventListener("DOMContentLoaded", () => vertical_slider.init());
 
   const testimonialsData = [

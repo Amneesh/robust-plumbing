@@ -68,10 +68,10 @@ a{
     align-items: center;
     height: 50px;
    
-    background-color: var(--color-accent);
+    background-color: var(--color-accent-dark);
     padding: 5px;
     border-radius: 50%;
-    color: var(--primary-black-color);
+    color: var(--primary-white-color);
   }
 }
 
