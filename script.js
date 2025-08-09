@@ -229,64 +229,65 @@ function getActiveFeature() {
 
 document.addEventListener("DOMContentLoaded", () => vertical_slider.init());
 
-  const testimonialsData = [
-    {
-      "name": "Himani Thakur",
-      "role": "34 reviews",
-      "time": "3 years ago",
-      "text": "I have learnt bhangra from here and they not only teach bhangra but also polish the skills out of a person. It's pretty disciplined place where everybody focus on their hard work and sincerity to learn bhangra.",
-      "likes": "🙏"
-    },
-    {
-      "name": "Gurjit Virk",
-      "role": "1 review",
-      "time": "2 years ago",
-      "text": "robust bhangra academy is one of the best academy, my kids are doing great in bhangra only because of the best coaching skills they get taught by the fantastic coach",
-      "likes": "❤️"
-    },
-    {
-      "name": "Ekjot Sarang",
-      "role": "2 reviews",
-      "time": "3 years ago",
-      "text": "Not good I used to go there and the owner is really unprofessional, unorganized, occasionally hits older students \"as a joke\" and doesn't account for students mental health",
-      "likes": "🙏1"
-    },
-    {
-      "name": "Sukh Toor Dhaliwal",
-      "role": "2 reviews",
-      "time": "6 years ago",
-      "text": "Hi the teacher here at this academy has so much discipline in him and does so much hard work",
-      "likes": "🙏❤️4"
-    },
-    {
-      "name": "Mehtab Brahm",
-      "role": "5 reviews",
-      "time": "6 years ago",
-      "text": "Learn from the best! Great coach!",
-      "likes": "🙏2"
-    },
-    {
-      "name": "Tanvir Johal",
-      "role": "7 reviews",
-      "time": "6 years ago",
-      "text": "AMAZING BHANGRA ACADEMY! LEARN THE BEST FROM THE BEST!",
-      "likes": "🙏1"
-    },
-    {
-      "name": "Esha Bedi",
-      "role": "4 reviews",
-      "time": "5 years ago",
-      "text": "This place is amazing on how they teach step by step",
-      "likes": "🙏1"
-    },
-    {
-      "name": "Amneesh Singh",
-      "role": "5 reviews",
-      "time": "1 year ago",
-      "text": "Robust Plumbing truly transformed our wedding! Their professionalism and energy were unmatched.",
-      "likes": "🌟5"
-    }
-  ]
+const testimonialsData = [
+  {
+    name: "Himani Thakur",
+    role: "34 reviews",
+    time: "3 years ago",
+    text: "I hired Robust Plumbing for my home repairs and they exceeded my expectations. The team was professional, punctual, and efficient.",
+    likes: "👍"
+  },
+  {
+    name: "Gurjit Virk",
+    role: "1 review",
+    time: "2 years ago",
+    text: "Robust Plumbing is the best in the business! Their attention to detail and customer service is outstanding.",
+    likes: "❤️"
+  },
+  {
+    name: "Ekjot Sarang",
+    role: "2 reviews",
+    time: "3 years ago",
+    text: "Had some scheduling issues, but overall the plumbing work was done well. Communication could be better.",
+    likes: "👌"
+  },
+  {
+    name: "Sukh Toor Dhaliwal",
+    role: "2 reviews",
+    time: "6 years ago",
+    text: "The plumber from Robust Plumbing showed great skill and professionalism. Highly recommend for any plumbing needs.",
+    likes: "👍❤️4"
+  },
+  {
+    name: "Mehtab Brahm",
+    role: "5 reviews",
+    time: "6 years ago",
+    text: "Fast and reliable service every time I call Robust Plumbing. Great team and very trustworthy.",
+    likes: "👍2"
+  },
+  {
+    name: "Tanvir Johal",
+    role: "7 reviews",
+    time: "6 years ago",
+    text: "Amazing service! Robust Plumbing fixed my leak in no time. Highly recommend!",
+    likes: "👍1"
+  },
+  {
+    name: "Esha Bedi",
+    role: "4 reviews",
+    time: "5 years ago",
+    text: "Robust Plumbing provides step-by-step explanations and quality repairs. Very happy with their work.",
+    likes: "👍1"
+  },
+  {
+    name: "Amneesh Singh",
+    role: "5 reviews",
+    time: "1 year ago",
+    text: "Robust Plumbing truly transformed our home plumbing. Their professionalism and energy were unmatched.",
+    likes: "🌟5"
+  }
+];
+
 
  const colors = [
   '#0000FF',

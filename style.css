@@ -406,21 +406,14 @@ i {
   right: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--color-surface);
+ 
   visibility: hidden;
   /* <- now shows smoothly */
   transform: translateX(100%);
   transition: transform 0.4s ease-in-out;
   z-index: 99999999;
 background-color: var(--color-navy);
-background-image: 
-    linear-gradient(to bottom right, rgba(0,0,0,0.3), rgba(0, 0, 0, 0.815)),  /* Gradient layer */
-    url('./resources/robust-logo-img-bg.png');                         /* Logo image layer */
-  
-  background-repeat: repeat;         /* Repeat the logo */
-  background-size: 50px 50px;        /* Make logo small */
-  background-position: top left;     /* Start from top-left */
-  background-blend-mode:darken;    /* Blend gradient with image */
+
 }
 
 @media only screen and (min-width: 600px) {
@@ -547,7 +540,8 @@ background-image:
   background-color: var(--color-background);
   height: auto;
   width: 100%;
-  padding: 3rem 2rem;
+  padding: 0rem 2rem 4rem 2rem;
+  margin-top: -4rem;
 
   /* visibility: hidden; */
   transition: opacity 1s ease, transform 1s ease;
@@ -573,6 +567,13 @@ background-image:
 
 .hero-content {
   color: var(--color-text);
+}
+.hero-image{
+  img{
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: top;
+  }
 }
 
 @media only screen and (min-width: 768px) {
