@@ -441,11 +441,15 @@ background-color: #002347;
   
   text-align: left;
   
- width: 100%;
 }
 
 
-
+#slide-menu .slide-menu-nav-container{
+  display: grid;
+grid-template-columns: 170px 10% 1fr;
+align-items: center;
+  gap: 10px;
+}
 #slide-menu .page-link {
   color: white;
   text-decoration: none;
@@ -453,14 +457,11 @@ background-color: #002347;
   font-family: "Castoro Titling", serif;
   font-size: clamp(28px, 4vw, 36px);
 }
-.sub-menu{
-  padding-top: 1rem;
-}
+
 #slide-menu .section-link {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "Castoro Titling", serif;
   font-size: clamp(18px, 4vw, 20px);
 }
 
@@ -1626,6 +1627,12 @@ top: 0;
   height: 4px;
   background-color: var(--color-accent);
 
+  border-radius: 2px;
+}
+.underline-nav {
+  width: 10px;
+  height: 4px;
+  background-color: var(--color-accent);
   border-radius: 2px;
 }
 

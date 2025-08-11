@@ -27,7 +27,7 @@
       <div class="robust-logo">
         <a href="./index.html"><img src="./resources/robust-logo-img-bg.png" alt=""></a>
       </div>
-    
+
     </div>
     <div class="header">
       <button id="menu-toggle" class="hamburger">
@@ -37,63 +37,67 @@
       </button>
       <nav id="slide-menu" class="nav-links">
         <ul class="flex flex-col gap-3">
-          <li>
+          <li class="slide-menu-nav-container">
             <a class="page-link" href="./index.html">Home</a>
-            <div class="underline-left"></div>
+            <div class="underline-nav"></div>
             <ul class="sub-menu flex flex-col gap-50">
               <li><a class="section-link" href="./index.html#whoWeAre">About Us</a></li>
               <li><a class="section-link" href="./index.html#features">FEATURES</a></li>
-              <li><a class="section-link" href="./index.html#services">Our Services</a></li>
-              <li><a class="section-link" href="./index.html#googleReviews">Happy Clients</a></li>
+              <li><a class="section-link" href="./index.html#services">Services</a></li>
+              <li><a class="section-link" href="./index.html#googleReviews">REVIEWS</a></li>
             </ul>
           </li>
 
-          <li>
+          <li class="slide-menu-nav-container">
             <a class="page-link" href="./boilers.html">Boilers</a>
-            <div class="underline-left"></div>
+            <div class="underline-nav"></div>
             <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./combi-boilers.html">Combi Boilers</a></li>
-              <li><a class="section-link" href="./system-boilers.html">System Boilers</a></li>
-              <li><a class="section-link" href="./boiler-repairs.html">Repairs</a></li>
+              <li><a class="section-link" href="./boilers.html#boilersSection">Boilers</a></li>
+              <li><a class="section-link" href="./boilers.html#boilerServices">Services</a></li>
+              <li><a class="section-link" href="./boilers.html#boilerCatalog">Catalog</a></li>
+              <li><a class="section-link" href="./boilers.html#boilerTypes">Types</a></li>
+
             </ul>
           </li>
 
-          <li>
+          <li class="slide-menu-nav-container">
             <a class="page-link" href="./portfolio.html">Portfolio</a>
-            <div class="underline-left"></div>
+            <div class="underline-nav"></div>
             <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./residential.html">Residential</a></li>
-              <li><a class="section-link" href="./commercial.html">Commercial</a></li>
-              <li><a class="section-link" href="./projects.html">All Projects</a></li>
+              <li><a class="section-link" href="./portfolio.html">Residential</a></li>
+              <li><a class="section-link" href="./portfolio.html">Commercial</a></li>
+              <li><a class="section-link" href="./portfolio.html">All Projects</a></li>
             </ul>
           </li>
 
-          <li>
+          <li class="slide-menu-nav-container">
             <a class="page-link" href="./contact.html">Contact</a>
-            <div class="underline-left"></div>
+            <div class="underline-nav"></div>
             <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./get-quote.html">Get a Quote</a></li>
-              <li><a class="section-link" href="./locations.html">Our Locations</a></li>
+              <li><a class="section-link" href="./contact.html">Get a Quote</a></li>
+              <li><a class="section-link" href="./contact.html">Our Locations</a></li>
             </ul>
           </li>
         </ul>
       </nav>
     </div>
-   
+
   </header>
 
-<div id="welcomeModal" class="modal-overlay">
-  <div class="modal-content">
-    <h3>Welcome  <p> Quality Plumbing Starts Here.</p></h3>
-    <h1> <span class="color-accent discount-text">25% </span>off all year </h1><p>Just Pay $300 upfront</p>
-    <button id="closeModalBtn" class="robust-button-primary">Close</button>
+  <div id="welcomeModal" class="modal-overlay">
+    <div class="modal-content">
+      <h3>Welcome <p> Quality Plumbing Starts Here.</p>
+      </h3>
+      <h1> <span class="color-accent discount-text">25% </span>off all year </h1>
+      <p>Just Pay $300 upfront</p>
+      <button id="closeModalBtn" class="robust-button-primary">Close</button>
+    </div>
   </div>
-</div>
 
   <main class="page-wrapper">
-     <div class="promo-banner flex flex-row flex-wrap items-center justify-center gap-1 go-to-contact">
-  <p class="promo-track flex flex-row gap-1" id="promo-track"></p>
-</div>
+    <div class="promo-banner flex flex-row flex-wrap items-center justify-center gap-1 go-to-contact">
+      <p class="promo-track flex flex-row gap-1" id="promo-track"></p>
+    </div>
 
     <section class="hero">
       <h1 class="visually-hidden">Robust Plumbing</h1>
@@ -408,7 +412,9 @@
 
     <section class="testimonial-section flex flex-col  justify-start items-end" id="googleReviews">
       <h1 class="visually-hidden">What our <span class="color-accent">Clients</span> say!</h1>
-      <button class="robust-button-secondary testimonial-button">LEAVE A REVIEW</button>
+      <button class="robust-button-secondary testimonial-button"
+        onclick="window.open('https://www.google.com/search?sca_esv=bf242ef3a2c390d8&rlz=1C1ONGR_enCA1103CA1103&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E8T3JfOQpBH5pIRynCMspyEwJN6NVQy4Dfnlgq_Ti3kmglwQHuLoCjyvXOTEz2DuSeSMSb8SaU4MXk7F2Iccuor5gvS_tpQB8HGGzzkSeKd74mUMjRhYcWgjQSvSPIynISVaMPs%3D&q=Robust+Plumbing+%26+Drain+Services+Reviews&sa=X&ved=2ahUKEwiQ6sKo1oOPAxWyvokEHVu2KVEQ0bkNegQIHhAE&biw=1728&bih=930&dpr=1#lrd=0x5485cf2388963ca5:0xafeb7792919ccc25,3,,,,', '_blank')">LEAVE
+        A REVIEW</button>
 
       <div class="testimonial-box">
         <div class="carousel-container flex items-center">

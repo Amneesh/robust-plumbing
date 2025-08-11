@@ -299,62 +299,112 @@ document.addEventListener("DOMContentLoaded", () => vertical_slider.init());
 
 const testimonialsData = [
   {
-    name: "Himani Thakur",
-    role: "34 reviews",
-    time: "3 years ago",
-    text: "I hired Robust Plumbing for my home repairs and they exceeded my expectations. The team was professional, punctual, and efficient.",
+    name: "Ali Altaf",
+    role: "1 review",
+    time: "a month ago",
+    text: "Wonderful experience. Quality work at a very reasonable price. They made sure leak is properly fixed and stayed additional 20 mins to test and confirm. Strongly recommended.",
     likes: "👍"
   },
   {
-    name: "Gurjit Virk",
-    role: "1 review",
-    time: "2 years ago",
-    text: "Robust Plumbing is the best in the business! Their attention to detail and customer service is outstanding.",
+    name: "Susi Wang",
+    role: "4 reviews · 2 photos",
+    time: "3 weeks ago",
+    text: "I called a plumber from Facebook but he didn’t show up, I called Robust Plumbing, they reached very fast and the technician came in an hour. He equipped a lot of professional equipment and worked with patience. I am very appreciative for his wonderful service.",
     likes: "❤️"
   },
   {
-    name: "Ekjot Sarang",
-    role: "2 reviews",
-    time: "3 years ago",
-    text: "Had some scheduling issues, but overall the plumbing work was done well. Communication could be better.",
-    likes: "👌"
+    name: "Nick Perry",
+    role: "Local Guide · 70 reviews · 49 photos",
+    time: "a month ago",
+    text: "Had a great experience. Showed up on time, was professional, and got the job done quickly. Highly recommend!",
+    likes: "👍"
   },
   {
-    name: "Sukh Toor Dhaliwal",
-    role: "2 reviews",
-    time: "6 years ago",
-    text: "The plumber from Robust Plumbing showed great skill and professionalism. Highly recommend for any plumbing needs.",
-    likes: "👍❤️4"
-  },
-  {
-    name: "Mehtab Brahm",
+    name: "Md Rahman",
     role: "5 reviews",
-    time: "6 years ago",
-    text: "Fast and reliable service every time I call Robust Plumbing. Great team and very trustworthy.",
-    likes: "👍2"
+    time: "2 weeks ago",
+    text: "Very prompt and affordable service, I am very satisfied, highly recommend people got stuck with any trouble, they do take care with compassion, all the best.",
+    likes: "👍"
   },
   {
-    name: "Tanvir Johal",
-    role: "7 reviews",
-    time: "6 years ago",
-    text: "Amazing service! Robust Plumbing fixed my leak in no time. Highly recommend!",
-    likes: "👍1"
+    name: "Krista Bowe",
+    role: "1 review",
+    time: "2 months ago",
+    text: "Raj arrived promptly and resolved my plumbing issue in under an hour. He was efficient, professional, and courteous throughout the process. I highly recommend Robust Plumbing for fast and reliable service.",
+    likes: "👍"
   },
   {
-    name: "Esha Bedi",
+    name: "Deepkamal Billen",
+    role: "3 reviews",
+    time: "2 months ago",
+    text: "Big help with a little Reno I had for my home, very good communication along with quality work. Highly recommend.",
+    likes: "👍"
+  },
+  {
+    name: "S Mantha",
+    role: "Local Guide · 83 reviews · 87 photos",
+    time: "a month ago",
+    text: "The gentleman tech Mr Raj, who had come to repair was fantastic, very courteous and respectful and did his best to put in an excellent job output. My best wishes to all at Robust Plumbing.",
+    likes: "👍"
+  },
+  {
+    name: "Gurminder Gill",
+    role: "1 review",
+    time: "2 months ago",
+    text: "We’ve partnered with Robust Plumbing & Drain Services on several renovation projects in the Lower Mainland and Vancouver. The Robust Team has always delivered top quality work. They’re reliable, professional, and quick to respond. Recommended for anyone looking for a solid plumbing company you can count on.",
+    likes: "👍"
+  },
+  {
+    name: "Catherne Gill",
     role: "4 reviews",
-    time: "5 years ago",
-    text: "Robust Plumbing provides step-by-step explanations and quality repairs. Very happy with their work.",
-    likes: "👍1"
+    time: "a month ago",
+    text: "Raj was quick and professional. He fixed a clogged sink at our salon in Delta and showed up same day. Highly recommend Robust Plumbing for any issues.",
+    likes: "👍"
   },
   {
-    name: "Amneesh Singh",
+    name: "Steven Purewal",
+    role: "1 review",
+    time: "a month ago",
+    text: "Great Job and service. Highly recommend!",
+    likes: "👍"
+  },
+  {
+    name: "Shawn O'Reilly",
+    role: "2 reviews",
+    time: "a month ago",
+    text: "Quick and fast solved my problem which helped me out greatly.",
+    likes: "👍"
+  },
+  {
+    name: "Bhavjot Dhiman",
+    role: "2 reviews",
+    time: "a month ago",
+    text: "Great quality work and professionalism.",
+    likes: "👍"
+  },
+  {
+    name: "Levin Shum",
+    role: "10 reviews · 1 photo",
+    time: "3 days ago",
+    text: "Shaun replied to my messages promptly. It’s a service call for water heater tank replacement. Their rates are reasonable. Worry free! I recommend them.",
+    likes: "👍"
+  },
+  {
+    name: "Vik P",
     role: "5 reviews",
-    time: "1 year ago",
-    text: "Robust Plumbing truly transformed our home plumbing. Their professionalism and energy were unmatched.",
-    likes: "🌟5"
+    time: "4 days ago",
+    text: "The guys at Robust are very knowledgeable and precise. Resolved the issue quick and efficiently. Great service!",
+    likes: "👍"
+  },
+  {
+    name: "DIAMOND TREE SERVICE LTD",
+    role: "2 reviews · 6 photos",
+    time: "a month ago",
+    text: "We appreciate your support and are glad you had a positive experience. Feel free to reach out anytime you need us!",
+    likes: "👍"
   }
 ];
+
 
 
  const colors = [

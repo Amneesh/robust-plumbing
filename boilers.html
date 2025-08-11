@@ -24,7 +24,7 @@
 </head>
 
 <body class="event-page">
-  <header class="robust-header">
+    <header class="robust-header">
 
     <div class="robust-page-links flex flex-row  items-center">
       <div class="robust-logo">
@@ -40,59 +40,60 @@
       </button>
       <nav id="slide-menu" class="nav-links">
         <ul class="flex flex-col gap-3">
-          <li>
+          <li class="slide-menu-nav-container">
             <a class="page-link" href="./index.html">Home</a>
-            <div class="underline-left"></div>
+            <div class="underline-nav"></div>
             <ul class="sub-menu flex flex-col gap-50">
               <li><a class="section-link" href="./index.html#whoWeAre">About Us</a></li>
               <li><a class="section-link" href="./index.html#features">FEATURES</a></li>
-              <li><a class="section-link" href="./index.html#services">Our Services</a></li>
-              <li><a class="section-link" href="./index.html#googleReviews">Happy Clients</a></li>
+              <li><a class="section-link" href="./index.html#services">Services</a></li>
+              <li><a class="section-link" href="./index.html#googleReviews">REVIEWS</a></li>
             </ul>
           </li>
 
-          <li>
+          <li class="slide-menu-nav-container">
             <a class="page-link" href="./boilers.html">Boilers</a>
-            <div class="underline-left"></div>
+            <div class="underline-nav"></div>
             <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./combi-boilers.html">Combi Boilers</a></li>
-              <li><a class="section-link" href="./system-boilers.html">System Boilers</a></li>
-              <li><a class="section-link" href="./boiler-repairs.html">Repairs</a></li>
+              <li><a class="section-link" href="./boilers.html#boilersSection">Boilers</a></li>
+              <li><a class="section-link" href="./boilers.html#boilerServices">Services</a></li>
+              <li><a class="section-link" href="./boilers.html#boilerCatalog">Catalog</a></li>
+              <li><a class="section-link" href="./boilers.html#boilerTypes">Types</a></li>
+
             </ul>
           </li>
 
-          <li>
+          <li class="slide-menu-nav-container">
             <a class="page-link" href="./portfolio.html">Portfolio</a>
-            <div class="underline-left"></div>
+            <div class="underline-nav"></div>
             <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./residential.html">Residential</a></li>
-              <li><a class="section-link" href="./commercial.html">Commercial</a></li>
-              <li><a class="section-link" href="./projects.html">All Projects</a></li>
+              <li><a class="section-link" href="./portfolio.html">Residential</a></li>
+              <li><a class="section-link" href="./portfolio.html">Commercial</a></li>
+              <li><a class="section-link" href="./portfolio.html">All Projects</a></li>
             </ul>
           </li>
 
-          <li>
+          <li class="slide-menu-nav-container">
             <a class="page-link" href="./contact.html">Contact</a>
-            <div class="underline-left"></div>
+            <div class="underline-nav"></div>
             <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./get-quote.html">Get a Quote</a></li>
-              <li><a class="section-link" href="./locations.html">Our Locations</a></li>
+              <li><a class="section-link" href="./contact.html">Get a Quote</a></li>
+              <li><a class="section-link" href="./contact.html">Our Locations</a></li>
             </ul>
           </li>
         </ul>
       </nav>
     </div>
+
   </header>
 
+
   <main class="boilers-main-wrapper">
-    <!-- <section class="page-header-wrapper events-page flex justify-center items-center animate-slide-down "
-      data-delay="0.2s">
-      <h1 class="visually-hidden">EVENTS</h1>
-    </section> -->
+   
     <div class="promo-banner flex flex-row flex-wrap items-center justify-center gap-1 go-to-contact">
       <p class="promo-track flex flex-row gap-1" id="promo-track"></p>
     </div>
-    <section class="boiler-main-container">
+    <section class="boiler-main-container" id="boilersSection">
 
       <h1 class="visually-hidden">Boilers Services by Robust Plumbing</h1>
       <div class="boiler-main-wrapper flex flex-row flex-wrap  gap-1 ">
@@ -114,7 +115,7 @@
     </section>
 
 
-    <section class="boiler-services-container flex flex-col items-center justify-center gap-2">
+    <section class="boiler-services-container flex flex-col items-center justify-center gap-2" id="boilerServices">
       <h1><span class="color-accent">Boiler Services</span> we offer</h1>
       <div class="boiler-services-wrapper flex flex-col md:flex-row gap-1 items-center justify-evenly">
         <div class="boiler-services-image">
@@ -192,7 +193,7 @@
     </section>
 
     
-<section class="boiler-types-section flex flex-col items-center justify-center gap-2">
+<section class="boiler-types-section flex flex-col items-center justify-center gap-2" id="boilerTypes">
   <h1>Boiler <span class="color-accent">Types</span></h1>
   <div class="boiler-types-wrapper flex flex-col-reverse lg:flex-row  gap-1">
   
@@ -274,28 +275,7 @@
 
 
 
-    <!-- <section class="insta-section">
-      <h2>Event Highlights on Instagram</h2>
-      <div class="insta-grid">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80"
-          alt="DJ Setup" loading="lazy" />
-        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80"
-          alt="Dance Performance" loading="lazy" />
-        <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=400&q=80"
-          alt="LED Screens" loading="lazy" />
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80"
-          alt="Lighting Show" loading="lazy" />
-        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=400&q=80"
-          alt="Sound System" loading="lazy" />
-        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=400&q=80"
-          alt="Crowd Fun" loading="lazy" />
-      </div>
-      <a class="insta-link" href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer">View More
-        on Instagram</a>
-    </section> -->
-
-
-
+    
 
 
   </main>
