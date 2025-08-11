@@ -1,23 +1,91 @@
  window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
-// menu headeer dropdown
-const logo = document.querySelector('.robust-logo');
-const pageLinks = document.querySelector('.page-links');
-const links = document.querySelectorAll('.page-links a');
 
-logo.addEventListener('click', (e) => {
-  e.preventDefault();
-  pageLinks.classList.toggle('active');
-  logo.classList.toggle('rotate');
-});
+  window.addEventListener("load", () => {
+  const modal = document.getElementById("welcomeModal");
+  const closeBtn = document.getElementById("closeModalBtn");
 
-links.forEach(link => {
-  link.addEventListener('click', () => {
-    pageLinks.classList.remove('active');
-    logo.classList.remove('rotate');
+  // Show modal on page load
+  modal.classList.add("active");
+
+  // Close modal on button click
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  // Optional: Close modal on clicking outside modal content
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
   });
 });
+
+
+// window.addEventListener("load", () => {
+//   const modal = document.getElementById("welcomeModal");
+//   const closeBtn = document.getElementById("closeModalBtn");
+
+//   // Check if modal was shown before
+//   if (!localStorage.getItem("modalShown")) {
+//     modal.classList.add("active");
+//   }
+
+//   closeBtn.addEventListener("click", () => {
+//     modal.classList.remove("active");
+//     localStorage.setItem("modalShown", "true"); // mark as shown
+//   });
+
+//   // Optional: close modal if clicking outside content
+//   modal.addEventListener("click", (e) => {
+//     if (e.target === modal) {
+//       modal.classList.remove("active");
+//       localStorage.setItem("modalShown", "true"); // mark as shown
+//     }
+//   });
+// });
+
+
+const promoLines = [
+  { icon: 'fa-solid fa-bolt', text: "$300 upfront & Get 25% OFF Plumbing Service upto 1 year" },
+  { icon: 'fa-solid fa-wrench', text: "Free Water Heater Inspection with Any Service – This Week Only!" },
+  { icon: 'fa-solid fa-phone-volume', text: "24/7 Emergency Plumbing – Call Us at (604) 712-3899" },
+  { icon: 'fa-solid fa-droplet', text: "Winter Prep Special: Boiler Tune-up for Only $99" }
+];
+
+const track = document.getElementById("promo-track");
+
+// Function to create span elements for all lines
+function createTrackContent() {
+  promoLines.forEach(line => {
+    const span = document.createElement("p");
+    span.innerHTML = `<i class="${line.icon}"></i> ${line.text}`;
+    track.appendChild(span);
+  });
+}
+
+// Create two sets for seamless loop
+createTrackContent();
+createTrackContent();
+
+// menu headeer dropdown
+// const logo = document.querySelector('.robust-logo');
+// const pageLinks = document.querySelector('.page-links');
+// const links = document.querySelectorAll('.page-links a');
+
+// logo.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   pageLinks.classList.toggle('active');
+//   logo.classList.toggle('rotate');
+// });
+
+// links.forEach(link => {
+//   link.addEventListener('click', () => {
+//     pageLinks.classList.remove('active');
+//     logo.classList.remove('rotate');
+//   });
+// });
 // menu headeer dropdown
 
 const toggleBtn1 = document.getElementById('menu-toggle');

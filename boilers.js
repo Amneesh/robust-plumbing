@@ -105,92 +105,6 @@ const servicesData = [
     img: "./resources/services/kitchen-plumbing.png",
   }
 ]
-const boilers = [
-  {
-    "id": "combi-navien",
-    "title": "Navien NCB-240E (Combi Boiler)",
-    "shortDescription": "Compact all-in-one heating & hot water solution for small to medium homes.",
-    "price": "$3,200 – $3,800",
-    "img": "./resources/services/kitchen-plumbing.png"
-  },
-  {
-    "id": "combi-viessmann",
-    "title": "Viessmann Vitodens 100-W (Combi Boiler)",
-    "shortDescription": "High efficiency combi boiler for instant hot water and heating.",
-    "price": "$3,500 – $4,200",
-    "img": "./resources/services/kitchen-plumbing.png"
-  },
-  {
-    "id": "combi-worcester",
-    "title": "Worcester Bosch Greenstar 25i (Combi Boiler)",
-    "shortDescription": "Reliable combi boiler perfect for limited space homes.",
-    "price": "$3,000 – $3,600",
-    "img": "./resources/services/kitchen-plumbing.png"
-  },
-  {
-    "id": "system-baxi",
-    "title": "Baxi Megaflo 24 (System Boiler)",
-    "shortDescription": "Reliable heating with a hot water cylinder for larger homes.",
-    "price": "$3,200 – $3,900",
-    "img": "./resources/services/kitchen-plumbing.png"
-  },
-  {
-    "id": "system-ideal",
-    "title": "Ideal Logic+ System S24 (System Boiler)",
-    "shortDescription": "Efficient system boiler for multiple taps and radiators.",
-    "price": "$2,900 – $3,400",
-    "img": "./resources/services/kitchen-plumbing.png"
-  },
-  {
-    "id": "system-vaillant",
-    "title": "Vaillant ecoTEC Plus 630 (System Boiler)",
-    "shortDescription": "High performance system boiler with easy installation.",
-    "price": "$3,500 – $4,100",
-    "img": "./resources/services/kitchen-plumbing.png"
-  },
-  {
-    "id": "conventional-ideal",
-    "title": "Ideal Mexico HE (Conventional Boiler)",
-    "shortDescription": "Traditional boiler suited for multi-bathroom homes.",
-    "price": "$2,800 – $3,300",
-    "img": "./resources/services/kitchen-plumbing.png"
-  },
-  {
-    "id": "conventional-vaillant",
-    "title": "Vaillant ecoFIT Pure 415 (Conventional Boiler)",
-    "shortDescription": "Reliable heat-only boiler for consistent heating.",
-    "price": "$2,900 – $3,400",
-    "img": "./resources/services/kitchen-plumbing.png"
-  },
-  {
-    "id": "conventional-worcester",
-    "title": "Worcester Bosch Greenstar Ri (Conventional Boiler)",
-    "shortDescription": "Trusted conventional boiler with solid performance.",
-    "price": "$2,900 – $3,500",
-    "img": "./resources/services/kitchen-plumbing.png"
-  },
-  {
-    "id": "electric-thermolec",
-    "title": "Thermolec B-12U (Electric Boiler)",
-    "shortDescription": "Compact and quiet electric boiler for gas-free heating.",
-    "price": "$2,500 – $3,000",
-    "img": "./resources/services/kitchen-plumbing.png"
-  },
-  {
-    "id": "electric-elnur",
-    "title": "Elnur Mattira MAC15 (Electric Boiler)",
-    "shortDescription": "Efficient electric boiler ideal for small spaces.",
-    "price": "$2,400 – $2,900",
-    "img": "./resources/services/kitchen-plumbing.png"
-  },
-  {
-    "id": "electric-strom",
-    "title": "Strom SFB15 (Electric Boiler)",
-    "shortDescription": "Eco-friendly electric boiler with low maintenance.",
-    "price": "$2,600 – $3,100",
-    "img": "./resources/services/kitchen-plumbing.png"
-  }
-]
 
 
   // Function to get URL query param by name
@@ -198,38 +112,155 @@ const boilers = [
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
   }
-  
 
-  // Add slides dynamically to Swiper wrapper
+ // Example boiler data with categories added
+const boilers = [
+  // Combi Boilers
+  {
+    id: "combi-navien",
+    category: "combi",
+    title: "Navien NCB-240E (Combi Boiler)",
+    shortDescription: "Compact all-in-one heating & hot water solution for small to medium homes.",
+    price: "$3,200 – $3,800",
+    img: "./resources/services/kitchen-plumbing.png"
+  },
+  {
+    id: "combi-viessmann",
+    category: "combi",
+    title: "Viessmann Vitodens 100-W (Combi Boiler)",
+    shortDescription: "High efficiency combi boiler for instant hot water and heating.",
+    price: "$3,500 – $4,200",
+    img: "./resources/services/kitchen-plumbing.png"
+  },
+  {
+    id: "combi-worcester",
+    category: "combi",
+    title: "Worcester Bosch Greenstar 25i (Combi Boiler)",
+    shortDescription: "Reliable combi boiler perfect for limited space homes.",
+    price: "$3,000 – $3,600",
+    img: "./resources/services/kitchen-plumbing.png"
+  },
+
+  // System Boilers
+  {
+    id: "system-baxi",
+    category: "system",
+    title: "Baxi Megaflo 24 (System Boiler)",
+    shortDescription: "Reliable heating with a hot water cylinder for larger homes.",
+    price: "$3,200 – $3,900",
+    img: "./resources/services/kitchen-plumbing.png"
+  },
+  {
+    id: "system-ideal",
+    category: "system",
+    title: "Ideal Logic+ System S24 (System Boiler)",
+    shortDescription: "Efficient system boiler for multiple taps and radiators.",
+    price: "$2,900 – $3,400",
+    img: "./resources/services/kitchen-plumbing.png"
+  },
+  {
+    id: "system-vaillant",
+    category: "system",
+    title: "Vaillant ecoTEC Plus 630 (System Boiler)",
+    shortDescription: "High performance system boiler with easy installation.",
+    price: "$3,500 – $4,100",
+    img: "./resources/services/kitchen-plumbing.png"
+  },
+
+  // Conventional Boilers
+  {
+    id: "conventional-ideal",
+    category: "conventional",
+    title: "Ideal Mexico HE (Conventional Boiler)",
+    shortDescription: "Traditional boiler suited for multi-bathroom homes.",
+    price: "$2,800 – $3,300",
+    img: "./resources/services/kitchen-plumbing.png"
+  },
+  {
+    id: "conventional-vaillant",
+    category: "conventional",
+    title: "Vaillant ecoFIT Pure 415 (Conventional Boiler)",
+    shortDescription: "Reliable heat-only boiler for consistent heating.",
+    price: "$2,900 – $3,400",
+    img: "./resources/services/kitchen-plumbing.png"
+  },
+  {
+    id: "conventional-worcester",
+    category: "conventional",
+    title: "Worcester Bosch Greenstar Ri (Conventional Boiler)",
+    shortDescription: "Trusted conventional boiler with solid performance.",
+    price: "$2,900 – $3,500",
+    img: "./resources/services/kitchen-plumbing.png"
+  },
+
+  // Electric Boilers
+  {
+    id: "electric-thermolec",
+    category: "electric",
+    title: "Thermolec B-12U (Electric Boiler)",
+    shortDescription: "Compact and quiet electric boiler for gas-free heating.",
+    price: "$2,500 – $3,000",
+    img: "./resources/services/kitchen-plumbing.png"
+  },
+  {
+    id: "electric-elnur",
+    category: "electric",
+    title: "Elnur Mattira MAC15 (Electric Boiler)",
+    shortDescription: "Efficient electric boiler ideal for small spaces.",
+    price: "$2,400 – $2,900",
+    img: "./resources/services/kitchen-plumbing.png"
+  },
+  {
+    id: "electric-strom",
+    category: "electric",
+    title: "Strom SFB15 (Electric Boiler)",
+    shortDescription: "Eco-friendly electric boiler with low maintenance.",
+    price: "$2,600 – $3,100",
+    img: "./resources/services/kitchen-plumbing.png"
+  }
+];
+
+
+// Store swiper instance globally so you can destroy/re-init it
+let swiper = null;
+
+function renderSlides(category) {
   const wrapper = document.getElementById("swiperWrapper");
-  boilers.forEach(({ id, title, shortDescription,price, img }) => {
+  wrapper.innerHTML = ""; // clear current slides
+
+  // Filter boilers by category or show all if no category passed
+  const filteredBoilers = category ? boilers.filter(b => b.category === category) : boilers;
+
+  filteredBoilers.forEach(({ id, title, shortDescription, price, img }) => {
     const slide = document.createElement("div");
     slide.classList.add("swiper-slide");
     slide.innerHTML = `
-    
       <div class="boiler-catalog-card flex flex-col gap-1 justify-between">
-            <div class="boiler-catalog-card-image">
-        <img src="${img}" alt="${title}" />
-            </div>
-            <div class="boiler-catalog-content flex flex-col  gap-50">
-              <div class="boiler-catalog-header flex flex-row gap-1 items-center justify-between">
-                <h5>${title}</h5>
-                <p>${price}</p>
-              </div>
-              <div class="boiler-catalog-body">
- <p>${shortDescription}</p>
-               </div>
-              <div class="boiler-catalog-footer">
-                <button class="robust-button-secondary">BUY NOW</button>
-              </div>
-            </div>
+        <div class="boiler-catalog-card-image">
+          <img src="${img}" alt="${title}" />
+        </div>
+        <div class="boiler-catalog-content flex flex-col gap-50">
+          <div class="boiler-catalog-header flex flex-row gap-1 items-center justify-between">
+            <h5>${title}</h5>
+            <p>${price}</p>
           </div>
+          <div class="boiler-catalog-body">
+            <p>${shortDescription}</p>
+          </div>
+          <div class="boiler-catalog-footer">
+            <button class="robust-button-secondary">BUY NOW</button>
+          </div>
+        </div>
+      </div>
     `;
     wrapper.appendChild(slide);
   });
 
-window.addEventListener("load", () => {
-  const swiper = new Swiper("#servicesCarousel", {
+  // Destroy previous swiper if exists
+  if (swiper) swiper.destroy(true, true);
+
+  // Initialize swiper again
+  swiper = new Swiper("#servicesCarousel", {
     loop: false,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -240,97 +271,39 @@ window.addEventListener("load", () => {
       clickable: true,
     },
   });
+}
 
-  const selectedServiceId = getQueryParam("service");
-  if (selectedServiceId) {
-    const index = servicesData.findIndex((s) => s.id === selectedServiceId);
-    if (index >= 0) {
-      swiper.slideToLoop(index, 0); // jump to slide instantly
-    }
+// Attach click listeners on buttons with data-category attribute
+document.querySelectorAll(".service-filter-button button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const category = btn.dataset.category;
+    renderSlides(category);
 
-    // Scroll to carousel section smoothly
-    const carouselSection = document.getElementById("serviceDetails");
-    if (carouselSection) {
-      carouselSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  }
+    // Optionally update active button style (if you have CSS for .active)
+    document.querySelectorAll(".service-filter-button button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+  });
 });
 
-const vertical_slider = {
-  slider_class: ".slider",
 
-  show_slide(slideIndex, navItem) {
-    const slider = navItem.closest(this.slider_class);
-    const slideContainer = slider.querySelector(".slides");
-    const slides = slideContainer.querySelectorAll(".slide");
-    const navLinks = slider.querySelectorAll(".slide_navigation a");
+window.addEventListener("load", () => {
+  renderSlides("electric");
+});
 
-    if (!slides[slideIndex]) return;
 
-    // Update active link
-    navLinks.forEach(link => link.classList.remove("active"));
-    navItem.classList.add("active");
+const texts = document.querySelectorAll(".boiler-text-item");
+const images = document.querySelectorAll(".boiler-types-images img");
 
-    if (window.innerWidth >= 1024) {
-      // Desktop: scroll to slide
-      slideContainer.scrollTo({
-        top: slides[slideIndex].offsetTop,
-        behavior: "smooth"
-      });
-    } else {
-      // Mobile: show only active slide
-      slides.forEach(slide => slide.classList.remove("active"));
-      slides[slideIndex].classList.add("active");
-    }
-  },
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    const type = img.dataset.type;
 
-  init_slider(slider) {
-    const navLinks = slider.querySelectorAll(".slide_navigation a");
+    // Remove active class from all texts and images
+    texts.forEach(t => t.classList.remove("active"));
+    images.forEach(i => i.classList.remove("active"));
 
-    navLinks.forEach((link, index) => {
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        this.show_slide(index, link);
-      });
-    });
-
-    // Set first slide active on mobile by default
-    if (window.innerWidth < 1024) {
-      const slides = slider.querySelectorAll(".slide");
-      if (slides.length) {
-        slides.forEach(s => s.classList.remove("active"));
-        slides[0].classList.add("active");
-      }
-    }
-  },
-
-  init() {
-    document.querySelectorAll(this.slider_class).forEach(slider => {
-      this.init_slider(slider);
-
-      // Track scroll position for desktop only
-      const slideContainer = slider.querySelector(".slides");
-      const slides = slideContainer.querySelectorAll(".slide");
-      const navLinks = slider.querySelectorAll(".slide_navigation a");
-
-      if (window.innerWidth >= 1024) {
-        slideContainer.addEventListener("scroll", () => {
-          let closest = 0;
-          let minDiff = Infinity;
-
-          slides.forEach((slide, index) => {
-            const diff = Math.abs(slide.offsetTop - slideContainer.scrollTop);
-            if (diff < minDiff) {
-              minDiff = diff;
-              closest = index;
-            }
-          });
-
-          navLinks.forEach((link, i) => {
-            link.classList.toggle("active", i === closest);
-          });
-        });
-      }
-    });
-  }
-};
+    // Add active class to selected text and image
+    document.querySelector(`.boiler-text-item[data-type="${type}"]`).classList.add("active");
+    img.classList.add("active");
+  });
+});

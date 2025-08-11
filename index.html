@@ -7,7 +7,7 @@
   <title>Robust Plumbing</title>
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./flex.css" />
-<link rel="icon" href="/resources/robust-logo-img-bg.png" type="image/png" />
+  <link rel="icon" href="/resources/robust-logo-img-bg.png" type="image/png" />
 
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -27,15 +27,7 @@
       <div class="robust-logo">
         <a href="./index.html"><img src="./resources/robust-logo-img-bg.png" alt=""></a>
       </div>
-      <nav id="page-links " class="page-links ">
-        <ul class="flex flex-col gap-2">
-          
-          <li> <a href="#whoWeAre">ABOUT US</a></li>
-          <li><a href="#features">FEATURES</a></li>
-          <li> <a href="#services">SERVICES</a></li>
-          <li> <a href="#googleReviews">TESTIMONIALS</a></li>
-        </ul>
-      </nav>
+    
     </div>
     <div class="header">
       <button id="menu-toggle" class="hamburger">
@@ -44,17 +36,64 @@
         <span></span>
       </button>
       <nav id="slide-menu" class="nav-links">
-        <ul>
-          <li> <a href="./index.html">Home</a></li>
-          <li><a href="./boilers.html">boilers</a></li>
-          <li> <a href="./portfolio.html">portfolio</a></li>
-          <li> <a href="./contact.html">Contact</a></li>
+        <ul class="flex flex-col gap-3">
+          <li>
+            <a class="page-link" href="./index.html">Home</a>
+            <div class="underline-left"></div>
+            <ul class="sub-menu flex flex-col gap-50">
+              <li><a class="section-link" href="./index.html#whoWeAre">About Us</a></li>
+              <li><a class="section-link" href="./index.html#features">FEATURES</a></li>
+              <li><a class="section-link" href="./index.html#services">Our Services</a></li>
+              <li><a class="section-link" href="./index.html#googleReviews">Happy Clients</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a class="page-link" href="./boilers.html">Boilers</a>
+            <div class="underline-left"></div>
+            <ul class="sub-menu flex flex-col gap-50">
+              <li><a class="section-link" href="./combi-boilers.html">Combi Boilers</a></li>
+              <li><a class="section-link" href="./system-boilers.html">System Boilers</a></li>
+              <li><a class="section-link" href="./boiler-repairs.html">Repairs</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a class="page-link" href="./portfolio.html">Portfolio</a>
+            <div class="underline-left"></div>
+            <ul class="sub-menu flex flex-col gap-50">
+              <li><a class="section-link" href="./residential.html">Residential</a></li>
+              <li><a class="section-link" href="./commercial.html">Commercial</a></li>
+              <li><a class="section-link" href="./projects.html">All Projects</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a class="page-link" href="./contact.html">Contact</a>
+            <div class="underline-left"></div>
+            <ul class="sub-menu flex flex-col gap-50">
+              <li><a class="section-link" href="./get-quote.html">Get a Quote</a></li>
+              <li><a class="section-link" href="./locations.html">Our Locations</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
+   
   </header>
 
+<div id="welcomeModal" class="modal-overlay">
+  <div class="modal-content">
+    <h3>Welcome  <p> Quality Plumbing Starts Here.</p></h3>
+    <h1> <span class="color-accent discount-text">25% </span>off all year </h1><p>Just Pay $300 upfront</p>
+    <button id="closeModalBtn" class="robust-button-primary">Close</button>
+  </div>
+</div>
+
   <main class="page-wrapper">
+     <div class="promo-banner flex flex-row flex-wrap items-center justify-center gap-1 go-to-contact">
+  <p class="promo-track flex flex-row gap-1" id="promo-track"></p>
+</div>
 
     <section class="hero">
       <h1 class="visually-hidden">Robust Plumbing</h1>
@@ -70,13 +109,28 @@
 
 
 
-      <div class="overlay animate-slide-right">
-        <div class="hero-content flex flex-col  justify-center items-center gap-1">
-          <img class="hero-logo" src="./resources/robust-logo-bg-white.png" alt="">
+      <div class="overlay flex flex-col items-center justify-center animate-slide-right">
+        <div class="hero-content flex flex-col items-center justify-center gap-2">
+          <!-- <img class="hero-logo" src="./resources/robust-logo-bg-white.png" alt=""> -->
           <!-- <p class="hero-description color-accent">Robust Plumbing</p> -->
 
+          <div class="footer-info-content-wrapper">
+            <div class="footer-logo-image">
+              <img src="./resources/robust-logo-img-bg.png" alt="">
+            </div>
+            <div class="footer-info-content content-robust">
+              <h2 class="header-content-robust">ROBUST</h2>
+              <h2 class="header-content-robust">ROBUST</h2>
 
-          <p class="hero-heading">Where <span class="color-accent">Quality </span> Meets <span class="color-accent">Trust</span> —That’s<span class="color-accent"> Robust !</span></p>
+            </div>
+            <div class="footer-info-content content-plumbing">
+              <h2>PLUMBING</h2>
+              <h2>PLUMBING</h2>
+            </div>
+          </div>
+
+          <p class="hero-heading">Where <span class="color-accent">Quality </span> Meets <span
+              class="color-accent">Trust</span> —That’s<span class="color-accent"> Robust !</span></p>
 
           <p class="hero-description color-primary">SURREY | LANGLEY | VANCOUVER | BURNABY</p>
 
@@ -120,7 +174,7 @@
             class="counters flex flex-col flex-wrap sm:flex-row sm:justify-evenly items-start row-gap-1 sm:column-gap-2"
             id="counterSection">
             <div class="counter-container flex flex-row sm:flex-col items-center justify-center">
-             
+
               <span id="count1" class="counter-number"></span>
               <h5 class="counter-title">Clients</h5>
             </div>
@@ -151,53 +205,58 @@
 
     <section class="features flex justify-evenly flex-col items-center gap-5" id="features">
       <h1 class="visually-hidden">Our Features</h1>
-      
-       <div class="feature-header flex flex-col gap-1">
-         <h1>OUR KEY <span class="color-accent">FEATURES</span></h1>
-         <div class="underline"></div>
-       </div>
-<div class="feature-circle-wrapper flex flex-row flex-wrap justify-evenly gap-3">
- 
-  <div class="feature-circle-container">
-    <div class="feature-border-circle"></div>
-    <div class="feature-circle" id="featureCircle">
-    <div class="feature-circle" id="featureCircle">
- <div class="feature" data-title="Trust" data-desc="You can count on us for dependable, high-quality plumbing backed by years of proven expertise. We prioritize reliability and integrity in every job we take on. Our team is committed to delivering consistent, professional results. We arrive on time, respect your space, and leave it cleaner than we found it. Our reputation is built on long-term customer relationships. Trust isn’t given—it’s earned, and we work to earn it every day.">
-  <div class="feature-inner"><i class="fas fa-shield-alt"></i></div>
-</div>
 
-<div class="feature" data-title="Expertise" data-desc="Our certified and highly trained plumbers bring years of hands-on experience to every project. We stay current with the latest plumbing codes, tools, and techniques to ensure safety and efficiency. From small repairs to major system overhauls, our team works with precision and attention to detail. Whether it’s residential, commercial, or industrial plumbing, we do it right the first time. Quality craftsmanship is our signature.">
-  <div class="feature-inner"><i class="fas fa-tools"></i></div>
-</div>
+      <div class="feature-header flex flex-col gap-1">
+        <h1>OUR KEY <span class="color-accent">FEATURES</span></h1>
+        <div class="underline"></div>
+      </div>
+      <div class="feature-circle-wrapper flex flex-row flex-wrap justify-evenly gap-3">
 
-<div class="feature" data-title="Transparency" data-desc="We believe you deserve to know exactly what you’re paying for—before any work begins. That’s why we provide detailed, upfront estimates with no hidden fees or surprise charges. We walk you through the problem, explain the solution, and answer every question clearly. You’ll always have full visibility into the scope, timeline, and cost of your plumbing work. Clear communication and honest billing are the foundation of our service.">
-  <div class="feature-inner"><i class="fas fa-receipt"></i></div>
-</div>
+        <div class="feature-circle-container">
+          <div class="feature-border-circle"></div>
+          <div class="feature-circle" id="featureCircle">
+            <div class="feature-circle" id="featureCircle">
+              <div class="feature" data-title="Trust"
+                data-desc="You can count on us for dependable, high-quality plumbing backed by years of proven expertise. We prioritize reliability and integrity in every job we take on. Our team is committed to delivering consistent, professional results. We arrive on time, respect your space, and leave it cleaner than we found it. Our reputation is built on long-term customer relationships. Trust isn’t given—it’s earned, and we work to earn it every day.">
+                <div class="feature-inner"><i class="fas fa-shield-alt"></i></div>
+              </div>
 
-<div class="feature" data-title="Speed" data-desc="When plumbing issues strike, time is critical. That’s why we respond quickly and resolve problems fast—without compromising quality. Whether it’s a burst pipe, blocked drain, or emergency repair, our team is equipped and ready 24/7. We understand how disruptive plumbing issues can be, and we act with urgency to minimize downtime. With us, help is just a call away—always.">
-  <div class="feature-inner"><i class="fas fa-bolt"></i></div>
-</div>
+              <div class="feature" data-title="Expertise"
+                data-desc="Our certified and highly trained plumbers bring years of hands-on experience to every project. We stay current with the latest plumbing codes, tools, and techniques to ensure safety and efficiency. From small repairs to major system overhauls, our team works with precision and attention to detail. Whether it’s residential, commercial, or industrial plumbing, we do it right the first time. Quality craftsmanship is our signature.">
+                <div class="feature-inner"><i class="fas fa-tools"></i></div>
+              </div>
+
+              <div class="feature" data-title="Transparency"
+                data-desc="We believe you deserve to know exactly what you’re paying for—before any work begins. That’s why we provide detailed, upfront estimates with no hidden fees or surprise charges. We walk you through the problem, explain the solution, and answer every question clearly. You’ll always have full visibility into the scope, timeline, and cost of your plumbing work. Clear communication and honest billing are the foundation of our service.">
+                <div class="feature-inner"><i class="fas fa-receipt"></i></div>
+              </div>
+
+              <div class="feature" data-title="Speed"
+                data-desc="When plumbing issues strike, time is critical. That’s why we respond quickly and resolve problems fast—without compromising quality. Whether it’s a burst pipe, blocked drain, or emergency repair, our team is equipped and ready 24/7. We understand how disruptive plumbing issues can be, and we act with urgency to minimize downtime. With us, help is just a call away—always.">
+                <div class="feature-inner"><i class="fas fa-bolt"></i></div>
+              </div>
 
 
-    </div>
-    </div>
-    
-  </div>
-  <div class="feature-description" id="featureDesc">
-  </div>
-</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="feature-description" id="featureDesc">
+        </div>
+      </div>
       <div class="join-us-wrapper shake-effect">
-        <img  class="tap-img" src="./resources/tap-png.png" alt="">
+        <img class="tap-img" src="./resources/tap-png.png" alt="">
         <div class="join-us-container flex flex-col items-center justify-center gap-1">
-         <img class="wrench-img" src="./resources/wrench.png" alt="">
-          
-          <h1><span class="color-accent-light">Leaks </span>don’t fix themselves. Call <span class="color-accent-light">Robust !
+          <img class="wrench-img" src="./resources/wrench.png" alt="">
+
+          <h1><span class="color-accent-light">Leaks </span>don’t fix themselves. Call <span
+              class="color-accent-light">Robust !
             </span></h1>
           <button class="robust-button-secondary go-to-contact">GET A QUOTE</button>
         </div>
       </div>
     </section>
-   
+
     <section class="services-vertical flex flex-col gap-2 justify-center items-center" id="services">
       <h1>OUR <span class="color-accent">SERVICES</span> </h1>
       <div class="underline"></div>
@@ -227,10 +286,11 @@
 
           <div class="slide" id="slide_1">
             <div class="inner_content ">
-            <img src="./resources/services/emergency-service.png" alt="">
+              <img src="./resources/services/emergency-service.png" alt="">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1>Emergency Plumbing Repairs</h1>
-                <p>Fast, 24/7 response for urgent issues like burst pipes, major leaks, or flooding to prevent damage and
+                <p>Fast, 24/7 response for urgent issues like burst pipes, major leaks, or flooding to prevent damage
+                  and
                   restore service quickly.</p>
               </div>
             </div>
@@ -238,7 +298,7 @@
 
           <div class="slide" id="slide_2">
             <div class="inner_content ">
-            <img src="./resources/services/leak-detection-and-repair.png" alt="">
+              <img src="./resources/services/leak-detection-and-repair.png" alt="">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1>Leak Detection and Repair</h1>
                 <p>Locating hidden or visible leaks using specialized tools and repairing them to stop water waste and
@@ -249,7 +309,7 @@
 
           <div class="slide" id="slide_3">
             <div class="inner_content ">
-            <img src="./resources/services/drain-cleanage.png" alt="">
+              <img src="./resources/services/drain-cleanage.png" alt="">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1>Drain Cleaning and Unclogging</h1>
                 <p>Clearing clogged sinks, toilets, showers, and main drains using snaking, hydro jetting, or other
@@ -260,7 +320,7 @@
 
           <div class="slide" id="slide_4">
             <div class="inner_content ">
-            <img src="./resources/services/pipe-repair.png" alt="">
+              <img src="./resources/services/pipe-repair.png" alt="">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1>Pipe Repair and Replacement</h1>
                 <p>Fixing damaged, corroded, or broken pipes, or replacing outdated plumbing to ensure safe and reliable
@@ -271,7 +331,7 @@
 
           <div class="slide" id="slide_5">
             <div class="inner_content ">
-            <img src="./resources/services/water-installation.png" alt="">
+              <img src="./resources/services/water-installation.png" alt="">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1>Water Heater Installation and Repair</h1>
                 <p>Installing new water heaters or repairing existing ones to provide consistent hot water for your home
@@ -282,10 +342,11 @@
 
           <div class="slide" id="slide_6">
             <div class="inner_content ">
-            <img src="./resources/services/bathroom-plumbing.png" alt="">
+              <img src="./resources/services/bathroom-plumbing.png" alt="">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1>Bathroom Plumbing Services</h1>
-                <p>Repairing or installing toilets, sinks, faucets, showers, and tubs to keep your bathroom functional and
+                <p>Repairing or installing toilets, sinks, faucets, showers, and tubs to keep your bathroom functional
+                  and
                   efficient.</p>
               </div>
             </div>
@@ -293,7 +354,7 @@
 
           <div class="slide" id="slide_7">
             <div class="inner_content ">
-            <img src="./resources/services/kitchen-plumbing.png" alt="">
+              <img src="./resources/services/kitchen-plumbing.png" alt="">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1>Kitchen Plumbing Services</h1>
                 <p>Handling kitchen sink, faucet, dishwasher, and garbage disposal installation and repairs for smooth
@@ -304,7 +365,7 @@
 
           <div class="slide" id="slide_8">
             <div class="inner_content ">
-            <img src="./resources/services/sewer-line.png" alt="">
+              <img src="./resources/services/sewer-line.png" alt="">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1>Sewer Line Repair and Replacement</h1>
                 <p>Addressing sewer backups, broken pipes, and root intrusions with trenchless or traditional repair
@@ -315,7 +376,7 @@
 
           <div class="slide" id="slide_9">
             <div class="inner_content ">
-            <img src="./resources/services/fixture-installation.png" alt="">
+              <img src="./resources/services/fixture-installation.png" alt="">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1>Fixture Installation</h1>
                 <p>Professional installation of plumbing fixtures like toilets, faucets, sinks, and water filtration
@@ -326,10 +387,11 @@
 
           <div class="slide" id="slide_10">
             <div class="inner_content ">
-            <img src="./resources/services/sump-pump.png" alt="">
+              <img src="./resources/services/sump-pump.png" alt="">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1>Sump Pump Installation and Repair</h1>
-                <p>Installing and maintaining sump pumps to prevent basement flooding and manage groundwater effectively.
+                <p>Installing and maintaining sump pumps to prevent basement flooding and manage groundwater
+                  effectively.
                 </p>
               </div>
             </div>
@@ -360,7 +422,7 @@
     </section>
 
 
-  
+
   </main>
 
   <div class="floating-social">
@@ -377,14 +439,15 @@
       <a href="#" aria-label="Facebook" class="icon cyan">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="https://wa.me/16047123899?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services%21" target="_blank" rel="noopener noreferrer" class="icon magenta">
+      <a href="https://wa.me/16047123899?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services%21"
+        target="_blank" rel="noopener noreferrer" class="icon magenta">
         <i class="fab fa-whatsapp"></i>
       </a>
     </nav>
   </div>
 
   <footer class="footer-section flex flex-col md:flex-row ">
-   
+
     <section class="footer-info flex flex-col items-center justify-center">
       <h4 class="visually-hidden">Logo and description</h4>
       <div class="footer-logo-image">
@@ -394,34 +457,35 @@
         <div class="footer-info-content content-robust">
           <h2>ROBUST</h2>
           <h2>ROBUST</h2>
-        
-          </div>
-          <div class="footer-info-content content-plumbing">
+
+        </div>
+        <div class="footer-info-content content-plumbing">
           <h2>PLUMBING</h2>
           <h2>PLUMBING</h2>
-          </div>
+        </div>
       </div>
-     
+
     </section>
 
-  
-  <section class="footer-subscribe">
-    <h1 >Reach Out <span class="color-accent">Today </span>!</h1>
-    <form class="subscribe-form flex flex-col gap-1" onsubmit="handleSubscribe(event)">
-      <p>Skip the wait — tell us what you need!      </p>
-    
-      <input type="email" id="subEmail" class="subscribe-input" name="email" placeholder="Enter your email" required />
-      <button class="robust-button-primary" type="submit" >Subscribe</button>
-    </form>
-    <div class="sub-success" id="subSuccess">
-      <h3 class="color-accent">Thank you</h3>
-      <h4>You have been subscribe to Robust Plumbing !</h4>
-    </div>
-    <div class="sub-fail" id="subFail">
-      <p class="color-accent">Oops !</p>
-      <p>Please try again after refreshing the page</p>
-    </div>
-  </section>
+
+    <section class="footer-subscribe">
+      <h1>Reach Out <span class="color-accent">Today </span>!</h1>
+      <form class="subscribe-form flex flex-col gap-1" onsubmit="handleSubscribe(event)">
+        <p>Skip the wait — tell us what you need! </p>
+
+        <input type="email" id="subEmail" class="subscribe-input" name="email" placeholder="Enter your email"
+          required />
+        <button class="robust-button-primary" type="submit">Subscribe</button>
+      </form>
+      <div class="sub-success" id="subSuccess">
+        <h3 class="color-accent">Thank you</h3>
+        <h4>You have been subscribe to Robust Plumbing !</h4>
+      </div>
+      <div class="sub-fail" id="subFail">
+        <p class="color-accent">Oops !</p>
+        <p>Please try again after refreshing the page</p>
+      </div>
+    </section>
 
   </footer>
 

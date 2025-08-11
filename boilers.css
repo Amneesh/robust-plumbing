@@ -382,7 +382,24 @@ max-width: 1400px;
 
 .service-details {
   padding: 2rem 0rem 2rem 0rem;
+  width: 100%;
 }
+
+.service-filter-button button{
+  flex-grow: 1;
+}
+
+.service-filter-button button:hover {
+  background-color: var(--color-accent-light) !important;
+  color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
+
+.service-filter-button button.active {
+  background-color: var(--color-accent-dark) !important;
+  color: #fff;
+}
+
 .boiler-carousel-buttons{
  position: relative;
     width: 300px;
@@ -390,7 +407,6 @@ max-width: 1400px;
 }
 @media only screen and (min-width:768px){
   .boiler-carousel-buttons{
-
     height: auto;
 }
 }
@@ -399,4 +415,74 @@ max-width: 1400px;
   position: absolute !important;
   color: var(--color-navy) !important;
   opacity: 1;
+}
+
+
+/* boiler tpyes */
+.boiler-types-section{
+  height: 100%;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: var(--color-secondary);
+}
+.boiler-types-text{
+padding: 2rem;
+width: 100%;
+  max-width: 600px;
+  min-width: 200px;
+  ul{
+    list-style:upper-roman;
+    font-size: clamp(18px, 4vw, 20px);
+    padding: 0rem 0rem 0rem 1rem;
+   li{
+    margin-bottom: 1rem;
+   }
+  }
+}
+.boiler-types-text > div {
+  display: none;
+}
+
+.boiler-types-text > div.active {
+  display: flex;
+}
+
+/* Make images grayscale by default */
+
+
+.boiler-types-images{
+background-color: var(--primary-white-color);
+padding:1rem 1rem;
+width: 100%;
+margin: 0 auto;
+}
+.boiler-types-images img {
+  cursor: pointer;
+  filter: grayscale(100%) brightness(0.3);
+  transition: filter 0.3s ease;
+width: 100%;
+width:  100%;
+margin: 0 auto;
+  box-shadow: none;
+  aspect-ratio: 3/1;
+   height: 100%;
+  object-fit: cover;
+   transition: all 1s ease-in-out;
+}
+.boiler-types-images img:hover {
+  filter: none;
+
+}
+/* Color the active image */
+.boiler-types-images img.active {
+  filter: none;
+z-index: 10;
+  transition: all 1s ease-in-out;
+}
+@media only screen and (min-width:768px){
+.boiler-types-images{
+display: grid;
+grid-template-columns: 1fr 1fr;
+max-width: 800px;
+}
 }

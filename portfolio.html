@@ -22,17 +22,12 @@
 
 
    <header class="robust-header">
- <div class="robust-page-links flex flex-row  items-center">
+
+    <div class="robust-page-links flex flex-row  items-center">
       <div class="robust-logo">
         <a href="./index.html"><img src="./resources/robust-logo-img-bg.png" alt=""></a>
       </div>
-      <nav id="page-links" class="page-links ">
-      <ul>
-          <li> <a href="https://www.instagram.com/robustplumbing?igsh=MWliNnE5czNxYmF1eA==" target="_blank">Instagram</a></li>
-          <li><a href="#imageGrid">PORTFOLIO</a></li>
-        
-        </ul>
-      </nav>
+    
     </div>
     <div class="header">
       <button id="menu-toggle" class="hamburger">
@@ -41,16 +36,54 @@
         <span></span>
       </button>
       <nav id="slide-menu" class="nav-links">
-        <ul>
-          <li> <a href="./index.html">Home</a></li>
-          <li><a href="./boilers.html">Events</a></li>
-          <li> <a href="./portfolio.html">portfolio</a></li>
-          <li> <a href="./contact.html">Contact</a></li>
+        <ul class="flex flex-col gap-3">
+          <li>
+            <a class="page-link" href="./index.html">Home</a>
+            <div class="underline-left"></div>
+            <ul class="sub-menu flex flex-col gap-50">
+              <li><a class="section-link" href="./index.html#whoWeAre">About Us</a></li>
+              <li><a class="section-link" href="./index.html#features">FEATURES</a></li>
+              <li><a class="section-link" href="./index.html#services">Our Services</a></li>
+              <li><a class="section-link" href="./index.html#googleReviews">Happy Clients</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a class="page-link" href="./boilers.html">Boilers</a>
+            <div class="underline-left"></div>
+            <ul class="sub-menu flex flex-col gap-50">
+              <li><a class="section-link" href="./combi-boilers.html">Combi Boilers</a></li>
+              <li><a class="section-link" href="./system-boilers.html">System Boilers</a></li>
+              <li><a class="section-link" href="./boiler-repairs.html">Repairs</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a class="page-link" href="./portfolio.html">Portfolio</a>
+            <div class="underline-left"></div>
+            <ul class="sub-menu flex flex-col gap-50">
+              <li><a class="section-link" href="./residential.html">Residential</a></li>
+              <li><a class="section-link" href="./commercial.html">Commercial</a></li>
+              <li><a class="section-link" href="./projects.html">All Projects</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a class="page-link" href="./contact.html">Contact</a>
+            <div class="underline-left"></div>
+            <ul class="sub-menu flex flex-col gap-50">
+              <li><a class="section-link" href="./get-quote.html">Get a Quote</a></li>
+              <li><a class="section-link" href="./locations.html">Our Locations</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
-  <main>
+  <main class="portfolio-main-wrapper">
+     <div class="promo-banner flex flex-row flex-wrap items-center justify-center gap-1 go-to-contact">
+  <p class="promo-track flex flex-row gap-1" id="promo-track"></p>
+</div>
     <!-- <section class="page-header-wrapper portfolio-page flex justify-center items-center animate-slide-down " data-delay="0.2s">
       <h1 class="visually-hidden">portfolio</h1>
     </section> -->

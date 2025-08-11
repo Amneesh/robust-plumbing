@@ -236,12 +236,55 @@ i {
   transform: translateY(10px);
   transition: 100ms;
 }
+/* modal */
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999999999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem 2rem;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+}
+
+.modal-content h1 {
+  margin-bottom: 1rem;
+  color: var(--color-navy);
+ 
+}
+
+.modal-content p {
+  margin-bottom: 2rem;
+}
+
+
+
+/* modal */
 /* headxder */
 .robust-header {
   background-color: var(--color-secondary);
-  position: relative;
-
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -251,45 +294,35 @@ i {
   align-items: center;
   padding: 0 2rem;
   justify-content: space-between;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
+.page-wrapper, .boilers-main-wrapper, .contact-main-wrapper, .portfolio-main-wrapper{
+  margin-top: 80px;
 }
-.page-links {
-    position: absolute;
-  top: 4rem;
-  left: -40px;
-  right: 0;
-  background-color: white;
-  border: 1px solid var(--color-secondary);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.promo-banner {
+  background: var(--color-accent-dark);
+  color:var(--primary-white-color);
   overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  padding: 0 1rem;
-  min-width: 200px;
-  max-width: 400px;
-  width: 100%;
-  flex-direction: column;
-  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
-  z-index: 1000;
-
-  ul {
-    display: flex;
-    flex-flow: column;
-    list-style: none;
-    padding: 1rem;
-   
-   
-
-    li {
-      text-transform: uppercase;
-      margin-right: 2rem;
-    
-
-      
-    }
-  }
- 
+  white-space: nowrap;
+  padding: 8px 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
+.promo-track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 50s linear infinite;
+
+  i{
+    font-size: clamp(16px, 4vw, 18px);
+  }
+}
+
+@keyframes scrollText {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } /* move half because we duplicated */
+}
 
 /* When active, expand the dropdown */
 .page-links.active {
@@ -305,34 +338,7 @@ i {
   
 }
 
-.page-links a {
-  color: var(--color-primary-dark);
 
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  transition: color 0.3s ease;
-  text-transform: uppercase;
-}
-
-.page-links a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: -4px;
-  background-color: var(--color-navy);
-  transition: width 0.3s ease;
-}
-
-.page-links a:hover {
-  color: var(--color-navy);
-}
-
-.page-links a:hover::after {
-  width: 100%;
-} 
 .robust-page-links {
   position: relative;
   display: flex;
@@ -350,8 +356,9 @@ i {
 }
 
 /* Rotate logo when active */
-.robust-logo.rotate {
-  transform: rotate(180deg);
+.robust-logo:hover {
+  transform: rotate(270deg);
+  transition: all 0.5s ease-in-out;
 }
 
 
@@ -406,13 +413,14 @@ i {
   right: 0;
   width: 100%;
   height: 100vh;
- 
+ padding: 2rem;
   visibility: hidden;
   /* <- now shows smoothly */
   transform: translateX(100%);
   transition: transform 0.4s ease-in-out;
   z-index: 99999999;
-background-color: var(--color-navy);
+background-color: #002347;
+
 
 }
 
@@ -430,27 +438,33 @@ background-color: var(--color-navy);
 
 #slide-menu ul {
   list-style: none;
-  padding: 0;
-  text-align: center;
+  
+  text-align: left;
+  
+ width: 100%;
 }
 
-#slide-menu ul li {
-  margin: 1.5rem auto;
 
-  img {
-    width: 250px;
-  }
-}
 
-#slide-menu ul li a {
+#slide-menu .page-link {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Castoro Titling", serif;
   font-size: clamp(28px, 4vw, 36px);
 }
+.sub-menu{
+  padding-top: 1rem;
+}
+#slide-menu .section-link {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Castoro Titling", serif;
+  font-size: clamp(18px, 4vw, 20px);
+}
 
-.nav-links a {
+.section-link {
   color: var(--color-text);
 
   text-decoration: none;
@@ -460,7 +474,7 @@ background-color: var(--color-navy);
   text-transform: uppercase;
 }
 
-.nav-links a::after {
+.section-link::after {
   content: "";
   position: absolute;
   width: 0%;
@@ -538,10 +552,10 @@ background-color: var(--color-navy);
 .overlay {
   text-align: center;
   background-color: var(--color-background);
-  height: auto;
+  height: 100%;
   width: 100%;
-  padding: 0rem 2rem 4rem 2rem;
-  margin-top: -4rem;
+  
+  
 
   /* visibility: hidden; */
   transition: opacity 1s ease, transform 1s ease;
@@ -551,12 +565,6 @@ background-color: var(--color-navy);
   left: 0;
   transform: translateX(-100%);
 
-  img{
-    max-width: 200px;
-    min-width: 150px;
-    width: 100%;
-    height: auto;
-  }
 }
 
 .overlay.show {
@@ -566,14 +574,19 @@ background-color: var(--color-navy);
 }
 
 .hero-content {
+  width: 100%;
+  padding: 2rem 2rem 2rem 2rem;
   color: var(--color-text);
+
+ 
 }
 .hero-image{
-  img{
+  position: relative;
+  /* img{
     aspect-ratio: 3/2;
     object-fit: cover;
     object-position: top;
-  }
+  } */
 }
 
 @media only screen and (min-width: 768px) {
@@ -601,9 +614,7 @@ width: 50%;
 
   }
 
-  .hero-content {
-    height: 100vh;
-  }
+
 
 
 }
@@ -619,12 +630,12 @@ width: 50%;
   text-align: center;
   padding: 1rem 1rem;
   word-spacing: 10px;
-  font-size: clamp(30px, 4vw, 45px) !important;
+  font-size: clamp(30px, 4vw, 40px) !important;
   font-style: oblique;
 
   span {
     font-style: normal;
-    font-size: clamp(40px, 4vw, 80px) !important;
+    font-size: clamp(40px, 4vw, 50px) !important;
   }
 }
 
@@ -838,8 +849,8 @@ color: var(--color-accent-dark);
 }
 .feature-circle-container{
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
    margin: auto;
  
 
@@ -869,8 +880,8 @@ margin: 3rem 0rem 0rem 0rem;
   position: absolute;
   top: 0;
   left: 0;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border: 5px dotted var(--color-accent);
   border-radius: 50%;
   z-index: 0;
@@ -1177,7 +1188,7 @@ h1{
 }
 
 #toggleSocial {
-  background-color: var(--color-navy);
+  background-color: var(--color-accent);
   color: var(--primary-white-color);
   border: none;
   border-radius: 50%;
@@ -1190,7 +1201,7 @@ h1{
 }
 
 #toggleSocial:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-navy);
   transform: rotate(90deg);
 }
 
@@ -1215,8 +1226,8 @@ h1{
 }
 
 .social-popup .icon {
-  background-color: var(--color-navy);
-  color: var(--color-text);
+  background-color: var(--color-accent);
+  color: var(--primary-white-color);
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -1230,15 +1241,15 @@ h1{
 }
 
 .social-popup .icon.cyan {
-  color: var(--color-primary-light);
+  color: var(--primary-white-color);
 }
 
 .social-popup .icon.magenta {
-  color: var(--color-accent-light);
+  color: var(--primary-white-color);
 }
 
 .social-popup .icon:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-navy);
   color: var(--primary-white-color);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
@@ -1339,6 +1350,10 @@ h1{
 
 .footer-logo-image{
 max-width: 100px;
+position: absolute;
+top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .footer-info{
     max-width: 500px;
@@ -1350,11 +1365,13 @@ max-width: 100px;
   position: relative;
   max-width: 500px;
   width: 100%;
+  margin: 0 auto;
   min-width: 200px;
+    min-height: 250px;
 }
 
 .footer-info-content {
-  height: 75px;
+
 }
 
 .footer-info-content h2 {
@@ -1364,22 +1381,25 @@ max-width: 100px;
   color: #fff;
   font-size: clamp(3.5rem, 8vw, 5rem);
   position: absolute;
-  left: 0;
+left: 0;
+top: 0;
 }
 
 .content-robust h2 {
     font-family: "Russo One", sans-serif;
   font-weight: 500;
-  left: 20%;
-  top: 10px;
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .content-plumbing h2 {
   font-weight: 500;
 
    font-family: "Russo One", sans-serif;
-
-  left: 10%;
-  top: 1em;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .footer-info-content h2:nth-child(1) {
