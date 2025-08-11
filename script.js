@@ -2,49 +2,49 @@
     document.body.classList.add("loaded");
   });
 
-  window.addEventListener("load", () => {
-  const modal = document.getElementById("welcomeModal");
-  const closeBtn = document.getElementById("closeModalBtn");
-
-  // Show modal on page load
-  modal.classList.add("active");
-
-  // Close modal on button click
-  closeBtn.addEventListener("click", () => {
-    modal.classList.remove("active");
-  });
-
-  // Optional: Close modal on clicking outside modal content
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.remove("active");
-    }
-  });
-});
-
-
-// window.addEventListener("load", () => {
+//   window.addEventListener("load", () => {
 //   const modal = document.getElementById("welcomeModal");
 //   const closeBtn = document.getElementById("closeModalBtn");
 
-//   // Check if modal was shown before
-//   if (!localStorage.getItem("modalShown")) {
-//     modal.classList.add("active");
-//   }
+//   // Show modal on page load
+//   modal.classList.add("active");
 
+//   // Close modal on button click
 //   closeBtn.addEventListener("click", () => {
 //     modal.classList.remove("active");
-//     localStorage.setItem("modalShown", "true"); // mark as shown
 //   });
 
-//   // Optional: close modal if clicking outside content
+//   // Optional: Close modal on clicking outside modal content
 //   modal.addEventListener("click", (e) => {
 //     if (e.target === modal) {
 //       modal.classList.remove("active");
-//       localStorage.setItem("modalShown", "true"); // mark as shown
 //     }
 //   });
 // });
+
+
+window.addEventListener("load", () => {
+  const modal = document.getElementById("welcomeModal");
+  const closeBtn = document.getElementById("closeModalBtn");
+
+  // Check if modal was shown before
+  if (!localStorage.getItem("modalShown")) {
+    modal.classList.add("active");
+  }
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+    localStorage.setItem("modalShown", "true"); // mark as shown
+  });
+
+  // Optional: close modal if clicking outside content
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+      localStorage.setItem("modalShown", "true"); // mark as shown
+    }
+  });
+});
 
 
 const promoLines = [
