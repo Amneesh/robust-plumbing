@@ -84,7 +84,7 @@ footer {
 h1 {
   text-transform: uppercase;
   font-family: "Castoro Titling", serif;
-  font-size: clamp(32px, 4vw, 48px);
+  font-size: clamp(30px, 4vw, 48px);
 }
 
 h2 {

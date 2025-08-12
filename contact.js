@@ -64,30 +64,12 @@ const faqToggles = document.querySelectorAll(".faq-toggle");
   });
 
 
- const buildings = document.querySelector('.buildings');
-  if (buildings) {
-    let latestScroll = 0;
-    let ticking = false;
+ 
+  const buildings = document.querySelector(".buildings");
 
-    function updateBackground() {
-      const speedFactor = 0.3;
-      // Use pageYOffset or scrollTop for cross-browser
-      const scrollY = latestScroll;
-
-      // Calculate new background vertical position in percentage
-      const posY = 50 + (scrollY * speedFactor) / window.innerHeight * 100;
-
-      buildings.style.backgroundPosition = `center ${posY}%`;
-
-      ticking = false;
-    }
-
-    window.addEventListener('scroll', () => {
-      latestScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (!ticking) {
-        window.requestAnimationFrame(updateBackground);
-        ticking = true;
-      }
-    });
-  }
+  window.addEventListener("scroll", () => {
+    let scrollY = window.scrollY;
+     let scrollX = window.scrollX;
+    // Move the background slower than the scroll for parallax effect
+    buildings.style.backgroundPosition = `${scrollY * 0.5}px`;
+  });

@@ -164,18 +164,19 @@ iframe:hover{
 
   .buildings {
     background-color: var(--color-secondary);
-    background-image: url('./resources/world-map-isolated.png');
-    background-repeat: no-repeat;
-    background-position: center 50%; /* initial vertical center */
-    background-size: contain;
-    background-attachment: scroll;
+   position: relative;
     height: 50vh;
+    background-image: url('./resources/world-map-isolated.png');
+    background-repeat: repeat-x;
+    background-size: cover;
     will-change: background-position;
   }
 
 
 @media screen and (min-width:768px){
 .buildings {
+  background-repeat: no-repeat;
+   background-size: contain;
     background-attachment: fixed;
   }
 }
