@@ -448,8 +448,8 @@ background-color: #002347;
 
 #slide-menu .slide-menu-nav-container{
   display: grid;
-grid-template-columns: 170px 10% 1fr;
-align-items: center;
+    grid-template-columns: 65% 10% 25%;
+    align-items: center;
   gap: 10px;
 }
 #slide-menu .page-link {

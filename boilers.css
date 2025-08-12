@@ -229,7 +229,7 @@ margin: 0 auto;
 overflow: hidden;
   box-shadow: none;
   aspect-ratio: 3/1;
-
+height: 250px;
   object-fit: cover;
   object-position: center;
    transition: all 1s ease-in-out;
