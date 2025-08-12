@@ -144,12 +144,39 @@ form textarea:focus {
 }
 
 .contact-map {
-  pointer-events: none;
+ overflow: hidden;
   iframe {
-    /* clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%); */
 
     width: 100vw;
-    height: 100vh;
+     object-position: top;
+  height: 40vh;
+    transition: all 1s ease-in-out;
+  }
+}
+iframe:hover{
+  transform: scale(1.1);
+
+}
+
+
+/* buildings */
+
+
+  .buildings {
+    background-color: var(--color-secondary);
+    background-image: url('./resources/world-map-isolated.png');
+    background-repeat: no-repeat;
+    background-position: center 50%; /* initial vertical center */
+    background-size: contain;
+    background-attachment: scroll;
+    height: 50vh;
+    will-change: background-position;
+  }
+
+
+@media screen and (min-width:768px){
+.buildings {
+    background-attachment: fixed;
   }
 }
 

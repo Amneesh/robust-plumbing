@@ -312,7 +312,7 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
 .promo-track {
   display: inline-block;
   padding-left: 100%;
-  animation: scrollText 50s linear infinite;
+  /* animation: scrollText 15s linear infinite; */
 
   i{
     font-size: clamp(16px, 4vw, 18px);
@@ -323,7 +323,9 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
   from { transform: translateX(0); }
   to { transform: translateX(-50%); } /* move half because we duplicated */
 }
-
+ #promo-track.scrolling {
+    animation: scrollText 50s linear infinite;
+  }
 /* When active, expand the dropdown */
 .page-links.active {
   max-height: 300px;  /* adjust as needed */
@@ -1136,7 +1138,7 @@ h1{
   color: white;
   padding: 20px;
   text-shadow: 0 2px 5px rgba(0,0,0,0.7);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.87), transparent); /* optional overlay */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.993), transparent); /* optional overlay */
 
 }
 

@@ -62,3 +62,32 @@ const faqToggles = document.querySelectorAll(".faq-toggle");
       });
     });
   });
+
+
+ const buildings = document.querySelector('.buildings');
+  if (buildings) {
+    let latestScroll = 0;
+    let ticking = false;
+
+    function updateBackground() {
+      const speedFactor = 0.3;
+      // Use pageYOffset or scrollTop for cross-browser
+      const scrollY = latestScroll;
+
+      // Calculate new background vertical position in percentage
+      const posY = 50 + (scrollY * speedFactor) / window.innerHeight * 100;
+
+      buildings.style.backgroundPosition = `center ${posY}%`;
+
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      latestScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (!ticking) {
+        window.requestAnimationFrame(updateBackground);
+        ticking = true;
+      }
+    });
+  }

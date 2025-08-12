@@ -1,6 +1,46 @@
  window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
+const track = document.getElementById("promo-track");
+
+async function fetchPromoLines(sheetId, sheetName = 'Sheet1') {
+  const sheetUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?sheet=${sheetName}&tq=select%20*`;
+try {
+      const response = await fetch(sheetUrl);
+      const textData = await response.text();
+
+      const jsonData = JSON.parse(textData.substring(textData.indexOf('{'), textData.lastIndexOf('}') + 1));
+      const rows = jsonData.table.rows;
+
+      // Clear previous content
+      track.innerHTML = '';
+
+      // Create promo items
+      rows.forEach(row => {
+        const promoText = row.c[0]?.v || '';
+
+        const p = document.createElement('p');
+        p.innerHTML = `<i class="fa-solid fa-circle-info"></i> ${promoText}`;
+        track.appendChild(p);
+      });
+
+      // Duplicate the content for infinite loop effect
+      const clone = track.innerHTML;
+      track.innerHTML += clone;
+
+      // Add animation class to start scrolling
+      track.classList.add('scrolling');
+
+    } catch (error) {
+      console.error('Error fetching promo lines:', error);
+    }
+}
+
+// Call with your Sheet ID and sheet name
+fetchPromoLines('1CKPqUcDt1Y-fZTMopPFhffEa5Gr3GM8hJybsk0Jo_9w', 'promotions');
+
+
+// Example usage:
 
 //   window.addEventListener("load", () => {
 //   const modal = document.getElementById("welcomeModal");
@@ -23,70 +63,31 @@
 // });
 
 
-window.addEventListener("load", () => {
-  const modal = document.getElementById("welcomeModal");
-  const closeBtn = document.getElementById("closeModalBtn");
-
-  // Check if modal was shown before
-  if (!localStorage.getItem("modalShown")) {
-    modal.classList.add("active");
-  }
-
-  closeBtn.addEventListener("click", () => {
-    modal.classList.remove("active");
-    localStorage.setItem("modalShown", "true"); // mark as shown
-  });
-
-  // Optional: close modal if clicking outside content
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.remove("active");
-      localStorage.setItem("modalShown", "true"); // mark as shown
-    }
-  });
-});
 
 
-const promoLines = [
-  { icon: 'fa-solid fa-bolt', text: "$300 upfront & Get 25% OFF Plumbing Service upto 1 year" },
-  { icon: 'fa-solid fa-wrench', text: "Free Water Heater Inspection with Any Service – This Week Only!" },
-  { icon: 'fa-solid fa-phone-volume', text: "24/7 Emergency Plumbing – Call Us at (604) 712-3899" },
-  { icon: 'fa-solid fa-droplet', text: "Winter Prep Special: Boiler Tune-up for Only $99" }
-];
+// const promoLines = [
+//   { icon: 'fa-solid fa-bolt', text: "$300 upfront & Get 25% OFF Plumbing Service upto 1 year" },
+//   { icon: 'fa-solid fa-wrench', text: "Free Water Heater Inspection with Any Service – This Week Only!" },
+//   { icon: 'fa-solid fa-phone-volume', text: "24/7 Emergency Plumbing – Call Us at (604) 712-3899" },
+//   { icon: 'fa-solid fa-droplet', text: "Winter Prep Special: Boiler Tune-up for Only $99" }
+// ];
 
-const track = document.getElementById("promo-track");
+// const track = document.getElementById("promo-track");
 
-// Function to create span elements for all lines
-function createTrackContent() {
-  promoLines.forEach(line => {
-    const span = document.createElement("p");
-    span.innerHTML = `<i class="${line.icon}"></i> ${line.text}`;
-    track.appendChild(span);
-  });
-}
-
-// Create two sets for seamless loop
-createTrackContent();
-createTrackContent();
-
-// menu headeer dropdown
-// const logo = document.querySelector('.robust-logo');
-// const pageLinks = document.querySelector('.page-links');
-// const links = document.querySelectorAll('.page-links a');
-
-// logo.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   pageLinks.classList.toggle('active');
-//   logo.classList.toggle('rotate');
-// });
-
-// links.forEach(link => {
-//   link.addEventListener('click', () => {
-//     pageLinks.classList.remove('active');
-//     logo.classList.remove('rotate');
+// // Function to create span elements for all lines
+// function createTrackContent() {
+//   promoLines.forEach(line => {
+//     const span = document.createElement("p");
+//     span.innerHTML = `<i class="${line.icon}"></i> ${line.text}`;
+//     track.appendChild(span);
 //   });
-// });
-// menu headeer dropdown
+// }
+
+
+// createTrackContent();
+// createTrackContent();
+
+
 
 const toggleBtn1 = document.getElementById('menu-toggle');
 const menu = document.getElementById('slide-menu');
@@ -166,6 +167,28 @@ if (document.body.classList.contains("home-page")) {
   //   // const bottomImg = document.querySelector(".hero-img-bottom");
   //   const overlay = document.querySelector(".overlay");
 
+window.addEventListener("load", () => {
+  const modal = document.getElementById("welcomeModal");
+  const closeBtn = document.getElementById("closeModalBtn");
+
+  // Check if modal was shown before
+  if (!localStorage.getItem("modalShown")) {
+    modal.classList.add("active");
+  }
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+    localStorage.setItem("modalShown", "true"); // mark as shown
+  });
+
+  // Optional: close modal if clicking outside content
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+      localStorage.setItem("modalShown", "true"); // mark as shown
+    }
+  });
+});
 
 
   //   setTimeout(() => {
