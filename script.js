@@ -310,12 +310,21 @@ function getActiveFeature() {
     }
   });
 
-  const activeFeature = features[index];
-    desc.innerHTML = `<div class = "feature-content-data flex flex-col gap-1"><h1>${activeFeature.dataset.title}</h1> <div class="underline"></div> <p> ${activeFeature.dataset.desc}</p></div>`;
-  }
+  desc.classList.add('fade-out');
 
+  const activeFeature = features[index];
+    desc.innerHTML = `
+    <div class = "feature-content-data flex flex-col gap-1 ">
+    <h1>${activeFeature.dataset.title}</h1>
+    <div class="underline"></div>
+    <p> ${activeFeature.dataset.desc}</p>
+    <div class="bagde-flag-wrap">
+      <p href="#" class="bagde-flag"> RED SEAL CERTIFIED </p>
+    </div>
+    </div>`;
+  }
   // Update description every second
-  setInterval(updateDescription, 1000);
+  setInterval(updateDescription, 10);
   updateDescription();
 
 document.addEventListener("DOMContentLoaded", () => vertical_slider.init());
