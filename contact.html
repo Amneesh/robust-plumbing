@@ -344,24 +344,26 @@
     </section>
 
 
-    <section class="footer-subscribe">
-      <h1>Reach Out <span class="color-accent">Today </span>!</h1>
-      <form class="subscribe-form flex flex-col gap-1" onsubmit="handleSubscribe(event)">
-        <p>Skip the wait — tell us what you need! </p>
+ <section class="footer-subscribe">
+  <h1 id="subHeading">Reach Out <span class="color-accent">Today!</span></h1>
+  <form class="subscribe-form flex flex-col gap-1" onsubmit="handleSubscribe(event)" >
+    <p id="subText">Skip the wait — tell us what you need!</p>
 
-        <input type="email" id="subEmail" class="subscribe-input" name="email" placeholder="Enter your email"
-          required />
-        <button class="robust-button-primary" type="submit">Subscribe</button>
-      </form>
-      <div class="sub-success" id="subSuccess">
-        <h3 class="color-accent">Thank you</h3>
-        <h4>You have been subscribe to Robust Plumbing !</h4>
-      </div>
-      <div class="sub-fail" id="subFail">
-        <p class="color-accent">Oops !</p>
-        <p>Please try again after refreshing the page</p>
-      </div>
-    </section>
+    <input type="email" id="subEmail" class="subscribe-input" name="email" placeholder="Enter your email" required />
+    <button class="robust-button-primary" type="submit">Subscribe</button>
+  </form>
+
+  <div class="sub-success" id="subSuccess" >
+    <h1>Thank <span  class="color-accent">you!</span></h1>
+    <p>Thanks for subscribing! Discover our boiler solutions in the meantime.</p>
+    <button class="robust-button-primary go-to-boiler" href="./boilers.html">Boiler Services</button>
+  </div>
+
+  <div class="sub-fail" id="subFail">
+    <p class="color-accent">Oops!</p>
+    <p>Please try again.</p>
+  </div>
+</section>
 
   </footer>
   <div class="footer-copyright flex flex-row justify-center" id="footerCopyright">
