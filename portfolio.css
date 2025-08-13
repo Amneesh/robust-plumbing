@@ -29,6 +29,19 @@
     clear: both;
 }
 
+
+.button-group button.active {
+  background-color: var(--color-accent-dark);
+  color: var(--primary-white-color);
+}
+.noData{
+  padding: 5rem 1rem;
+
+  p{
+    text-align: center;
+    font-size: clamp(25px, 4vw, 35px);
+  }
+}
 .profile-image {
   background-color: var(--primary-white-color);
     float: left;
