@@ -40,71 +40,7 @@ const whyPoints = document.querySelectorAll('.why-point');
 
 
   
-const servicesData = [
-  {
-    id: "combi",
-    title: "Combi Boilers",
-    description:
-      "Combi (combination) boilers are compact, all-in-one units that provide both central heating and instant hot water without the need for a separate water tank. Perfect for small to medium-sized homes with limited space, they offer energy-efficient heating and hot water on demand, helping reduce your energy bills while saving space.",
-    img: "./resources/services/kitchen-plumbing.png",
-  },
-  {
-    id: "system",
-    title: "System Boilers",
-    description:
-      "System boilers work with a hot water storage cylinder but don’t require a separate cold water tank. They deliver hot water simultaneously to multiple taps and radiators, making them ideal for larger homes or businesses with high hot water demand. System boilers are known for reliability and ease of installation.",
-    img: "./resources/services/kitchen-plumbing.png",
-  },
-  {
-    id: "conventional",
-    title: "Conventional Boilers",
-    description:
-      "Also called regular or traditional boilers, these systems use both a cold water storage tank and a hot water cylinder. They are suitable for older properties with existing radiator systems and where multiple bathrooms require hot water at the same time. Conventional boilers provide consistent heating but take up more space.",
-    img: "./resources/services/kitchen-plumbing.png",
-  },
-  {
-    id: "electric",
-    title: "Electric Boilers",
-    description:
-      "Electric boilers are an eco-friendly alternative to gas boilers, ideal for homes or businesses without access to natural gas. They provide clean, quiet heating and hot water with low maintenance needs. Electric boilers are compact, easy to install, and great for small spaces or environmentally conscious customers.",
-    img: "./resources/services/kitchen-plumbing.png",
-  },
-  {
-    id: "gas",
-    title: "Gas Boilers",
-    description:
-      "Gas boilers are the most common type of boilers, burning natural gas to provide heating and hot water efficiently. They come in combi, system, or conventional models and are popular due to their cost-effectiveness and performance. Proper installation and maintenance ensure safety and long-term reliability.",
-    img: "./resources/services/kitchen-plumbing.png",
-  },
-  {
-    id: "oil",
-    title: "Oil Boilers",
-    description:
-      "Oil boilers burn heating oil to produce heat and hot water, commonly used in rural areas or properties without natural gas connections. They offer powerful heating and can be combined with modern controls for efficiency. Regular servicing is essential to maintain performance and safety.",
-    img: "./resources/services/kitchen-plumbing.png",
-  },
-  {
-    id: "condensing",
-    title: "Condensing Boilers",
-    description:
-      "Condensing boilers are high-efficiency boilers designed to capture and reuse heat from exhaust gases that traditional boilers waste. This results in reduced fuel consumption and lower carbon emissions. Available in combi, system, or conventional styles, condensing boilers are an environmentally friendly and cost-saving choice.",
-    img: "./resources/services/kitchen-plumbing.png",
-  },
-  {
-    id: "biomass",
-    title: "Biomass Boilers",
-    description:
-      "Biomass boilers use renewable organic materials such as wood pellets, chips, or logs to generate heat. They are an eco-friendly alternative for homes and businesses aiming to reduce their carbon footprint. Biomass boilers require dedicated fuel storage but offer sustainable heating with government incentives in some areas.",
-    img: "./resources/services/kitchen-plumbing.png",
-  },
-  {
-    id: "steam",
-    title: "Steam Boilers",
-    description:
-      "Primarily used in industrial and large commercial applications, steam boilers heat water to produce steam for heating or processing needs. These robust systems are designed for high-capacity output and are maintained by specialists to ensure safe and efficient operation.",
-    img: "./resources/services/kitchen-plumbing.png",
-  }
-]
+
 
 
   // Function to get URL query param by name

@@ -166,7 +166,7 @@ iframe:hover{
     background-color: var(--color-secondary);
    position: relative;
     height: 50vh;
-    background-image: url('./resources/world-map-isolated.png');
+    background-image: url('./resources/world-map-isolated.webp');
     background-repeat: repeat-x;
     background-size: cover;
     will-change: background-position;

@@ -658,3 +658,5 @@ async function handleSubscribe(event) {
 
 
 
+  document.getElementById('footerCopyright').innerHTML = `
+   <p> &copy; <span id="year">${new Date().getFullYear()}</span> copyright reserved by <a href="mailto:amneeshsingh5@gmail.com" class="color-accent-light"> amneeshsingh5@gmail.com </a>. All rights reserved.</p>`
