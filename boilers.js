@@ -113,112 +113,157 @@ const servicesData = [
     return urlParams.get(name);
   }
 
- // Example boiler data with categories added
 const boilers = [
-  // Combi Boilers
+  // Natural Gas
   {
-    id: "combi-navien",
-    category: "combi",
-    title: "Navien NCB-240E (Combi Boiler)",
-    shortDescription: "Compact all-in-one heating & hot water solution for small to medium homes.",
-    price: "$3,200 – $3,800",
-    img: "./resources/services/kitchen-plumbing.png"
+    id: "ng-johnwood-40",
+    category: "natural-gas",
+    title: "John Wood 40 Gallon Natural Gas",
+    shortDescription: "Reliable 40 gallon natural gas water heater from John Wood.",
+    price: "$1,400 – $1,700",
+    img: "./resources/boiler-products/johnwood-40.jpg"
   },
   {
-    id: "combi-viessmann",
-    category: "combi",
-    title: "Viessmann Vitodens 100-W (Combi Boiler)",
-    shortDescription: "High efficiency combi boiler for instant hot water and heating.",
-    price: "$3,500 – $4,200",
-    img: "./resources/services/kitchen-plumbing.png"
+    id: "ng-johnwood-50",
+    category: "natural-gas",
+    title: "John Wood 50 Gallon Natural Gas",
+    shortDescription: "High capacity 50 gallon natural gas water heater from John Wood.",
+    price: "$1,500 – $1,800",
+    img: "./resources/boiler-products/johnwood-40.jpg"
   },
   {
-    id: "combi-worcester",
-    category: "combi",
-    title: "Worcester Bosch Greenstar 25i (Combi Boiler)",
-    shortDescription: "Reliable combi boiler perfect for limited space homes.",
-    price: "$3,000 – $3,600",
-    img: "./resources/services/kitchen-plumbing.png"
-  },
-
-  // System Boilers
-  {
-    id: "system-baxi",
-    category: "system",
-    title: "Baxi Megaflo 24 (System Boiler)",
-    shortDescription: "Reliable heating with a hot water cylinder for larger homes.",
-    price: "$3,200 – $3,900",
-    img: "./resources/services/kitchen-plumbing.png"
+    id: "ng-johnwood-60",
+    category: "natural-gas",
+    title: "John Wood 60 Gallon Natural Gas",
+    shortDescription: "Large 60 gallon natural gas water heater from John Wood.",
+    price: "$1,600 – $1,950",
+    img: "./resources/boiler-products/johnwood-40.jpg"
   },
   {
-    id: "system-ideal",
-    category: "system",
-    title: "Ideal Logic+ System S24 (System Boiler)",
-    shortDescription: "Efficient system boiler for multiple taps and radiators.",
-    price: "$2,900 – $3,400",
-    img: "./resources/services/kitchen-plumbing.png"
+    id: "ng-rheem-40",
+    category: "natural-gas",
+    title: "Rheem 40 Gallon Natural Gas",
+    shortDescription: "Durable 40 gallon natural gas water heater from Rheem.",
+    price: "$1,350 – $1,650",
+    img: "./resources/boiler-products/rheme-40.avif"
   },
   {
-    id: "system-vaillant",
-    category: "system",
-    title: "Vaillant ecoTEC Plus 630 (System Boiler)",
-    shortDescription: "High performance system boiler with easy installation.",
-    price: "$3,500 – $4,100",
-    img: "./resources/services/kitchen-plumbing.png"
-  },
-
-  // Conventional Boilers
-  {
-    id: "conventional-ideal",
-    category: "conventional",
-    title: "Ideal Mexico HE (Conventional Boiler)",
-    shortDescription: "Traditional boiler suited for multi-bathroom homes.",
-    price: "$2,800 – $3,300",
-    img: "./resources/services/kitchen-plumbing.png"
+    id: "ng-rheem-50",
+    category: "natural-gas",
+    title: "Rheem 50 Gallon Natural Gas",
+    shortDescription: "Efficient 50 gallon natural gas water heater from Rheem.",
+    price: "$1,450 – $1,750",
+    img: "./resources/boiler-products/rheme-40.avif"
   },
   {
-    id: "conventional-vaillant",
-    category: "conventional",
-    title: "Vaillant ecoFIT Pure 415 (Conventional Boiler)",
-    shortDescription: "Reliable heat-only boiler for consistent heating.",
-    price: "$2,900 – $3,400",
-    img: "./resources/services/kitchen-plumbing.png"
+    id: "ng-rheem-60",
+    category: "natural-gas",
+    title: "Rheem 60 Gallon Natural Gas",
+    shortDescription: "High performance 60 gallon natural gas water heater from Rheem.",
+    price: "$1,550 – $1,850",
+    img: "./resources/boiler-products/rheme-40.avif"
   },
   {
-    id: "conventional-worcester",
-    category: "conventional",
-    title: "Worcester Bosch Greenstar Ri (Conventional Boiler)",
-    shortDescription: "Trusted conventional boiler with solid performance.",
-    price: "$2,900 – $3,500",
-    img: "./resources/services/kitchen-plumbing.png"
+    id: "ng-bradfordwhite-40",
+    category: "natural-gas",
+    title: "Bradford White 40 Gallon Natural Gas",
+    shortDescription: "Trusted 40 gallon natural gas water heater from Bradford White.",
+    price: "$1,500 – $1,800",
+    img: "./resources/boiler-products/bradford.jpg"
+  },
+  {
+    id: "ng-bradfordwhite-50",
+    category: "natural-gas",
+    title: "Bradford White 50 Gallon Natural Gas",
+    shortDescription: "Reliable 50 gallon natural gas water heater from Bradford White.",
+    price: "$1,600 – $1,900",
+    img: "./resources/boiler-products/bradford.jpg"
+  },
+  {
+    id: "ng-bradfordwhite-60",
+    category: "natural-gas",
+    title: "Bradford White 60 Gallon Natural Gas",
+    shortDescription: "Large 60 gallon natural gas water heater from Bradford White.",
+    price: "$1,700 – $2,000",
+    img: "./resources/boiler-products/bradford.jpg"
   },
 
-  // Electric Boilers
+  // Electric
   {
-    id: "electric-thermolec",
+    id: "electric-johnwood-40",
     category: "electric",
-    title: "Thermolec B-12U (Electric Boiler)",
-    shortDescription: "Compact and quiet electric boiler for gas-free heating.",
-    price: "$2,500 – $3,000",
-    img: "./resources/services/kitchen-plumbing.png"
+    title: "John Wood 40 Gallon Electric",
+    shortDescription: "Efficient 40 gallon electric water heater from John Wood.",
+    price: "$1,200 – $1,500",
+    img: "./resources/boiler-products/johnwood-40.jpg"
   },
   {
-    id: "electric-elnur",
+    id: "electric-johnwood-50",
     category: "electric",
-    title: "Elnur Mattira MAC15 (Electric Boiler)",
-    shortDescription: "Efficient electric boiler ideal for small spaces.",
-    price: "$2,400 – $2,900",
-    img: "./resources/services/kitchen-plumbing.png"
+    title: "John Wood 50 Gallon Electric",
+    shortDescription: "High capacity 50 gallon electric water heater from John Wood.",
+    price: "$1,300 – $1,600",
+    img: "./resources/boiler-products/johnwood-40.jpg"
   },
   {
-    id: "electric-strom",
+    id: "electric-johnwood-60",
     category: "electric",
-    title: "Strom SFB15 (Electric Boiler)",
-    shortDescription: "Eco-friendly electric boiler with low maintenance.",
-    price: "$2,600 – $3,100",
-    img: "./resources/services/kitchen-plumbing.png"
+    title: "John Wood 60 Gallon Electric",
+    shortDescription: "Large 60 gallon electric water heater from John Wood.",
+    price: "$1,400 – $1,700",
+    img: "./resources/boiler-products/johnwood-40.jpg"
+  },
+  {
+    id: "electric-rheem-40",
+    category: "electric",
+    title: "Rheem 40 Gallon Electric",
+    shortDescription: "Reliable 40 gallon electric water heater from Rheem.",
+    price: "$1,150 – $1,450",
+    img: "./resources/boiler-products/rheme-40.avif"
+  },
+  {
+    id: "electric-rheem-50",
+    category: "electric",
+    title: "Rheem 50 Gallon Electric",
+    shortDescription: "Efficient 50 gallon electric water heater from Rheem.",
+    price: "$1,250 – $1,550",
+    img: "./resources/boiler-products/rheme-40.avif"
+  },
+  {
+    id: "electric-rheem-60",
+    category: "electric",
+    title: "Rheem 60 Gallon Electric",
+    shortDescription: "High capacity 60 gallon electric water heater from Rheem.",
+    price: "$1,350 – $1,650",
+    img: "./resources/boiler-products/rheme-40.avif"
+  },
+  {
+    id: "electric-bradfordwhite-40",
+    category: "electric",
+    title: "Bradford White 40 Gallon Electric",
+    shortDescription: "Durable 40 gallon electric water heater from Bradford White.",
+    price: "$1,300 – $1,600",
+    img: "./resources/boiler-products/bradford.jpg"
+  },
+  {
+    id: "electric-bradfordwhite-50",
+    category: "electric",
+    title: "Bradford White 50 Gallon Electric",
+    shortDescription: "Reliable 50 gallon electric water heater from Bradford White.",
+    price: "$1,400 – $1,700",
+    img: "./resources/boiler-products/bradford.jpg"
+  },
+  {
+    id: "electric-bradfordwhite-60",
+    category: "electric",
+    title: "Bradford White 60 Gallon Electric",
+    shortDescription: "Large 60 gallon electric water heater from Bradford White.",
+    price: "$1,500 – $1,800",
+    img: "./resources/boiler-products/bradford.jpg"
   }
 ];
+
+
 
 
 // Store swiper instance globally so you can destroy/re-init it
@@ -242,13 +287,15 @@ function renderSlides(category) {
         <div class="boiler-catalog-content flex flex-col gap-50">
           <div class="boiler-catalog-header flex flex-row gap-1 items-center justify-between">
             <h5>${title}</h5>
-            <p>${price}</p>
+           
           </div>
-          <div class="boiler-catalog-body">
-            <p>${shortDescription}</p>
+          <div class="underline-left"></div>
+          <div class="boiler-catalog-body flex flex-col gap-25">
+           <p>${price}</p>
+            <p class="boiler-catalog-description">${shortDescription}</p>
           </div>
           <div class="boiler-catalog-footer">
-            <button class="robust-button-secondary">BUY NOW</button>
+            <button class="robust-button-secondary go-to-contact">BUY NOW</button>
           </div>
         </div>
       </div>
@@ -287,7 +334,7 @@ document.querySelectorAll(".service-filter-button button").forEach(btn => {
 
 
 window.addEventListener("load", () => {
-  renderSlides("electric");
+  renderSlides("natural-gas");
 });
 
 

@@ -24,7 +24,7 @@
 </head>
 
 <body class="event-page">
-    <header class="robust-header">
+  <header class="robust-header">
 
     <div class="robust-page-links flex flex-row  items-center">
       <div class="robust-logo">
@@ -43,43 +43,43 @@
           <li class="slide-menu-nav-container">
             <a class="page-link" href="./index.html">Home</a>
             <div class="underline-nav"></div>
-            <ul class="sub-menu flex flex-col gap-50">
+            <!-- <ul class="sub-menu flex flex-col gap-50">
               <li><a class="section-link" href="./index.html#whoWeAre">About Us</a></li>
               <li><a class="section-link" href="./index.html#features">FEATURES</a></li>
               <li><a class="section-link" href="./index.html#services">Services</a></li>
               <li><a class="section-link" href="./index.html#googleReviews">REVIEWS</a></li>
-            </ul>
+            </ul> -->
           </li>
 
           <li class="slide-menu-nav-container">
             <a class="page-link" href="./boilers.html">Boilers</a>
             <div class="underline-nav"></div>
-            <ul class="sub-menu flex flex-col gap-50">
+            <!-- <ul class="sub-menu flex flex-col gap-50">
               <li><a class="section-link" href="./boilers.html#boilersSection">Boilers</a></li>
               <li><a class="section-link" href="./boilers.html#boilerServices">Services</a></li>
               <li><a class="section-link" href="./boilers.html#boilerCatalog">Catalog</a></li>
               <li><a class="section-link" href="./boilers.html#boilerTypes">Types</a></li>
 
-            </ul>
+            </ul> -->
           </li>
 
           <li class="slide-menu-nav-container">
             <a class="page-link" href="./portfolio.html">Portfolio</a>
             <div class="underline-nav"></div>
-            <ul class="sub-menu flex flex-col gap-50">
+            <!-- <ul class="sub-menu flex flex-col gap-50">
               <li><a class="section-link" href="./portfolio.html">Residential</a></li>
               <li><a class="section-link" href="./portfolio.html">Commercial</a></li>
               <li><a class="section-link" href="./portfolio.html">Projects</a></li>
-            </ul>
+            </ul> -->
           </li>
 
           <li class="slide-menu-nav-container">
             <a class="page-link" href="./contact.html">Contact</a>
             <div class="underline-nav"></div>
-            <ul class="sub-menu flex flex-col gap-50">
+            <!-- <ul class="sub-menu flex flex-col gap-50">
               <li><a class="section-link" href="./contact.html">Get a Quote</a></li>
               <li><a class="section-link" href="./contact.html">Locations</a></li>
-            </ul>
+            </ul> -->
           </li>
         </ul>
       </nav>
@@ -89,7 +89,7 @@
 
 
   <main class="boilers-main-wrapper">
-   
+
     <div class="promo-banner flex flex-row flex-wrap items-center justify-center gap-1 go-to-contact">
       <p class="promo-track flex flex-row gap-1" id="promo-track"></p>
     </div>
@@ -109,7 +109,7 @@
             technicians are here to provide fast, efficient, and affordable boiler services you can count on.</p>
           <button class="robust-button-primary">GET A QUOTE</button>
         </div>
-        <div class="boiler-image-wrapper animate-slide-left"><img src="./resources/robust_van.png" alt="" srcset="">
+        <div class="boiler-image-wrapper animate-slide-left"><img src="./resources/robust_van.png" alt="">
         </div>
       </div>
     </section>
@@ -174,10 +174,10 @@
 
           <div id="serviceDetails" class="service-details flex flex-col gap-3">
             <div class="service-filter-button flex flex-row flex-wrap gap-1">
-               <button class="robust-button-secondary" data-category="combi">Combi Boilers</button>
-  <button class="robust-button-secondary" data-category="system">System Boilers</button>
-  <button class="robust-button-secondary" data-category="conventional">conventional</button>
-    <button class="robust-button-secondary" data-category="electric">electric</button>
+              <button class="robust-button-secondary active" data-category="natural-gas">Natural Gas</button>
+
+              <button class="robust-button-secondary" data-category="electric">Electric</button>
+
 
 
             </div>
@@ -192,76 +192,78 @@
       </div>
     </section>
 
-    
-<section class="boiler-types-section flex flex-col items-center justify-center gap-2" id="boilerTypes">
-  <h1>Boiler <span class="color-accent">Types</span></h1>
-  <div class="boiler-types-wrapper flex flex-col-reverse lg:flex-row  gap-1">
-  
-   <div class="boiler-types-text">
-  <div class="boiler-text-item flex flex-col gap-1 active" data-type="combi">
-    <h1>COMBI BOILERS</h1>
-    <div class="underline-left"></div>
-    <ul>
-      <li>Provide both central heating and instant hot water on demand without a separate hot water tank.</li>
-      <li>Compact and efficient, great for smaller homes.</li>
-      <li>Energy-efficient due to on-demand heating, which can reduce utility bills.</li>
-      <li>Requires less space compared to system or conventional boilers.</li>
-      <li>Simple installation and low maintenance.</li>
-      <li>Ideal for homes with limited space and fewer bathrooms.</li>
-    </ul>
-  </div>
-  
-  <div class="boiler-text-item flex flex-col gap-1" data-type="system">
-    <h1>SYSTEM BOILERS</h1>
-    <div class="underline-left"></div>
-    <ul>
-      <li>Work with a separate hot water storage tank but don’t require a water feed tank in the loft.</li>
-      <li>Suitable for homes with multiple bathrooms needing a steady hot water supply.</li>
-      <li>Hot water stored in the tank is available instantly for use.</li>
-      <li>More complex installation than combi boilers but better for high water demand.</li>
-      <li>Offers good pressure and water flow throughout the home.</li>
-      <li>Requires space for the hot water cylinder but less than conventional boilers.</li>
-    </ul>
-  </div>
-  
-  <div class="boiler-text-item flex flex-col gap-1" data-type="conventional">
-    <h1>CONVENTIONAL BOILERS</h1>
-    <div class="underline-left"></div>
-    <ul>
-      <li>Use a separate hot water cylinder and a cold water storage tank (usually in the loft).</li>
-      <li>Often found in older homes with traditional plumbing systems.</li>
-      <li>Reliable for homes with high hot water demand and multiple bathrooms.</li>
-      <li>Provides hot water to several taps simultaneously without pressure loss.</li>
-      <li>More complex and costly installation compared to combi and system boilers.</li>
-      <li>Requires more space due to the need for storage tanks.</li>
-      <li>Cold water tank needs regular maintenance to prevent contamination.</li>
-    </ul>
-  </div>
-  
-  <div class="boiler-text-item flex flex-col gap-1" data-type="electric">
-    <h1>ELECTRIC BOILERS</h1>
-    <div class="underline-left"></div>
-    <ul>
-      <li>Use electricity instead of gas or oil to heat water.</li>
-      <li>Compact and ideal for properties without gas supply.</li>
-      <li>Quiet operation with minimal maintenance.</li>
-      <li>Easy to install and often used as secondary or backup heating.</li>
-      <li>Generally more expensive to run than gas boilers, but cleaner and greener if using renewable electricity.</li>
-      <li>Suitable for small homes, flats, or where low heating demand is required.</li>
-    </ul>
-  </div>
-</div>
 
-    
-    <div class="boiler-types-images ">
-      <img src="./resources/boiler-types/combi-boiler.webp" alt="Combi Boilers" data-type="combi" class="active" />
-      <img src="./resources/boiler-types/system-boiler.webp" alt="System Boilers" data-type="system" />
-      <img src="./resources/boiler-types/conventional-boiler.webp" alt="Conventional Boilers" data-type="conventional" />
-      <img src="./resources/boiler-types/electric-boiler.webp" alt="Electric Boilers" data-type="electric" />
-    </div>
-    
-  </div>
-</section>
+    <section class="boiler-types-section flex flex-col items-center justify-center gap-2" id="boilerTypes">
+      <h1>Boiler <span class="color-accent">Types</span></h1>
+      <div class="boiler-types-wrapper flex flex-col-reverse lg:flex-row  gap-1">
+
+        <div class="boiler-types-text">
+          <div class="boiler-text-item flex flex-col gap-1 active" data-type="combi">
+            <h1>COMBI BOILERS</h1>
+            <div class="underline-left"></div>
+            <ul>
+              <li>Provide both central heating and instant hot water on demand without a separate hot water tank.</li>
+              <li>Compact and efficient, great for smaller homes.</li>
+              <li>Energy-efficient due to on-demand heating, which can reduce utility bills.</li>
+              <li>Requires less space compared to system or conventional boilers.</li>
+              <li>Simple installation and low maintenance.</li>
+              <li>Ideal for homes with limited space and fewer bathrooms.</li>
+            </ul>
+          </div>
+
+          <div class="boiler-text-item flex flex-col gap-1" data-type="system">
+            <h1>SYSTEM BOILERS</h1>
+            <div class="underline-left"></div>
+            <ul>
+              <li>Work with a separate hot water storage tank but don’t require a water feed tank in the loft.</li>
+              <li>Suitable for homes with multiple bathrooms needing a steady hot water supply.</li>
+              <li>Hot water stored in the tank is available instantly for use.</li>
+              <li>More complex installation than combi boilers but better for high water demand.</li>
+              <li>Offers good pressure and water flow throughout the home.</li>
+              <li>Requires space for the hot water cylinder but less than conventional boilers.</li>
+            </ul>
+          </div>
+
+          <div class="boiler-text-item flex flex-col gap-1" data-type="conventional">
+            <h1>CONVENTIONAL BOILERS</h1>
+            <div class="underline-left"></div>
+            <ul>
+              <li>Use a separate hot water cylinder and a cold water storage tank (usually in the loft).</li>
+              <li>Often found in older homes with traditional plumbing systems.</li>
+              <li>Reliable for homes with high hot water demand and multiple bathrooms.</li>
+              <li>Provides hot water to several taps simultaneously without pressure loss.</li>
+              <li>More complex and costly installation compared to combi and system boilers.</li>
+              <li>Requires more space due to the need for storage tanks.</li>
+              <li>Cold water tank needs regular maintenance to prevent contamination.</li>
+            </ul>
+          </div>
+
+          <div class="boiler-text-item flex flex-col gap-1" data-type="electric">
+            <h1>ELECTRIC BOILERS</h1>
+            <div class="underline-left"></div>
+            <ul>
+              <li>Use electricity instead of gas or oil to heat water.</li>
+              <li>Compact and ideal for properties without gas supply.</li>
+              <li>Quiet operation with minimal maintenance.</li>
+              <li>Easy to install and often used as secondary or backup heating.</li>
+              <li>Generally more expensive to run than gas boilers, but cleaner and greener if using renewable
+                electricity.</li>
+              <li>Suitable for small homes, flats, or where low heating demand is required.</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="boiler-types-images ">
+          <img src="./resources/boiler-types/combi-boiler.webp" alt="Combi Boilers" data-type="combi" class="active" />
+          <img src="./resources/boiler-types/system-boiler.webp" alt="System Boilers" data-type="system" />
+          <img src="./resources/boiler-types/conventional-boiler.webp" alt="Conventional Boilers"
+            data-type="conventional" />
+          <img src="./resources/boiler-types/electric-boiler.webp" alt="Electric Boilers" data-type="electric" />
+        </div>
+
+      </div>
+    </section>
 
 
     <section class="join-us shake-effect">
@@ -275,7 +277,7 @@
 
 
 
-    
+
 
 
   </main>

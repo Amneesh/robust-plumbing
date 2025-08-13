@@ -20,6 +20,7 @@
   --color-primary-light:  #ADD8E6;
   --color-primary-dark: #00008B;
   
+  --color-navy-dark:  #001123;
   --color-navy: #002347;
 
   --color-secondary: #e5eef7;
@@ -295,6 +296,8 @@ i {
   padding: 0 2rem;
   justify-content: space-between;
 box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
+
+
 .page-wrapper, .boilers-main-wrapper, .contact-main-wrapper, .portfolio-main-wrapper{
   margin-top: 80px;
 }
@@ -408,7 +411,7 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
 /* Slide Menu */
 #slide-menu {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: fixed;
   top: 0;
@@ -417,11 +420,14 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
   height: 100vh;
  padding: 2rem;
   visibility: hidden;
-  /* <- now shows smoothly */
   transform: translateX(100%);
   transition: transform 0.4s ease-in-out;
   z-index: 99999999;
 background-color: #002347;
+background-image: url('./resources/plumber-header.png');
+background-size: 30em;
+    background-position: 15rem 100%;
+    background-repeat: no-repeat;
 
 
 }
@@ -429,6 +435,10 @@ background-color: #002347;
 @media only screen and (min-width: 600px) {
   #slide-menu {
     width: 50%;
+    background-size: 30em;
+    background-position: 30rem 100%;
+    background-repeat: no-repeat;
+
   }
 }
 
@@ -447,9 +457,9 @@ background-color: #002347;
 
 
 #slide-menu .slide-menu-nav-container{
-  display: grid;
-    grid-template-columns: 65% 10% 25%;
-    align-items: center;
+  display: flex;
+  flex-flow: column;
+    align-items: flex-start;
   gap: 10px;
 }
 #slide-menu .page-link {
@@ -457,7 +467,7 @@ background-color: #002347;
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Castoro Titling", serif;
-  font-size: clamp(28px, 4vw, 36px);
+  font-size: clamp(28px, 4vw, 45px);
 }
 
 #slide-menu .section-link {
@@ -1679,7 +1689,7 @@ top: 0;
   border-radius: 2px;
 }
 .underline-nav {
-  width: 10px;
+  width: 80px;
   height: 4px;
   background-color: var(--color-accent);
   border-radius: 2px;
