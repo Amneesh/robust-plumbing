@@ -412,7 +412,7 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
 #slide-menu {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
   position: fixed;
   top: 0;
   right: 0;
@@ -426,7 +426,7 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
 background-color: #002347;
 background-image: url('./resources/plumber-header.png');
 background-size: 30em;
-    background-position: 7rem 100%;
+    background-position: 8rem bottom ;
     background-repeat: no-repeat;
 
 
