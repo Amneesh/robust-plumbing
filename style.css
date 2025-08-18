@@ -418,7 +418,6 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
   right: 0;
   width: 100%;
   height: 100vh;
-
   visibility: hidden;
   transform: translateX(100%);
   transition: transform 0.4s ease-in-out;
