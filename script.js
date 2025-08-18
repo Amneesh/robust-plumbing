@@ -461,10 +461,14 @@ if (document.body.classList.contains("home-page")) {
 
     const testimonialHTML = `
 
-     <div class="testimonial-card flex flex-col justify-between items-center">
+    <a class="testimonial-card flex flex-col justify-between items-center" href="https://www.google.com/search?sca_esv=0cad35c59d313fc9&rlz=1C5CHFA_enCA1097CA1097&sxsrf=AE3TifN1ia8FwsEZxZmtcroxgWYRMAEoDQ:1755552596050&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E8T3JfOQpBH5pIRynCMspyEwJN6NVQy4Dfnlgq_Ti3kmglwQHuLoCjyvXOTEz2DuSeSMSb8SaU4MXk7F2Iccuor5gvS_tpQB8HGGzzkSeKd74mUMjRhYcWgjQSvSPIynISVaMPs%3D&q=Robust+Plumbing+%26+Drain+Services+Reviews&sa=X&ved=2ahUKEwjY4PyGp5WPAxUhJDQIHewxJLUQ0bkNegQIIhAE&biw=1353&bih=737&dpr=2.2" target="_blank">
+    
        
         <div class="t-card-body">
-        <p class="t-card-body-text">${truncateWords(test.text, 30)}</p>
+        <p class="t-card-body-text">${truncateWords(test.text, 20)}</p>
+           <div class='t-card-footer flex justify-end items-end'>
+        <img src ="./resources/google-logo.webp">
+        </div>
         </div>
         
        
@@ -480,11 +484,15 @@ if (document.body.classList.contains("home-page")) {
            <p> ${test.role}</p>
       </div>
 
+    
+
         </div>
+
+       
       
       </div>
          
-        </div>
+        </a>
      
 
       

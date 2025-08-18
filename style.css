@@ -641,7 +641,6 @@ width: 50%;
   max-width: 1100px;
   font-family: "Castoro Titling", serif;
   text-align: center;
-  padding: 1rem 1rem;
   text-transform: lowercase !important;
   font-size: clamp(20px, 4vw, 30px) !important;
 
@@ -1741,6 +1740,7 @@ top: 0;
   transform: scale(0.9);
   height: 250px;
   filter: brightness(1) contrast(0.4);
+  text-decoration: none;
 }
 .testimonial-card-data {
   position: absolute;
@@ -1756,8 +1756,14 @@ top: 0;
   width: 100%;
 }
 
+.t-card-footer{
+  img{
+    width: 50px;
+  }
+}
+
 .google-logo {
-  width: 50px;
+ 
 }
 .t-card-body-text {
   color: var(--primary-white-color);
