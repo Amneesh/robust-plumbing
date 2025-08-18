@@ -201,7 +201,6 @@ const boilers = [
 
 
 
-
 // Store swiper instance globally so you can destroy/re-init it
 let swiper = null;
 
@@ -231,7 +230,7 @@ function renderSlides(category) {
             <p class="boiler-catalog-description">${shortDescription}</p>
           </div>
           <div class="boiler-catalog-footer">
-            <button class="robust-button-secondary go-to-contact">BUY NOW</button>
+            <a href="/contact.html"><button class="robust-button-secondary go-to-contact">BUY NOW</button></a>
           </div>
         </div>
       </div>
