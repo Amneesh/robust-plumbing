@@ -1,10 +1,9 @@
+// ===== Why Choose Us Section Animation =====
 const whyPoints = document.querySelectorAll('.why-point');
-  const mainImage = document.getElementById('main-why-us-image');
-  
-  const mainContainer = document.getElementById('whyUsMainContainer');
+const mainImage = document.getElementById('main-why-us-image');
+const mainContainer = document.getElementById('whyUsMainContainer');
 
-  // Add click listeners
- whyPoints.forEach(point => {
+whyPoints.forEach(point => {
   point.addEventListener('click', () => {
     const newImageSrc = point.getAttribute('data-image');
     if (newImageSrc && mainImage) {
@@ -13,9 +12,9 @@ const whyPoints = document.querySelectorAll('.why-point');
         mainImage.setAttribute('src', newImageSrc);
         mainImage.style.opacity = 1;
 
-        // Remove and re-add class to restart animation
+        // restart animation
         mainContainer.classList.remove('rotating-div');
-        void mainContainer.offsetWidth;  // Trigger reflow
+        void mainContainer.offsetWidth;
         mainContainer.classList.add('rotating-div');
       }, 150);
     }
@@ -25,193 +24,119 @@ const whyPoints = document.querySelectorAll('.why-point');
   });
 });
 
-  // Highlight and set first image on load
-  window.addEventListener('DOMContentLoaded', () => {
-    const firstPoint = document.querySelector('.why-point');
-    if (firstPoint) {
-      const firstImage = firstPoint.getAttribute('data-image');
-      firstPoint.classList.add('selected');
-      if (firstImage && mainImage) {
-        mainImage.setAttribute('src', firstImage);
-        mainImage.style.opacity = 1;
-      }
+window.addEventListener('DOMContentLoaded', () => {
+  const firstPoint = document.querySelector('.why-point');
+  if (firstPoint) {
+    const firstImage = firstPoint.getAttribute('data-image');
+    firstPoint.classList.add('selected');
+    if (firstImage && mainImage) {
+      mainImage.setAttribute('src', firstImage);
+      mainImage.style.opacity = 1;
     }
-  });
-
-
-  
-
-
-
-  // Function to get URL query param by name
-  function getQueryParam(name) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
   }
+});
 
-const boilers = [
-  // Natural Gas
+// ===== Get Query Param Utility =====
+function getQueryParam(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+// ===== Mechanical Equipment Data =====
+const mechanicalEquipments = [
+  // HVAC Systems
   {
-    id: "ng-johnwood-40",
-    category: "natural-gas",
-    title: "John Wood 40 Gallon Natural Gas",
-    shortDescription: "Reliable 40 gallon natural gas water heater from John Wood.",
-    price: "$1,400 – $1,700",
+    id: "hvac-york",
+    category: "hvac",
+    title: "York Commercial HVAC System",
+    shortDescription: "High-efficiency HVAC system for large commercial spaces.",
+    price: "$8,000 – $15,000",
     img: "./resources/boiler-products/johnwood-40.jpg"
   },
   {
-    id: "ng-johnwood-50",
-    category: "natural-gas",
-    title: "John Wood 50 Gallon Natural Gas",
-    shortDescription: "High capacity 50 gallon natural gas water heater from John Wood.",
-    price: "$1,500 – $1,800",
+    id: "hvac-carrier",
+    category: "hvac",
+    title: "Carrier Rooftop HVAC Unit",
+    shortDescription: "Durable and energy-efficient rooftop HVAC system.",
+    price: "$9,000 – $16,000",
     img: "./resources/boiler-products/johnwood-40.jpg"
   },
   {
-    id: "ng-johnwood-60",
-    category: "natural-gas",
-    title: "John Wood 60 Gallon Natural Gas",
-    shortDescription: "Large 60 gallon natural gas water heater from John Wood.",
-    price: "$1,600 – $1,950",
+    id: "hvac-lennox",
+    category: "hvac",
+    title: "Lennox Split HVAC System",
+    shortDescription: "Reliable split system for precise temperature control.",
+    price: "$7,000 – $13,000",
     img: "./resources/boiler-products/johnwood-40.jpg"
-  },
-  {
-    id: "ng-rheem-40",
-    category: "natural-gas",
-    title: "Rheem 40 Gallon Natural Gas",
-    shortDescription: "Durable 40 gallon natural gas water heater from Rheem.",
-    price: "$1,350 – $1,650",
-    img: "./resources/boiler-products/rheme-40.avif"
-  },
-  {
-    id: "ng-rheem-50",
-    category: "natural-gas",
-    title: "Rheem 50 Gallon Natural Gas",
-    shortDescription: "Efficient 50 gallon natural gas water heater from Rheem.",
-    price: "$1,450 – $1,750",
-    img: "./resources/boiler-products/rheme-40.avif"
-  },
-  {
-    id: "ng-rheem-60",
-    category: "natural-gas",
-    title: "Rheem 60 Gallon Natural Gas",
-    shortDescription: "High performance 60 gallon natural gas water heater from Rheem.",
-    price: "$1,550 – $1,850",
-    img: "./resources/boiler-products/rheme-40.avif"
-  },
-  {
-    id: "ng-bradfordwhite-40",
-    category: "natural-gas",
-    title: "Bradford White 40 Gallon Natural Gas",
-    shortDescription: "Trusted 40 gallon natural gas water heater from Bradford White.",
-    price: "$1,500 – $1,800",
-    img: "./resources/boiler-products/bradford.jpg"
-  },
-  {
-    id: "ng-bradfordwhite-50",
-    category: "natural-gas",
-    title: "Bradford White 50 Gallon Natural Gas",
-    shortDescription: "Reliable 50 gallon natural gas water heater from Bradford White.",
-    price: "$1,600 – $1,900",
-    img: "./resources/boiler-products/bradford.jpg"
-  },
-  {
-    id: "ng-bradfordwhite-60",
-    category: "natural-gas",
-    title: "Bradford White 60 Gallon Natural Gas",
-    shortDescription: "Large 60 gallon natural gas water heater from Bradford White.",
-    price: "$1,700 – $2,000",
-    img: "./resources/boiler-products/bradford.jpg"
   },
 
-  // Electric
+  // Chillers
   {
-    id: "electric-johnwood-40",
-    category: "electric",
-    title: "John Wood 40 Gallon Electric",
-    shortDescription: "Efficient 40 gallon electric water heater from John Wood.",
-    price: "$1,200 – $1,500",
+    id: "chiller-trane",
+    category: "chillers",
+    title: "Trane Centrifugal Chiller",
+    shortDescription: "Industrial-grade chiller for cooling large facilities.",
+    price: "$25,000 – $60,000",
     img: "./resources/boiler-products/johnwood-40.jpg"
   },
   {
-    id: "electric-johnwood-50",
-    category: "electric",
-    title: "John Wood 50 Gallon Electric",
-    shortDescription: "High capacity 50 gallon electric water heater from John Wood.",
-    price: "$1,300 – $1,600",
+    id: "chiller-york",
+    category: "chillers",
+    title: "York Water-Cooled Chiller",
+    shortDescription: "Efficient water-cooled system with reduced noise operation.",
+    price: "$30,000 – $70,000",
+    img: "./resources/boiler-products/johnwood-40.jpg"
+  },
+
+  // Pumps
+  {
+    id: "pump-grundfos",
+    category: "pumps",
+    title: "Grundfos Circulation Pump",
+    shortDescription: "Reliable pump for HVAC and hydronic systems.",
+    price: "$1,000 – $3,000",
     img: "./resources/boiler-products/johnwood-40.jpg"
   },
   {
-    id: "electric-johnwood-60",
-    category: "electric",
-    title: "John Wood 60 Gallon Electric",
-    shortDescription: "Large 60 gallon electric water heater from John Wood.",
-    price: "$1,400 – $1,700",
+    id: "pump-armstrong",
+    category: "pumps",
+    title: "Armstrong Vertical Inline Pump",
+    shortDescription: "Compact and efficient solution for mechanical systems.",
+    price: "$1,500 – $3,500",
+    img: "./resources/boiler-products/johnwood-40.jpg"
+  },
+
+  // Air Handling Units
+  {
+    id: "ahu-trane",
+    category: "pumps",
+    title: "Trane Modular Air Handling Unit",
+    shortDescription: "Customizable AHU for optimal air distribution and filtration.",
+    price: "$5,000 – $12,000",
     img: "./resources/boiler-products/johnwood-40.jpg"
   },
   {
-    id: "electric-rheem-40",
-    category: "electric",
-    title: "Rheem 40 Gallon Electric",
-    shortDescription: "Reliable 40 gallon electric water heater from Rheem.",
-    price: "$1,150 – $1,450",
-    img: "./resources/boiler-products/rheme-40.avif"
-  },
-  {
-    id: "electric-rheem-50",
-    category: "electric",
-    title: "Rheem 50 Gallon Electric",
-    shortDescription: "Efficient 50 gallon electric water heater from Rheem.",
-    price: "$1,250 – $1,550",
-    img: "./resources/boiler-products/rheme-40.avif"
-  },
-  {
-    id: "electric-rheem-60",
-    category: "electric",
-    title: "Rheem 60 Gallon Electric",
-    shortDescription: "High capacity 60 gallon electric water heater from Rheem.",
-    price: "$1,350 – $1,650",
-    img: "./resources/boiler-products/rheme-40.avif"
-  },
-  {
-    id: "electric-bradfordwhite-40",
-    category: "electric",
-    title: "Bradford White 40 Gallon Electric",
-    shortDescription: "Durable 40 gallon electric water heater from Bradford White.",
-    price: "$1,300 – $1,600",
-    img: "./resources/boiler-products/bradford.jpg"
-  },
-  {
-    id: "electric-bradfordwhite-50",
-    category: "electric",
-    title: "Bradford White 50 Gallon Electric",
-    shortDescription: "Reliable 50 gallon electric water heater from Bradford White.",
-    price: "$1,400 – $1,700",
-    img: "./resources/boiler-products/bradford.jpg"
-  },
-  {
-    id: "electric-bradfordwhite-60",
-    category: "electric",
-    title: "Bradford White 60 Gallon Electric",
-    shortDescription: "Large 60 gallon electric water heater from Bradford White.",
-    price: "$1,500 – $1,800",
-    img: "./resources/boiler-products/bradford.jpg"
+    id: "ahu-dyson",
+    category: "pumps",
+    title: "Dyson Clean Air Handling Unit",
+    shortDescription: "Advanced air handling with purification and smart controls.",
+    price: "$6,000 – $14,000",
+    img: "./resources/boiler-products/johnwood-40.jpg"
   }
 ];
 
-
-
-// Store swiper instance globally so you can destroy/re-init it
+// ===== Swiper Slider Setup =====
 let swiper = null;
 
 function renderSlides(category) {
   const wrapper = document.getElementById("swiperWrapper");
-  wrapper.innerHTML = ""; // clear current slides
+  wrapper.innerHTML = "";
 
-  // Filter boilers by category or show all if no category passed
-  const filteredBoilers = category ? boilers.filter(b => b.category === category) : boilers;
+  const filteredEquipments = category
+    ? mechanicalEquipments.filter(item => item.category === category)
+    : mechanicalEquipments;
 
-  filteredBoilers.forEach(({ id, title, shortDescription, price, img }) => {
+  filteredEquipments.forEach(({ id, title, shortDescription, price, img }) => {
     const slide = document.createElement("div");
     slide.classList.add("swiper-slide");
     slide.innerHTML = `
@@ -222,15 +147,14 @@ function renderSlides(category) {
         <div class="boiler-catalog-content flex flex-col gap-50">
           <div class="boiler-catalog-header flex flex-row gap-1 items-center justify-between">
             <h5>${title}</h5>
-           
           </div>
           <div class="underline-left"></div>
           <div class="boiler-catalog-body flex flex-col gap-25">
-           <p>${price}</p>
+            <p>${price}</p>
             <p class="boiler-catalog-description">${shortDescription}</p>
           </div>
           <div class="boiler-catalog-footer">
-            <a href="/contact.html"><button class="robust-button-secondary go-to-contact">BUY NOW</button></a>
+            <a href="/contact.html"><button class="robust-button-secondary go-to-contact">REQUEST QUOTE</button></a>
           </div>
         </div>
       </div>
@@ -238,10 +162,8 @@ function renderSlides(category) {
     wrapper.appendChild(slide);
   });
 
-  // Destroy previous swiper if exists
   if (swiper) swiper.destroy(true, true);
 
-  // Initialize swiper again
   swiper = new Swiper("#servicesCarousel", {
     loop: false,
     navigation: {
@@ -255,36 +177,30 @@ function renderSlides(category) {
   });
 }
 
-// Attach click listeners on buttons with data-category attribute
+// ===== Filter Buttons =====
 document.querySelectorAll(".service-filter-button button").forEach(btn => {
   btn.addEventListener("click", () => {
     const category = btn.dataset.category;
     renderSlides(category);
-
-    // Optionally update active button style (if you have CSS for .active)
     document.querySelectorAll(".service-filter-button button").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
   });
 });
 
-
+// Default view on page load
 window.addEventListener("load", () => {
-  renderSlides("natural-gas");
+  renderSlides("hvac");
 });
 
-
+// ===== Image-Text Interaction Section =====
 const texts = document.querySelectorAll(".boiler-text-item");
 const images = document.querySelectorAll(".boiler-types-images img");
 
 images.forEach(img => {
   img.addEventListener("click", () => {
     const type = img.dataset.type;
-
-    // Remove active class from all texts and images
     texts.forEach(t => t.classList.remove("active"));
     images.forEach(i => i.classList.remove("active"));
-
-    // Add active class to selected text and image
     document.querySelector(`.boiler-text-item[data-type="${type}"]`).classList.add("active");
     img.classList.add("active");
   });

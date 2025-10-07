@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robust Plumbing</title>
+  <title>Robust Mechanical</title>
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./contact.css" />
   <link rel="stylesheet" href="./flex.css" />
@@ -39,43 +39,21 @@
           <li class="slide-menu-nav-container">
             <a class="page-link" href="./index.html">Home</a>
             <div class="underline-nav"></div>
-            <!-- <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./index.html#whoWeAre">About Us</a></li>
-              <li><a class="section-link" href="./index.html#features">FEATURES</a></li>
-              <li><a class="section-link" href="./index.html#services">Services</a></li>
-              <li><a class="section-link" href="./index.html#googleReviews">REVIEWS</a></li>
-            </ul> -->
           </li>
 
           <li class="slide-menu-nav-container">
-            <a class="page-link" href="./boilers.html">Boilers</a>
+            <a class="page-link" href="./boilers.html">HVAC & Heating</a>
             <div class="underline-nav"></div>
-            <!-- <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./boilers.html#boilersSection">Boilers</a></li>
-              <li><a class="section-link" href="./boilers.html#boilerServices">Services</a></li>
-              <li><a class="section-link" href="./boilers.html#boilerCatalog">Catalog</a></li>
-              <li><a class="section-link" href="./boilers.html#boilerTypes">Types</a></li>
-
-            </ul> -->
           </li>
 
           <li class="slide-menu-nav-container">
             <a class="page-link" href="./portfolio.html">Portfolio</a>
             <div class="underline-nav"></div>
-            <!-- <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./portfolio.html">Residential</a></li>
-              <li><a class="section-link" href="./portfolio.html">Commercial</a></li>
-              <li><a class="section-link" href="./portfolio.html">Projects</a></li>
-            </ul> -->
           </li>
 
           <li class="slide-menu-nav-container">
             <a class="page-link" href="./contact.html">Contact</a>
             <div class="underline-nav"></div>
-            <!-- <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./contact.html">Get a Quote</a></li>
-              <li><a class="section-link" href="./contact.html">Locations</a></li>
-            </ul> -->
           </li>
         </ul>
       </nav>
@@ -88,193 +66,159 @@
   <p class="promo-track flex flex-row gap-1" id="promo-track"></p>
 </div>
    
-
-<section class=" contact-map contact-page flex justify-center items-center animate-slide-down "
+<section class="contact-map contact-page flex justify-center items-center animate-slide-down"
       data-delay="0.2s">
-
       <h1 class="visually-hidden">robust map</h1>
-
-
-     
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.717364451028!2d-122.67567882299998!3d49.09201097136485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485cf2388963ca5%3A0xafeb7792919ccc25!2sRobust%20Plumbing%20%26%20Drain%20Services!5e0!3m2!1sen!2sca!4v1754934833546!5m2!1sen!2sca"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.717364451028!2d-122.67567882299998!3d49.09201097136485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485cf2388963ca5%3A0xafeb7792919ccc25!2sRobust%20Mechanical%20Ltd!5e0!3m2!1sen!2sca!4v1754934833546!5m2!1sen!2sca"
         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
+</section>
 
-    <section
-      class="contact-section flex flex flex-col md:flex-row  sm:justify-around items-start row-gap-3 sm:column-gap-2 items-center">
-      <div class="contact-form shake-effect flex flex-col gap-2" id="contactFormContainer">
-        <div class="contact-header flex flex-col gap-25">
-          <h2 id="contactFormHeading">Get in touch </h2>
-          <h2 id="contactFormSuccessHeading">Thank You </h2>
-          <div class="underline-left"></div>
-        </div>
-        <form id="contactForm">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your full name" required />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
-
-          <button type="submit" class="robust-button-secondary">Send Message</button>
-        </form>
-        <div id="form-status-success" class="flex flex-col gap-2">
-          <div class="text-message">
-            <p>
-              Thank you for reaching out.</p>
-            <p>We’ll be in touch with you
-              shortly !</p>
-            <p>
-              Meanwhile you can explore our portfolio !</p>
-          </div>
-
-          <button class="robust-button-secondary open-portfolio go-to-portfolio">
-            Watch portfolio
-          </button>
-        </div>
-        <div id="form-status-fail" style="margin-top: 10px">
-          <p>
-            <i class="fa fa-warning"></i>
-            Oops! Something went wrong. Please try again later or
-            contact support if the issue persists
-          </p>
-        </div>
-      </div>
-      <div class="contact-info flex flex-col row-gap-2">
-        <h1>Contact Our<span class="color-accent"> Plumbing </span>Experts</h1>
-        <h5>
-          Need urgent plumbing help? We’re ready 24/7 — call or message now!
-
-        </h5>
-
-
-        <div class="contact-info-wrapper flex flex-row flex-wrap justify-between items-start gap-2">
-
-
-          <div class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-right">
-            <!-- <img src="" alt="" /> -->
-            <i class="fa-solid fa-phone"></i>
-            <div class="contact-info-container flex flex-col gap-50">
-              <h5>LET'S TALK</h5>
-              <a href="tel:+16047123899" class="flex flex-col">+1 (604) 712-3899 <span class="color-primary"> - Shaun
-                  Gill</span></a>
-           
-
-            </div>
-          </div>
-
-          <a href="linkto:info@robustplumbing.ca"
-            class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-left">
-            <!-- <img src="" alt="" /> -->
-            <i class="fa-solid fa-location-dot"></i>
-            <div class="contact-info-container flex flex-col gap-50">
-              <h5>HEAD OFFICE</h5>
-              <p>4925 198B street, Langley, BC </p>
-            </div>
-          </a>
-
-          <a href="mailto:info@robustplumbing.ca"
-            class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-right ">
-            <!-- <img src="" alt="" /> -->
-            <i class="fa-solid fa-envelope"></i>
-            <div class="contact-info-container flex flex-col gap-50">
-              <h5>EMAIL US</h5>
-              <p>info@robustplumbing.ca</p>
-            </div>
-          </a>
-
-          <a href="linkto:info@robustplumbing.ca"
-            class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-left">
-            <!-- <img src="" alt="" /> -->
-            <i class="fa-solid fa-clock"></i>
-            <div class="contact-info-container flex flex-col gap-50">
-              <h5>WORKING HOURS</h5>
-              <p>Monday - Sunday</p>
-              <p>24/7</p>
-            </div>
-          </a>
-
-
-
-        </div>
-        <div class="underline-left"></div>
-
-        <div class="social-icons flex flex-col gap-1">
-
-          <h4>FOLLOW US ON SOCIAL MEDIA</h4>
-          <div class="footer-social-media-icons">
-            <a href="https://wa.me/16047123899?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
-              target="_blank">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a href="https://www.facebook.com/people/Robust-Plumbing-Drain-Services-LTD/61576814480581/#" target="_blank">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/robustplumbing/" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/robust-plumbing-a41044373?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BrEn606%2BqQaWEXxUAiAu3Pg%3D%3D" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-    </section>
-
-    <section class="buildings">
-      <!-- <img src="./resources/contact-buildings.jpg" alt=""> -->
-    </section>
-
-    <section class="faq-section flex flex-col gap-1 " id="faqs">
-
-      <h1><span class="color-accent">Questions ? </span> We’ve Got Answers!</h1>
+<section
+  class="contact-section flex flex flex-col md:flex-row sm:justify-around items-start row-gap-3 sm:column-gap-2 items-center">
+  <div class="contact-form shake-effect flex flex-col gap-2" id="contactFormContainer">
+    <div class="contact-header flex flex-col gap-25">
+      <h2 id="contactFormHeading">Get in touch </h2>
+      <h2 id="contactFormSuccessHeading">Thank You </h2>
       <div class="underline-left"></div>
-      <div
-        class="faq-wrapper flex flex flex-col-reverse lg:flex-row  sm:justify-center items-star sm:column-gap-2 items-end ">
-        <div class="faq-container flex flex-col gap-2">
+    </div>
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
 
-          <div class="faq-card-container flex flex-col gap-1">
-            <div class="faq-card animate-slide-down">
-              <button class="faq-toggle">What plumbing services do you offer?<span class="icon">+</span></button>
-              <div class="faq-content">
-                <p>We provide a wide range of plumbing services including leak repairs, water heater installation and replacement, drain cleaning, pipe repairs, and emergency plumbing services for both residential and commercial clients.</p>
-              </div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+
+      <button type="submit" class="robust-button-secondary">Send Message</button>
+    </form>
+    <div id="form-status-success" class="flex flex-col gap-2">
+      <div class="text-message">
+        <p>Thank you for reaching out.</p>
+        <p>We’ll be in touch with you shortly!</p>
+        <p>
+          Meanwhile you can explore our portfolio !</p>
+      </div>
+
+      <button class="robust-button-secondary open-portfolio go-to-portfolio">
+        View Portfolio
+      </button>
+    </div>
+    <div id="form-status-fail" style="margin-top: 10px">
+      <p>
+        <i class="fa fa-warning"></i>
+        Oops! Something went wrong. Please try again later or contact support if the issue persists.
+      </p>
+    </div>
+  </div>
+
+  <div class="contact-info flex flex-col row-gap-2">
+    <h1>Contact Our <span class="color-accent">Mechanical</span> Experts</h1>
+    <h5>
+      Need expert help with heating, cooling, or mechanical systems? We’re available 24/7 — call or message now!
+    </h5>
+
+    <div class="contact-info-wrapper flex flex-row flex-wrap justify-between items-start gap-2">
+
+      <div class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-right">
+        <i class="fa-solid fa-phone"></i>
+        <div class="contact-info-container flex flex-col gap-50">
+          <h5>LET'S TALK</h5>
+          <a href="tel:+16047123899" class="flex flex-col">+1 (604) 712-3899 
+            <span class="color-primary"> - Shaun Gill</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="linkto:info@robustmechanical.ca"
+        class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-left">
+        <i class="fa-solid fa-location-dot"></i>
+        <div class="contact-info-container flex flex-col gap-50">
+          <h5>HEAD OFFICE</h5>
+          <p>4925 198B Street, Langley, BC</p>
+        </div>
+      </a>
+
+      <a href="mailto:info@robustmechanical.ca"
+        class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-right">
+        <i class="fa-solid fa-envelope"></i>
+        <div class="contact-info-container flex flex-col gap-50">
+          <h5>EMAIL US</h5>
+          <p>info@robustmechanical.ca</p>
+        </div>
+      </a>
+
+      <a href="linkto:info@robustmechanical.ca"
+        class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-left">
+        <i class="fa-solid fa-clock"></i>
+        <div class="contact-info-container flex flex-col gap-50">
+          <h5>WORKING HOURS</h5>
+          <p>Monday - Sunday</p>
+          <p>24/7</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="underline-left"></div>
+
+    <div class="social-icons flex flex-col gap-1">
+      <h4>FOLLOW US ON SOCIAL MEDIA</h4>
+      <div class="footer-social-media-icons">
+        <a href="https://wa.me/16047123899?text=Hi!%20I'm%20interested%20in%20your%20mechanical%20services."
+          target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/people/Robust-Mechanical-Ltd/61576814480581/#" target="_blank"><i
+            class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/robustmechanical/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/robust-mechanical/" target="_blank"><i
+            class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section flex flex-col gap-1" id="faqs">
+  <h1><span class="color-accent">Questions?</span> We’ve Got Answers!</h1>
+  <div class="underline-left"></div>
+  <div class="faq-wrapper flex flex flex-col-reverse lg:flex-row sm:justify-center sm:column-gap-2 items-end">
+    <div class="faq-container flex flex-col gap-2">
+
+      <div class="faq-card-container flex flex-col gap-1">
+        <div class="faq-card animate-slide-down">
+          <button class="faq-toggle">What mechanical services do you offer?<span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>We specialize in HVAC installations, boiler systems, mechanical maintenance, gas fitting, and full building system upgrades for residential and commercial properties.</p>
+          </div>
+        </div>
+
+        <div class="faq-card animate-slide-down">
+          <button class="faq-toggle">Do you provide emergency mechanical services?<span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>Yes, our team is available 24/7 for emergency mechanical support, including heating or cooling failures, leaks, and system malfunctions.</p>
+          </div>
+        </div>
+
+        <div class="faq-card animate-slide-down">
+          <button class="faq-toggle">Can I request a free quote?<span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>Absolutely! Contact us via phone, email, or our online form to receive a free, no-obligation quote tailored to your mechanical service needs.</p>
+          </div>
+        </div>
+
+        <div class="faq-card animate-slide-down">
+          <button class="faq-toggle">Are your technicians licensed and certified?<span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>All our mechanical technicians are fully licensed, insured, and trained in the latest building code and safety standards.</p>
+          </div>
+        </div>
+
+        <div class="faq-card animate-slide-down">
+          <button class="faq-toggle">What areas do you serve?<span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>We proudly serve the Greater Vancouver Area, Fraser Valley, and nearby regions. Reach out to confirm service availability in your location.</p>
             </div>
-            <div class="faq-card animate-slide-down">
-              <button class="faq-toggle">Do you offer emergency plumbing services?<span class="icon">+</span></button>
-              <div class="faq-content">
-                <p>Yes, we offer 24/7 emergency plumbing services. Our team is available to respond quickly to urgent issues such as burst pipes, major leaks, or water damage emergencies.</p>
-              </div>
-            </div>
-            <div class="faq-card animate-slide-down">
-              <button class="faq-toggle">How do I schedule a service?<span class="icon">+</span></button>
-              <div class="faq-content">
-                <p>You can schedule a service by calling us directly, sending an email, or filling out our online booking form. We recommend booking in advance to ensure availability, though we do accommodate urgent requests.</p>
-              </div>
-            </div>
-            <div class="faq-card animate-slide-down">
-              <button class="faq-toggle">Do you provide free estimates?<span class="icon">+</span></button>
-              <div class="faq-content">
-                <p>Yes, we provide free estimates for most plumbing services. A member of our team will assess the work required and give you a transparent, upfront quote before starting any job.</p>
-              </div>
-            </div>
-            <div class="faq-card animate-slide-down">
-              <button class="faq-toggle">Are your plumbers licensed and insured?<span class="icon">+</span></button>
-              <div class="faq-content">
-                <p>Absolutely. All our plumbers are fully licensed, insured, and trained to deliver high-quality workmanship safely and efficiently.</p>
-              </div>
-            </div>
-            <div class="faq-card animate-slide-down">
-              <button class="faq-toggle">What areas do you serve?<span class="icon">+</span></button>
-              <div class="faq-content">
-                <p>We primarily serve the Greater Vancouver Area and surrounding communities. For locations outside this area, please contact us to see if we can accommodate your request.</p>
-              </div>
             </div>
             <div class="faq-card animate-slide-down">
               <button class="faq-toggle">What payment methods do you accept?<span class="icon">+</span></button>
@@ -289,13 +233,13 @@
               </div>
             </div>
           </div>
-          
-        </div>
-        <div class="faq-image">
-          <img src="./resources/plumber-faq.webp" alt="">
-        </div>
+        
       </div>
-    </section>
+    <div class="faq-image">
+      <img src="./resources/plumber-faq.webp" alt="Mechanical technician at work">
+    </div>
+  </div>
+</section>
 
 
   </main>
@@ -308,22 +252,22 @@
       <a href="tel:+16047123899" aria-label="Phone" class="icon cyan">
         <i class="fas fa-phone"></i>
       </a>
-      <a href="mailto:info@robustplumbing.ca" aria-label="Email" class="icon magenta">
+      <a href="mailto:info@robustmechanical.ca" aria-label="Email" class="icon magenta">
         <i class="fas fa-envelope"></i>
       </a>
-      <a href="https://www.facebook.com/people/Robust-Plumbing-Drain-Services-LTD/61576814480581/#" target="_blank" aria-label="Facebook" class="icon cyan">
+      <a href="https://www.facebook.com/robustmechanical" target="_blank" aria-label="Facebook" class="icon cyan">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="https://wa.me/16047123899?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services%21"
+      <a href="https://wa.me/16047123899?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20mechanical%20services%21"
         target="_blank" rel="noopener noreferrer" class="icon magenta">
         <i class="fab fa-whatsapp"></i>
       </a>
-       <a href="https://www.instagram.com/robustplumbing/" class="icon magenta" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/robust-plumbing-a41044373?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BrEn606%2BqQaWEXxUAiAu3Pg%3D%3D" class="icon magenta" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
+      <a href="https://www.instagram.com/robustmechanical/" class="icon magenta" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/robust-mechanical" class="icon magenta" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
     </nav>
   </div>
 
@@ -341,38 +285,38 @@
 
         </div>
         <div class="footer-info-content content-plumbing">
-          <h2>PLUMBING</h2>
-          <h2>PLUMBING</h2>
+          <h2>MECHANICAL</h2>
+          <h2>MECHANICAL</h2>
         </div>
       </div>
 
     </section>
 
 
- <section class="footer-subscribe">
-  <h1 id="subHeading">Reach Out <span class="color-accent">Today!</span></h1>
-  <form class="subscribe-form flex flex-col gap-1" onsubmit="handleSubscribe(event)" >
-    <p id="subText">Skip the wait — tell us what you need!</p>
+    <section class="footer-subscribe">
+      <h1 id="subHeading">Reach Out <span class="color-accent">Today!</span></h1>
+      <form class="subscribe-form flex flex-col gap-1" onsubmit="handleSubscribe(event)">
+        <p id="subText">Skip the wait — tell us what you need!</p>
 
-    <input type="email" id="subEmail" class="subscribe-input" name="email" placeholder="Enter your email" required />
-    <button class="robust-button-primary" type="submit">Subscribe</button>
-  </form>
+        <input type="email" id="subEmail" class="subscribe-input" name="email" placeholder="Enter your email" required />
+        <button class="robust-button-primary" type="submit">Subscribe</button>
+      </form>
 
-  <div class="sub-success" id="subSuccess" >
-    <h1>Thank <span  class="color-accent">you!</span></h1>
-    <p>Thanks for subscribing! Discover our boiler solutions in the meantime.</p>
-    <button class="robust-button-primary go-to-boiler">Boiler Services</button>
-  </div>
+      <div class="sub-success" id="subSuccess">
+        <h1>Thank <span class="color-accent">you!</span></h1>
+        <p>Thanks for subscribing! Discover our mechanical system solutions in the meantime.</p>
+        <button class="robust-button-primary go-to-services">View Services</button>
+      </div>
 
-  <div class="sub-fail" id="subFail">
-    <p class="color-accent">Oops!</p>
-    <p>Please try again.</p>
-  </div>
-</section>
+      <div class="sub-fail" id="subFail">
+        <p class="color-accent">Oops!</p>
+        <p>Please try again.</p>
+      </div>
+    </section>
 
   </footer>
   <div class="footer-copyright flex flex-row justify-center" id="footerCopyright">
-</div>
+  </div>
 </body>
 
 </html>
