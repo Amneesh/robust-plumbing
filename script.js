@@ -294,63 +294,63 @@ if (document.body.classList.contains("home-page")) {
       name: "Ali Altaf",
       role: "1 review",
       time: "a month ago",
-      text: "Wonderful experience. Quality work at a very reasonable price. They made sure leak is properly fixed and stayed additional 20 mins to test and confirm. Strongly recommended.",
+      text: "Wonderful experience from start to finish. Quality work at a fair price. The team made sure the issue was fully resolved and took extra time to test and confirm everything was working properly. Highly recommended.",
       likes: "👍"
     },
     {
       name: "Susi Wang",
       role: "4 reviews · 2 photos",
       time: "3 weeks ago",
-      text: "I called a plumber from Facebook but he didn’t show up, I called Robust Plumbing, they reached very fast and the technician came in an hour. He equipped a lot of professional equipment and worked with patience. I am very appreciative for his wonderful service.",
+      text: "I first contacted another company through Facebook, but they never showed up. I then called Robust Mechanical, and they responded right away—the technician arrived within an hour. He was friendly, well-prepared, and took his time to get the job done properly. Really appreciate the great service.",
       likes: "❤️"
     },
     {
       name: "Nick Perry",
       role: "Local Guide · 70 reviews · 49 photos",
       time: "a month ago",
-      text: "Had a great experience. Showed up on time, was professional, and got the job done quickly. Highly recommend!",
+      text: "Great experience overall. They arrived on time, were easy to work with, and finished the job quickly. Highly recommend.",
       likes: "👍"
     },
     {
       name: "Md Rahman",
       role: "5 reviews",
       time: "2 weeks ago",
-      text: "Very prompt and affordable service, I am very satisfied, highly recommend people got stuck with any trouble, they do take care with compassion, all the best.",
+      text: "Very prompt and affordable service. I’m really satisfied and would highly recommend them to anyone dealing with an issue. They genuinely care and handle things with compassion. All the best!",
       likes: "👍"
     },
     {
       name: "Krista Bowe",
       role: "1 review",
       time: "2 months ago",
-      text: "Raj arrived promptly and resolved my plumbing issue in under an hour. He was efficient, professional, and courteous throughout the process. I highly recommend Robust Plumbing for fast and reliable service.",
+      text: "Raj arrived promptly and resolved the issue in under an hour. He was efficient, professional, and courteous throughout the process. I highly recommend Robust Mechanical for fast and reliable service.",
       likes: "👍"
     },
     {
       name: "Deepkamal Billen",
       role: "3 reviews",
       time: "2 months ago",
-      text: "Big help with a little Reno I had for my home, very good communication along with quality work. Highly recommend.",
+      text: "Big help with a small home reno. Great communication and quality work. Highly recommend.",
       likes: "👍"
     },
     {
       name: "S Mantha",
       role: "Local Guide · 83 reviews · 87 photos",
       time: "a month ago",
-      text: "The gentleman tech Mr Raj, who had come to repair was fantastic, very courteous and respectful and did his best to put in an excellent job output. My best wishes to all at Robust Plumbing.",
+      text: "Mr. Raj, the technician who came out, was fantastic. Very polite, respectful, and did his best to deliver excellent work. Best wishes to the team at Robust Mechanical.",
       likes: "👍"
     },
     {
       name: "Gurminder Gill",
       role: "1 review",
       time: "2 months ago",
-      text: "We’ve partnered with Robust Plumbing & Drain Services on several renovation projects in the Lower Mainland and Vancouver. The Robust Team has always delivered top quality work. They’re reliable, professional, and quick to respond. Recommended for anyone looking for a solid plumbing company you can count on.",
+      text: "We’ve partnered with Robust Mechanical on several projects in the Lower Mainland and Vancouver. The Robust team has consistently delivered top-quality work. They’re reliable, professional, and quick to respond. Highly recommended for anyone looking for a mechanical company you can count on.",
       likes: "👍"
     },
     {
       name: "Catherne Gill",
       role: "4 reviews",
       time: "a month ago",
-      text: "Raj was quick and professional. He fixed a clogged sink at our salon in Delta and showed up same day. Highly recommend Robust Plumbing for any issues.",
+      text: "Raj was fast and professional. He came the same day and fixed the issue at our salon in Delta. Would definitely recommend Robust Mechanical for any work.",
       likes: "👍"
     },
     {
