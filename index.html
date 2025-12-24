@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Robust Mechanical</title>
   <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./boilers.css" />
   <link rel="stylesheet" href="./flex.css" />
   <link rel="icon" href="/resources/robust-logo-img-bg.webp" type="image/webp" />
 
@@ -47,7 +48,7 @@
         </li>
 
         <li class="slide-menu-nav-container">
-          <a class="page-link" href="./boilers.html">Boilers</a>
+          <a class="page-link" href="./boilers.html">HVAC & Heating</a>
           <div class="underline-nav"></div>
         </li>
 
@@ -126,6 +127,7 @@
       </div>
     </section>
 
+
     <section class="who-we-are" id="whoWeAre">
       <div class="who-we-are-content">
         <div class="image-side">
@@ -154,11 +156,10 @@
             deliver systems that perform as intended.
           </p>
 
-          <p>
-            Built on experience. Driven by quality. Trusted to deliver.
-          </p>
+          <p>Robust in name. Reliable by nature.</p>
 
-          <div class="counters flex flex-col flex-wrap sm:flex-row sm:justify-evenly items-start row-gap-1 sm:column-gap-2"
+          <div
+            class="counters flex flex-col flex-wrap sm:flex-row sm:justify-evenly items-start row-gap-1 sm:column-gap-2"
             id="counterSection">
 
             <div class="counter-container flex flex-row sm:flex-col items-center justify-center">
@@ -181,16 +182,22 @@
       </div>
     </section>
 
-
-
-    <section class="features flex justify-evenly flex-col items-center gap-5" id="features">
-      <h1 class="visually-hidden">Our Features</h1>
-
-      <div class="feature-header flex flex-col gap-1">
-        <h1>OUR KEY <span class="color-accent">FEATURES</span></h1>
-        <div class="underline"></div>
+    <section class="boiler-main-container" id="boilersSection">
+      <h1 class="visually-hidden">HVAC and Heating Services by Robust Mechanical</h1>
+      <div class="boiler-main-wrapper flex flex-row-reverse flex-wrap gap-1">
+        <div class="boiler-text-wrapper flex flex-col gap-2 justify-center items-start">
+          <div class="boiler-text-heading">
+            <h1><span class="color-accent">HVAC & Heating</span> solutions by Robust!</h1>
+            <div class="underline-left"></div>
+          </div>
+          <p>At Robust Mechanical, we specialize in providing reliable, energy-efficient HVAC and heating systems for both residential and commercial properties. From installation and repair to routine maintenance and system upgrades, our experienced technicians ensure your comfort all year round.</p>
+          <button class="robust-button-primary go-to-contact">GET A QUOTE</button>
+        </div>
+        <div class="boiler-image-wrapper animate-slide-right">
+          <img src="./resources/robust_van_opp.png" alt="HVAC System Installation">
+        </div>
       </div>
-
+      
       <div class="feature-circle-wrapper flex flex-row flex-wrap justify-evenly gap-3">
 
         <div class="feature-circle-container">
@@ -223,7 +230,7 @@
       </div>
 
       <div class="join-us-wrapper shake-effect">
-        <!-- <img class="tap-img" src="./resources/tap-png.webp" alt="Mechanical gear"> -->
+        <img class="tap-img" src="./resources/tap-png.webp" alt="Mechanical gear">
         <div class="join-us-container flex flex-col items-center justify-center gap-1">
           <img class="wrench-img" src="./resources/wrench.webp" alt="Wrench tool">
 
@@ -231,11 +238,10 @@
               class="color-accent-light">Robust!</span></h1>
           <button class="robust-button-secondary go-to-contact">GET A QUOTE</button>
         </div>
-      </div>
-    </section>
+      </div> -->
+  
 
-
-    <section class="services-vertical flex flex-col gap-2 justify-center items-center" id="services">
+     <section class="services-vertical flex flex-col gap-2 justify-center items-center" id="services">
       <h1>OUR <span class="color-accent">SERVICES</span></h1>
       <div class="underline"></div>
       <div class="slider">
@@ -263,7 +269,7 @@
         <div class="slides">
           <div class="slide" id="slide_1">
             <div class="inner_content">
-              <img src="./resources/services/emergency-service.webp" alt="HVAC installation service">
+              <img src="./resources/servicesWebp/vent-air.webp" alt="HVAC installation service">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1 class="visually-hidden">HVAC Installation & Maintenance</h1>
                 <p>
@@ -277,7 +283,7 @@
 
           <div class="slide" id="slide_2">
             <div class="inner_content">
-              <img src="./resources/services/leak-detection-and-repair.webp" alt="Boiler installation and repair">
+              <img src="./resources/servicesWebp/boiler-inst.webp" alt="Boiler installation and repair">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1 class="visually-hidden">Boiler Installation & Repair</h1>
                 <p>
@@ -291,7 +297,7 @@
 
           <div class="slide" id="slide_3">
             <div class="inner_content">
-              <img src="./resources/services/drain-cleanage.webp" alt="Gas fitting service">
+              <img src="./resources/servicesWebp/gas-fit.webp" alt="Gas fitting service">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1 class="visually-hidden">Gas Fitting & Piping</h1>
                 <p>
@@ -306,7 +312,7 @@
 
           <div class="slide" id="slide_4">
             <div class="inner_content">
-              <img src="./resources/services/pipe-repair.webp" alt="Mechanical system upgrade">
+              <img src="./resources/servicesWebp/mech-sys.webp" alt="Mechanical system upgrade">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1 class="visually-hidden">Mechanical System Upgrades</h1>
                 <p>
@@ -319,7 +325,7 @@
 
           <div class="slide" id="slide_5">
             <div class="inner_content">
-              <img src="./resources/services/water-installation.webp" alt="Heating and cooling service">
+              <img src="./resources/servicesWebp/heating-cooling.webp" alt="Heating and cooling service">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1 class="visually-hidden">Heating & Cooling Solutions</h1>
                 <p>
@@ -332,7 +338,7 @@
 
           <div class="slide" id="slide_6">
             <div class="inner_content">
-              <img src="./resources/services/bathroom-plumbing.webp" alt="Commercial mechanical service">
+              <img src="./resources/servicesWebp/comm-mechanical.webp" alt="Commercial mechanical service">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1 class="visually-hidden">Commercial Mechanical Services</h1>
                 <p>
@@ -346,7 +352,7 @@
 
           <div class="slide" id="slide_7">
             <div class="inner_content">
-              <img src="./resources/services/kitchen-plumbing.webp" alt="Preventive maintenance service">
+              <img src="./resources/servicesWebp/pre-maintain.webp" alt="Preventive maintenance service">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1 class="visually-hidden">Preventive Maintenance Programs</h1>
                 <p>
@@ -359,7 +365,7 @@
 
           <div class="slide" id="slide_8">
             <div class="inner_content">
-              <img src="./resources/services/sewer-line.webp" alt="Ventilation system service">
+              <img src="./resources/servicesWebp/vent-air.webp" alt="Ventilation system service">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1 class="visually-hidden">Ventilation & Air Quality Systems</h1>
                 <p>
@@ -373,7 +379,7 @@
 
           <div class="slide" id="slide_9">
             <div class="inner_content">
-              <img src="./resources/services/fixture-installation.webp" alt="Design-build mechanical solutions">
+              <img src="./resources/servicesWebp/custom-design.webp" alt="Design-build mechanical solutions">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1 class="visually-hidden">Custom Design-Build Solutions</h1>
                 <p>
@@ -387,7 +393,7 @@
 
           <div class="slide" id="slide_10">
             <div class="inner_content">
-              <img src="./resources/services/sump-pump.webp" alt="Emergency mechanical repair service">
+              <img src="./resources/servicesWebp/em-mech.webp" alt="Emergency mechanical repair service">
               <div class="inner_content_data flex flex-col gap-1">
                 <h1 class="visually-hidden">Emergency Mechanical Repairs</h1>
                 <p>
@@ -402,6 +408,11 @@
         </div>
       </div>
     </section>
+
+   
+
+
+   
 
 
 
@@ -458,7 +469,10 @@
 
     <section class="footer-info flex flex-col items-center justify-center">
       <h4 class="visually-hidden">Logo and description</h4>
-      <div class="footer-logo-image">
+       <div class="robust-logo-main">
+          <img src="./resources/robust-logo-bg-white.png" alt="">
+          </div>
+      <!-- <div class="footer-logo-image">
         <img src="./resources/robust-logo-img-bg.webp" alt="Robust Mechanical Logo">
       </div>
       <div class="footer-info-content-wrapper">
@@ -470,7 +484,7 @@
           <h2>MECHANICAL</h2>
           <h2>MECHANICAL</h2>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <section class="footer-subscribe">

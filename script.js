@@ -279,7 +279,7 @@ if (document.body.classList.contains("home-page")) {
     <div class="underline"></div>
     <p> ${activeFeature.dataset.desc}</p>
     <div class="bagde-flag-wrap">
-      <p href="#" class="bagde-flag"> RED SEAL CERTIFIED </p>
+      <p href="#" class="bagde-flag"> CERTIFIED TECHNICIANS </p>
     </div>
     </div>`;
   }

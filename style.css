@@ -437,7 +437,7 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
   transition: transform 0.4s ease-in-out;
   z-index: 99999999;
   padding: 2rem 2rem 7rem 2rem;
-background-color: #002347;
+background-color: var(--color-background);
 background-image: url('./resources/plumber-header.webp');
 background-size: 30em;
     background-position: 8rem bottom ;
@@ -477,7 +477,7 @@ background-size: 30em;
   gap: 10px;
 }
 #slide-menu .page-link {
-  color: white;
+  color: var(--color-navy);
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -485,7 +485,7 @@ background-size: 30em;
 }
 
 #slide-menu .section-link {
-  color: white;
+  color: var(--color-navy);
   text-decoration: none;
   text-transform: uppercase;
   font-size: clamp(18px, 4vw, 20px);
@@ -610,7 +610,7 @@ background-size: 30em;
 }
 .robust-logo-main{
 img{
-  aspect-ratio: 3/1;
+  aspect-ratio: 5/1;
   object-fit: cover;
 }
 }
@@ -879,7 +879,7 @@ color: var(--color-accent-dark);
 
 .feature-circle-wrapper {
  width: 100%;
- padding: 2rem ;
+ padding: 5rem 2rem ;
   
 }
 .feature-circle-container{
@@ -999,13 +999,13 @@ margin: 3rem 0rem 0rem 0rem;
     height: 0;
     border-style: solid;
     border-width: 0 12px 12px 0;
-    border-color: transparent var(--color-primary-dark) transparent transparent;
+    border-color: transparent red transparent transparent;
 }
 
 .bagde-flag {
 	text-transform: capitalize;
     color: #ffffff;
-    background: var(--color-primary-dark);
+    background: red;
     letter-spacing: 0;
     font-size: 18px;
     line-height: 15px;
@@ -1075,7 +1075,7 @@ h1{
   padding: 2rem 2rem;
   color: var(--primary-white-color);
   z-index: 1;
-  background-color: var(--color-accent-dark);
+  background-color: var(--color-navy-dark);
 }
 
 @keyframes shake {
@@ -1221,8 +1221,9 @@ h1{
   z-index: 2;
   color: white;
   padding: 20px;
-
-background: linear-gradient(180deg,rgba(0, 27, 58, 1) 0%, rgba(255, 255, 255, 0) 100%);
+background-color: var(--color-navy-dark);
+border-left: 1px solid var(--color-accent);
+/* background: linear-gradient(180deg,rgba(0, 27, 58, 1) 0%, rgba(255, 255, 255, 0) 100%); */
 
 }
 
@@ -1673,6 +1674,7 @@ top: 0;
 
 .testimonial-section::after {
   content: "SATISFIED CLIENTS ";
+    font-family: "Montserrat", sans-serif;
   position: absolute;
   text-align: center;
   padding: 3rem 0rem 0rem;
@@ -1696,9 +1698,9 @@ top: 0;
   right: 0;
   width: 300px;
   height: 100%;
-  background: url("./resources/plumber-png.webp");
+  /* background: url("./resources/plumber-png.webp");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain; */
   object-fit: contain;
 
   border-radius: 20px;
@@ -1759,7 +1761,7 @@ top: 0;
   max-width: 300px;
   min-width: 300px;
   width: 100%;
-  background: var(--color-accent-dark);
+  background: var(--color-navy-dark);
   flex: 0 0 auto;
   padding: 1rem;
   transition: all 1s ease-in-out;
@@ -1796,7 +1798,7 @@ top: 0;
 .t-card-body-text {
   color: var(--primary-white-color);
 
-  line-height: 1.8;
+  line-height: 1.2;
   position: relative;
 }
 
@@ -1820,14 +1822,16 @@ top: 0;
   height: 0;
   border-left: 14px solid transparent;
   border-right: 14px solid transparent;
-  border-top: 18px solid var(--color-accent-dark); /* Match card background */
+  border-top: 18px solid var(--color-navy-dark); /* Match card background */
   transform: rotate(10deg); /* Slight tilt to the left */
 }
 
 .user-pic {
   max-width: 50px;
 }
-
+.user-name{
+  color: var(--color-navy-dark);
+}
 .avatar {
   width: 50px;
   height: 50px;
@@ -1843,7 +1847,7 @@ top: 0;
 }
 
 .testimonial-card.focused {
-  background: var(--color-accent-dark);
+  background: var(--color-navy-dark);
   transform: scale(1.15);
   opacity: 1;
   z-index: 2;
